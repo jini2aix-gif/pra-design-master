@@ -4,1119 +4,1119 @@
     "category": "구조",
     "item": "간섭 확인",
     "criteria": "배터리 시스템 내부 PRA 경로면에서 타 부품과 간섭이 없는가?",
-    "ee_consideration": "ISO 16750-3 공진 및 진동 규격 검토. 패키지 소형화 시 절연 연면거리(Creepage) 및 공간거리(Clearance) 확보 설계 필수 (IEC 60664-1)."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "2",
     "category": "구조",
     "item": "PRA 사이즈",
     "criteria": "BSA 조립성을 고려하여 PRA의 외부 치수 및 사이즈가 적절한가?",
-    "ee_consideration": "ISO 16750-3 공진 및 진동 규격 검토. 패키지 소형화 시 절연 연면거리(Creepage) 및 공간거리(Clearance) 확보 설계 필수 (IEC 60664-1)."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "3",
     "category": "구조",
     "item": "HV 케이블 텐션",
     "criteria": "고전압 케이블이 과한 인장력(텐션)을 받지 않도록 설계되었는가?",
-    "ee_consideration": "ISO 19642 표준 준수. 케이블 곡률 반경(R) 최소 10배 확보 및 릴레이 단자에 가해지는 축력(Tension) 5N 미만 관리."
+    "ee_consideration": "SAE J1742 고주파 진동 조건 검토. 케이블 유동에 의한 터미널 기계적 응력(Stress) 5N 이하 관리 및 고온 신축성 고려한 루프 길이 최적화."
   },
   {
     "id": "4",
     "category": "구조",
     "item": "체결 후 변형",
     "criteria": "커넥터 정위치 체결 후 케이블 및 관련 부품의 변형이 없는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "5",
     "category": "구조",
     "item": "케이블 곡률",
     "criteria": "고전압 케이블의 벤딩(곡률) 반경이 규정치 내로 적정한가?",
-    "ee_consideration": "ISO 19642 표준 준수. 케이블 곡률 반경(R) 최소 10배 확보 및 릴레이 단자에 가해지는 축력(Tension) 5N 미만 관리."
+    "ee_consideration": "ISO 19642-7 표준. 고전압 케이블 선경(D) 대비 곡률 반경(R) 10D 이상 확보하여 내부 절연피복 파손 및 전하 집중 현상(Charge Concentration) 방지."
   },
   {
     "id": "6",
     "category": "구조",
     "item": "선정 근거",
     "criteria": "정격전류 3A당 1SQ 기준을 준수하며 선정 근거 자료를 첨부하였는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "7",
     "category": "구조",
     "item": "HV 케이블 규격",
     "criteria": "고전압 케이블의 선경(SQ) 선정이 전기적 부하에 타당한가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "8",
     "category": "구조",
     "item": "와이어링 길이",
     "criteria": "불필요한 와이어 길이 과다를 방지하여 중량 및 원가를 최적화했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "ISO 16750-3 진동 환경 하에서의 기계적 결합부 피로 수명(Endurance) 10년/20만km 만족 설계 및 전장 패키지 최적화 검토."
   },
   {
     "id": "9",
     "category": "구조",
     "item": "경로 설정",
     "criteria": "고전압 테이블(Busbar/Cable)의 경로 설정이 레이아웃상 적정한가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "ISO 16750-3 진동 환경 하에서의 기계적 결합부 피로 수명(Endurance) 10년/20만km 만족 설계 및 전장 패키지 최적화 검토."
   },
   {
     "id": "10",
     "category": "구조",
     "item": "배선 다발 구성",
     "criteria": "저전압(LV) 와이어와 고전압(HV) 와이어 다발을 물리적으로 분리했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "ISO 6469-3 (Electrical Safety). 고전압/저전압 배선 간 최소 50mm 물리적 이격 및 격벽 설치로 절연 파괴 시 2차 시스템 소손 방지 및 EMI 차폐 강화."
   },
   {
     "id": "11",
     "category": "구조",
     "item": "배치 이원화",
     "criteria": "고전압 와이어와 저전압 와이어의 배선 경로를 별도로 구성하였는가?",
-    "ee_consideration": "ISO 6469-3 (Electrical Safety). HV-LV 혼선 방지를 위한 물리적 격벽 및 Twist-pair 적용으로 EMI 감쇄."
+    "ee_consideration": "ISO 16750-3 진동 환경 하에서의 기계적 결합부 피로 수명(Endurance) 10년/20만km 만족 설계 및 전장 패키지 최적화 검토."
   },
   {
     "id": "12",
     "category": "구조",
     "item": "이원화 방안",
     "criteria": "와이어 길이 조절 및 커넥터 이원화 등을 통해 오체결 방지 방안이 있는가?",
-    "ee_consideration": "ISO 6469-3 (Electrical Safety). HV-LV 혼선 방지를 위한 물리적 격벽 및 Twist-pair 적용으로 EMI 감쇄."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "13",
     "category": "구조",
     "item": "오체결 방지",
     "criteria": "내부 커넥터류가 물리적으로 오체결을 방지할 수 있는 구조인가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "14",
     "category": "구조",
     "item": "ISO 와이어 쇼트",
     "criteria": "ISO 와이어(+/-)가 각각 별도로 구성되었는가?",
-    "ee_consideration": "절연 감시 시스템(IMD) 신뢰성 확보. 기생 정전용량(Parasitic Capacitance)에 의한 측정 오차 최소화 설계."
+    "ee_consideration": "현대차 HMC 기술 표준(ES91100-01) 및 법규(ECE R100 Rev.3) 만족 여부. 글로벌 시장 대응을 위한 시스템 레벨의 절연 저항(100Ω/V 이상) 모니터링 기능(IMD) 연동."
   },
   {
     "id": "15",
     "category": "구조",
     "item": "별도 다발 구성",
     "criteria": "ISO 와이어 (+ / -)를 각각 별도 다발로 구성하여 절연을 확보했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "16",
     "category": "구조",
     "item": "쇼트 방지 대안",
     "criteria": "별도 구성 불가 시, 추가적인 쇼트 방지(보호재 등) 방안을 제시했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "ISO 16750-3 진동 환경 하에서의 기계적 결합부 피로 수명(Endurance) 10년/20만km 만족 설계 및 전장 패키지 최적화 검토."
   },
   {
     "id": "17",
     "category": "구조",
     "item": "ISO 분기 위치",
     "criteria": "ISO 와이어가 릴레이 전단(BATT <-> 릴레이 사이)에서 적절히 분기되는가?",
-    "ee_consideration": "절연 감시 시스템(IMD) 신뢰성 확보. 기생 정전용량(Parasitic Capacitance)에 의한 측정 오차 최소화 설계."
+    "ee_consideration": "SAE J2344 고전압 안전. 릴레이 융착(Welding) 방지를 위한 Pre-charge 효율 95% 이상 검증 및 돌입 전류(Inrush Current) i2t 적합성 분석."
   },
   {
     "id": "18",
     "category": "구조",
     "item": "이격거리 규격",
     "criteria": "퓨즈 연결 와이어 및 버스바의 이격거리가 전압별 기준을 준수하는가?",
-    "ee_consideration": "IEC 60664-1 (Insulation Coordination). 오염 등급 2 기준, 800V 시스템 상시 이격 거리 5.5mm 이상 상시 확보."
+    "ee_consideration": "ISO 6469-3 (Electrical Safety). 고전압/저전압 배선 간 최소 50mm 물리적 이격 및 격벽 설치로 절연 파괴 시 2차 시스템 소손 방지 및 EMI 차폐 강화."
   },
   {
     "id": "19",
     "category": "구조",
     "item": "퓨즈 이격거리",
     "criteria": "퓨즈 (+ / -) 단자 간의 이격거리는 충분히 확보되었는가?",
-    "ee_consideration": "IEC 60664-1 (Insulation Coordination). 오염 등급 2 기준, 800V 시스템 상시 이격 거리 5.5mm 이상 상시 확보."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "20",
     "category": "구조",
     "item": "MIDI 퓨즈 매칭",
     "criteria": "MIDI 퓨즈 적용 시 퓨즈 단자와 터미널 간의 매칭 근거 자료가 있는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "21",
     "category": "구조",
     "item": "상대물 버스바",
     "criteria": "ISO 퓨즈 조립을 위한 상대물 버스바 두께가 퓨즈 사양에 적합한가?",
-    "ee_consideration": "MS153-02 동 전도율 관리. 전식(Galvanic Corrosion) 방지를 위한 볼트/단자 간 도금 사양(Sn-Ag) 매칭."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "22",
     "category": "구조",
     "item": "설체결 방지",
     "criteria": "퓨즈 및 단자류의 설체결(느슨함) 방지를 위한 기구적 대책이 있는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "23",
     "category": "구조",
     "item": "ISO 퓨즈 커버",
     "criteria": "ISO 퓨즈 커버가 퓨즈의 설체결을 보완하거나 보호할 수 있는 구조인가?",
-    "ee_consideration": "절연 감시 시스템(IMD) 신뢰성 확보. 기생 정전용량(Parasitic Capacitance)에 의한 측정 오차 최소화 설계."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "24",
     "category": "구조",
     "item": "W/H 고정 구조",
     "criteria": "250mm 이상의 구간에서 고정 클립 또는 하우징 고정 구조를 반영했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "SAE J1742 고주파 진동 조건 검토. 케이블 유동에 의한 터미널 기계적 응력(Stress) 5N 이하 관리 및 고온 신축성 고려한 루프 길이 최적화."
   },
   {
     "id": "25",
     "category": "구조",
     "item": "클립 배치",
     "criteria": "W/H 고정을 위한 클립이 적절한 간격으로 배치되었는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "SAE J1742 고주파 진동 조건 검토. 케이블 유동에 의한 터미널 기계적 응력(Stress) 5N 이하 관리 및 고온 신축성 고려한 루프 길이 최적화."
   },
   {
     "id": "26",
     "category": "구조",
     "item": "릴레이 커넥터",
     "criteria": "릴레이 체결 커넥터의 오조립 방지를 위한 물리적 이격 거리를 확보했는가?",
-    "ee_consideration": "스위칭 서지(Surge) V = L * di/dt 관리. 릴레이 융착 방지를 위한 프리차징 효율(95% 이상) 설계 확인."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "27",
     "category": "구조",
     "item": "오조립 방지안",
     "criteria": "기구적으로 오조립이 불가능하도록 Poka-yoke 설계가 적용되었는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "ISO 16750-3 진동 환경 하에서의 기계적 결합부 피로 수명(Endurance) 10년/20만km 만족 설계 및 전장 패키지 최적화 검토."
   },
   {
     "id": "28",
     "category": "구조",
     "item": "릴레이 인접 배치",
     "criteria": "메인 릴레이와 보조 릴레이(OBC 등)가 혼동되지 않도록 구성했는가?",
-    "ee_consideration": "스위칭 서지(Surge) V = L * di/dt 관리. 릴레이 융착 방지를 위한 프리차징 효율(95% 이상) 설계 확인."
+    "ee_consideration": "SAE J2344 고전압 안전. 릴레이 융착(Welding) 방지를 위한 Pre-charge 효율 95% 이상 검증 및 돌입 전류(Inrush Current) i2t 적합성 분석."
   },
   {
     "id": "29",
     "category": "구조",
     "item": "이격거리 예외",
     "criteria": "오조립 방지 구조를 별도 제안하여 승인된 경우, 이격거리 규제를 준수하는가?",
-    "ee_consideration": "IEC 60664-1 (Insulation Coordination). 오염 등급 2 기준, 800V 시스템 상시 이격 거리 5.5mm 이상 상시 확보."
+    "ee_consideration": "ISO 6469-3 (Electrical Safety). 고전압/저전압 배선 간 최소 50mm 물리적 이격 및 격벽 설치로 절연 파괴 시 2차 시스템 소손 방지 및 EMI 차폐 강화."
   },
   {
     "id": "30",
     "category": "구조",
     "item": "프리차지 커넥터",
     "criteria": "프리차지 릴레이와 저항 커넥터가 동일할 경우 이격거리를 확보했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "31",
     "category": "구조",
     "item": "터미널 이원화",
     "criteria": "오조립 방지를 위해 터미널 형상을 다르게 설계하였는가?",
-    "ee_consideration": "ISO 6469-3 (Electrical Safety). HV-LV 혼선 방지를 위한 물리적 격벽 및 Twist-pair 적용으로 EMI 감쇄."
+    "ee_consideration": "ISO 16750-3 진동 환경 하에서의 기계적 결합부 피로 수명(Endurance) 10년/20만km 만족 설계 및 전장 패키지 최적화 검토."
   },
   {
     "id": "32",
     "category": "구조",
     "item": "링터미널 방지",
     "criteria": "고전압 단자의 링터미널 오조립 방지 구조가 적용되었는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "33",
     "category": "구조",
     "item": "가이드 준수",
     "criteria": "커넥터 고정을 위한 하우징 구조가 커넥터 제조사의 가이드를 따르는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "SAE J1742 고주파 진동 조건 검토. 케이블 유동에 의한 터미널 기계적 응력(Stress) 5N 이하 관리 및 고온 신축성 고려한 루프 길이 최적화."
   },
   {
     "id": "34",
     "category": "구조",
     "item": "커넥터류 고정력",
     "criteria": "조립된 커넥터 및 단자류의 체결 고정력은 진동 조건에서 충분한가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "SAE J1742 고주파 진동 조건 검토. 케이블 유동에 의한 터미널 기계적 응력(Stress) 5N 이하 관리 및 고온 신축성 고려한 루프 길이 최적화."
   },
   {
     "id": "35",
     "category": "구조",
     "item": "리브(Rib) 보강",
     "criteria": "버스바 길이가 과다할 경우 케이스 리브 추가 또는 중간 볼트 체결을 했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "36",
     "category": "구조",
     "item": "진동 내구성",
     "criteria": "버스바 길이 과다 시 진동 내구성 확보를 위한 지지 구조가 적용되었는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "37",
     "category": "구조",
     "item": "버스바 레이아웃",
     "criteria": "적절한 버스바 길이와 경로로 내부 레이아웃을 구성하였는가?",
-    "ee_consideration": "MS153-02 동 전도율 관리. 전식(Galvanic Corrosion) 방지를 위한 볼트/단자 간 도금 사양(Sn-Ag) 매칭."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "38",
     "category": "구조",
     "item": "경로 적정성",
     "criteria": "버스바의 전체적인 경로가 조립 및 절연 면에서 적절한가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "39",
     "category": "구조",
     "item": "GAP 확보",
     "criteria": "주변 부품 및 케이스와 조립 공차를 포함한 충분한 간격(GAP)을 확보했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "40",
     "category": "구조",
     "item": "간섭 유무",
     "criteria": "작동 범위 및 공차 상태에서 주변 부품과의 간섭은 전혀 없는가?",
-    "ee_consideration": "ISO 16750-3 공진 및 진동 규격 검토. 패키지 소형화 시 절연 연면거리(Creepage) 및 공간거리(Clearance) 확보 설계 필수 (IEC 60664-1)."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "41",
     "category": "구조",
     "item": "전류센서 방지",
     "criteria": "전류센서 조립 시 방향이 바뀌지 않도록 역체결 방지 구조를 적용했는가?",
-    "ee_consideration": "Hall-effect/Shunt 센서 선형성 확보. CAN/LIN 하이-스피드 통신 무결성 및 영점 드리프트 보정 알고리즘 연계."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "42",
     "category": "구조",
     "item": "방향 일치",
     "criteria": "전류센서의 방향이 배터리 방전 시 (+) 값이 나오는 방향으로 설계되었는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "43",
     "category": "구조",
     "item": "회전 방지 구조",
     "criteria": "나사 체결 시 단자가 돌아가지 않도록 회전 방지(Anti-rotation) 구조를 갖췄는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "44",
     "category": "구조",
     "item": "나사 사용 기준",
     "criteria": "후방향(또는 정방향) 나사 사용 기준에 따른 회전 방지 설계 여부.",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "ISO 16750-3 진동 환경 하에서의 기계적 결합부 피로 수명(Endurance) 10년/20만km 만족 설계 및 전장 패키지 최적화 검토."
   },
   {
     "id": "45",
     "category": "구조",
     "item": "온도센서 방지",
     "criteria": "온도센서 체결 시 센서가 회전하여 와이어가 꼬이지 않도록 설계했는가?",
-    "ee_consideration": "Hall-effect/Shunt 센서 선형성 확보. CAN/LIN 하이-스피드 통신 무결성 및 영점 드리프트 보정 알고리즘 연계."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "46",
     "category": "구조",
     "item": "와이어 소손 방지",
     "criteria": "회전 방지 구조 설계 시 온도센서 와이어가 씹히거나 소손될 우려는 없는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "Hall-effect 센서 비선형성 보정. 고자기장 간섭(Magnetic Interference) 차폐 및 CAN High-speed 통신 샘플링 레이트(500kbps+) 무결성 검증."
   },
   {
     "id": "47",
     "category": "구조",
     "item": "센서 바디 절연",
     "criteria": "온도센서 회전 방지 구조가 센서 바디에 닿아 절연 파괴가 발생하지 않는가?",
-    "ee_consideration": "Hall-effect/Shunt 센서 선형성 확보. CAN/LIN 하이-스피드 통신 무결성 및 영점 드리프트 보정 알고리즘 연계."
+    "ee_consideration": "Hall-effect 센서 비선형성 보정. 고자기장 간섭(Magnetic Interference) 차폐 및 CAN High-speed 통신 샘플링 레이트(500kbps+) 무결성 검증."
   },
   {
     "id": "48",
     "category": "구조",
     "item": "바디 밀착",
     "criteria": "온도센서 바디가 측정 대상인 버스바와 전체적으로 밀착되는 구조인가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "49",
     "category": "구조",
     "item": "안착 면적",
     "criteria": "온도센서가 조립되는 면적이 충분히 확보되었는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "50",
     "category": "구조",
     "item": "센서 변형 확인",
     "criteria": "온도센서 체결 시 센서 자체가 틀어지거나 기계적 변형이 발생하지 않는가?",
-    "ee_consideration": "Hall-effect/Shunt 센서 선형성 확보. CAN/LIN 하이-스피드 통신 무결성 및 영점 드리프트 보정 알고리즘 연계."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "51",
     "category": "구조",
     "item": "레그(Leg) 두께",
     "criteria": "체결 토크에 의한 센서 변형을 방지하기 위해 링터미널 및 레그 두께가 충분한가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "52",
     "category": "구조",
     "item": "단자 사이즈",
     "criteria": "BPA 체결 버스바 홀(Hole)과 BATT 단자 스터드 볼트 사이즈가 일치하는가?",
-    "ee_consideration": "ISO 16750-3 공진 및 진동 규격 검토. 패키지 소형화 시 절연 연면거리(Creepage) 및 공간거리(Clearance) 확보 설계 필수 (IEC 60664-1)."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "53",
     "category": "구조",
     "item": "구경 적합성",
     "criteria": "BPA 버스바와 BATT 단자의 접촉면 및 볼트 구경 사이즈가 적절한가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "54",
     "category": "구조",
     "item": "나사산 여유",
     "criteria": "버스바 체결 이후 너트 위로 나사산이 2~3개 이상 노출되는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "55",
     "category": "구조",
     "item": "INV 단자 사이즈",
     "criteria": "고전압 커넥터/버스바와 인버터(INV) 단자 볼트 사이즈가 적절한가?",
-    "ee_consideration": "ISO 16750-3 공진 및 진동 규격 검토. 패키지 소형화 시 절연 연면거리(Creepage) 및 공간거리(Clearance) 확보 설계 필수 (IEC 60664-1)."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "56",
     "category": "구조",
     "item": "스터드 볼트 매칭",
     "criteria": "HV 커넥터 체결 홀과 BATT 단자 스터드 볼트 규격이 상호 일치하는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "ISO 6469-3 (Electrical Safety). 고전압/저전압 배선 간 최소 50mm 물리적 이격 및 격벽 설치로 절연 파괴 시 2차 시스템 소손 방지 및 EMI 차폐 강화."
   },
   {
     "id": "57",
     "category": "구조",
     "item": "상부커버 탈거성",
     "criteria": "ASSY(조립) 상태에서 BDU 또는 PRA 상부 커버의 탈거가 용이한가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "ISO 16750-3 진동 환경 하에서의 기계적 결합부 피로 수명(Endurance) 10년/20만km 만족 설계 및 전장 패키지 최적화 검토."
   },
   {
     "id": "58",
     "category": "조립성",
     "item": "협력사 협의",
     "criteria": "BSA 협력사와 PRA 마운팅 포인트 및 치수 공차에 대해 협의를 완료했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "배터리 팩 전장 시스템 설계 표준(HMC ES/MS) 및 국제 표준(ISO/IEC) 부품별 세부 사양 정합성 확인."
   },
   {
     "id": "59",
     "category": "조립성",
     "item": "홀 사이즈 공차",
     "criteria": "BSA 파트(판재)와의 조립을 위해 홀 사이즈 및 공차를 공유했는가?",
-    "ee_consideration": "ISO 16750-3 공진 및 진동 규격 검토. 패키지 소형화 시 절연 연면거리(Creepage) 및 공간거리(Clearance) 확보 설계 필수 (IEC 60664-1)."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "60",
     "category": "조립성",
     "item": "러버 부시 간섭",
     "criteria": "PRA 러버 부시 조립 시 주변 볼트 및 구조물과 간섭이 없는가?",
-    "ee_consideration": "ISO 16750-3 공진 및 진동 규격 검토. 패키지 소형화 시 절연 연면거리(Creepage) 및 공간거리(Clearance) 확보 설계 필수 (IEC 60664-1)."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "61",
     "category": "조립성",
     "item": "링터미널 H/W",
     "criteria": "고전압 단자용 링터미널 조립용 하드웨어(Bolt/Nut)가 적합한 사양인가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "62",
     "category": "조립성",
     "item": "나사산 높이",
     "criteria": "너트 체결 완료 후 노출되는 나사산의 개수가 3개 이상인가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "63",
     "category": "조립성",
     "item": "호칭경 선정",
     "criteria": "링터미널 체결 볼트의 호칭경이 전류량(대전류/저전류)에 맞게 선정되었는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "64",
     "category": "조립성",
     "item": "마찰 면적 확보",
     "criteria": "링터미널의 폭이 체결용 볼트/너트의 와셔 면적보다 넓어 면압이 충분한가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "65",
     "category": "조립성",
     "item": "단자 압착 편차",
     "criteria": "링터미널이 압착된 상태에서의 치수 편차를 고려하여 설계를 검토했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "66",
     "category": "조립성",
     "item": "릴레이 단자 볼트",
     "criteria": "메인 릴레이 단자부 볼트 길이 사양이 적절한지 협력사와 협의했는가?",
-    "ee_consideration": "스위칭 서지(Surge) V = L * di/dt 관리. 릴레이 융착 방지를 위한 프리차징 효율(95% 이상) 설계 확인."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "67",
     "category": "조립성",
     "item": "여유 길이 확보",
     "criteria": "릴레이 탑 부분의 여유 길이를 점검하여 볼트 체결 불량을 방지했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "68",
     "category": "조립성",
     "item": "나사산 깊이",
     "criteria": "릴레이 단자부 내부 나사산 깊이를 고려하여 볼트 길이를 최적화했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "69",
     "category": "조립성",
     "item": "유효 체결량",
     "criteria": "최소 유효 체결량(M6 기준 7mm 이상 등)을 확보하여 축력이 유지되는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "IEC 60664-1 기준 준수. 800V 시스템 기준 최소 연면거리(Creepage) 5.5mm 이상 확보 및 진동 시 전력 부품 간 동적 간섭 3.0mm 이상 확보 설계."
   },
   {
     "id": "70",
     "category": "조립성",
     "item": "체결 토크/속도",
     "criteria": "공정상의 볼트 체결 토크 및 속도 기준이 릴레이 사양 내에 있는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "71",
     "category": "조립성",
     "item": "공차 누적 점검",
     "criteria": "버스바 두께 및 부품 공차를 포함하여 체결 볼트 길이가 적합한가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "72",
     "category": "조립성",
     "item": "표준 부품 적용",
     "criteria": "메인 릴레이 체결 볼트 등이 HMC 표준 부품 및 도면 사양과 일치하는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "73",
     "category": "조립성",
     "item": "실물 시험 검증",
     "criteria": "최대 체결 토크의 1.7배에서도 나사산 손상이 없는지 실물로 확인했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "74",
     "category": "조립성",
     "item": "매직스레드 적용",
     "criteria": "조립 불량 방지가 필요한 구간에 매직스레드(Magic Thread) 볼트를 적용했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "배터리 팩 전장 시스템 설계 표준(HMC ES/MS) 및 국제 표준(ISO/IEC) 부품별 세부 사양 정합성 확인."
   },
   {
     "id": "75",
     "category": "정비성",
     "item": "진동 열림 방지",
     "criteria": "상부 케이스가 진동이나 충격에 의해 쉽게 열리거나 파손되지 않는 구조인가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "배터리 팩 전장 시스템 설계 표준(HMC ES/MS) 및 국제 표준(ISO/IEC) 부품별 세부 사양 정합성 확인."
   },
   {
     "id": "76",
     "category": "정비성",
     "item": "와이어 씹힘 방지",
     "criteria": "상부 케이스 조립 시 내부 커넥터 및 와이어가 끼이거나 씹힐 우려가 없는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "ISO 20653 IP67/IP69K 방수 성능. 커넥터 체결 시 삽입력(Insertion Force) 75N 이하 및 조립 확인용 CPA(Connector Position Assurance) 적용 유무 기술 검토."
   },
   {
     "id": "77",
     "category": "정비성",
     "item": "조립 공차 관리",
     "criteria": "상부 케이스로 고정되는 커넥터 및 단자부의 조립 방향 공차가 적절한가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "SAE J1742 고주파 진동 조건 검토. 케이블 유동에 의한 터미널 기계적 응력(Stress) 5N 이하 관리 및 고온 신축성 고려한 루프 길이 최적화."
   },
   {
     "id": "78",
     "category": "정비성",
     "item": "체결 방향",
     "criteria": "BSA 조립 상태에서 PRA 외부 커넥터의 체결 방향이 작업하기 용이한가(수평 등)?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "79",
     "category": "정비성",
     "item": "후크 파손 방지",
     "criteria": "릴레이 및 저항 조립 시 고정용 후크(Hook)가 쉽게 파손되지 않는 재질/두께인가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "SAE J1742 고주파 진동 조건 검토. 케이블 유동에 의한 터미널 기계적 응력(Stress) 5N 이하 관리 및 고온 신축성 고려한 루프 길이 최적화."
   },
   {
     "id": "80",
     "category": "정비성",
     "item": "인입부 표기",
     "criteria": "상부 케이스 전면에 BATT (+/-), INV (+/-) 등 고전압 명칭을 표기했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "배터리 팩 전장 시스템 설계 표준(HMC ES/MS) 및 국제 표준(ISO/IEC) 부품별 세부 사양 정합성 확인."
   },
   {
     "id": "81",
     "category": "정비성",
     "item": "소손 여부 체크",
     "criteria": "프리차지 저항 소손 시 외부에서 점검 및 분석이 용이한 구조인가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "배터리 팩 전장 시스템 설계 표준(HMC ES/MS) 및 국제 표준(ISO/IEC) 부품별 세부 사양 정합성 확인."
   },
   {
     "id": "82",
     "category": "정비성",
     "item": "탈거 도구 진입",
     "criteria": "프리차지 저항 등 소모성 부품 탈거를 위한 작업 도구(Tool) 진입이 용이한가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "배터리 팩 전장 시스템 설계 표준(HMC ES/MS) 및 국제 표준(ISO/IEC) 부품별 세부 사양 정합성 확인."
   },
   {
     "id": "83",
     "category": "정비성",
     "item": "볼트/너트 파단",
     "criteria": "조립 및 정비 시 볼트/너트 파단 토크가 권장 체결 토크보다 충분히 큰가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "84",
     "category": "회로",
     "item": "프리차지 배치",
     "criteria": "Main Relay(+)와 프리차지 회로(릴레이+저항)가 병렬로 올바르게 연결되었는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "SAE J2344 고전압 안전. 릴레이 융착(Welding) 방지를 위한 Pre-charge 효율 95% 이상 검증 및 돌입 전류(Inrush Current) i2t 적합성 분석."
   },
   {
     "id": "85",
     "category": "회로",
     "item": "전류센서 위치",
     "criteria": "전류가 흐르는 모든 경로를 모니터링할 수 있도록 센서가 최전단에 탑재되었는가?",
-    "ee_consideration": "Hall-effect/Shunt 센서 선형성 확보. CAN/LIN 하이-스피드 통신 무결성 및 영점 드리프트 보정 알고리즘 연계."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "86",
     "category": "회로",
     "item": "ISO SNSR 분기",
     "criteria": "메인 릴레이 전단에서 ISO 센서가 분기되어 OFF 시 절연 측정이 가능한가?",
-    "ee_consideration": "절연 감시 시스템(IMD) 신뢰성 확보. 기생 정전용량(Parasitic Capacitance)에 의한 측정 오차 최소화 설계."
+    "ee_consideration": "SAE J2344 고전압 안전. 릴레이 융착(Welding) 방지를 위한 Pre-charge 효율 95% 이상 검증 및 돌입 전류(Inrush Current) i2t 적합성 분석."
   },
   {
     "id": "87",
     "category": "회로",
     "item": "보조 릴레이 배치",
     "criteria": "OBC, 승온 히터용 릴레이가 부품 작동 및 퓨즈 보호를 고려하여 배치되었는가?",
-    "ee_consideration": "스위칭 서지(Surge) V = L * di/dt 관리. 릴레이 융착 방지를 위한 프리차징 효율(95% 이상) 설계 확인."
+    "ee_consideration": "SAE J2344 고전압 안전. 릴레이 융착(Welding) 방지를 위한 Pre-charge 효율 95% 이상 검증 및 돌입 전류(Inrush Current) i2t 적합성 분석."
   },
   {
     "id": "88",
     "category": "회로",
     "item": "퓨즈 보호 회로",
     "criteria": "OBC/ICCU/LDC 등의 퓨즈가 단락 시 회로를 보호할 수 있도록 적절히 배치되었는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "ISO 26262 기능 안전(ASIL-D). 과전류 발생 시 퓨즈 차단 곡선과 릴레이 스위칭 시간 간의 보호 협조(Selective Coordination) 설계로 시스템 안정성 확보."
   },
   {
     "id": "89",
     "category": "성능",
     "item": "전류 사양 타당성",
     "criteria": "BSA 성능 요구서(SR)의 정격 및 최대 전류 사양을 만족하는가?",
-    "ee_consideration": "ISO 26262 기능 안전 (ASIL-C/D). 과전류 차단 시나리오 및 퓨즈-릴레이-BMS 간 보호 협조(Selective Coordination) 검증."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "90",
     "category": "성능",
     "item": "버스바 SQ",
     "criteria": "전류 사양 및 급속 충전 전류를 고려하여 버스바 단면적(SQ)을 선정했는가?",
-    "ee_consideration": "LV 124(VWG 80000) 내전류 규격. 피크 전류(400A 급충 등) 발열 시 도체 온도 125℃ 이하 유지 및 De-rating 설계."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "91",
     "category": "성능",
     "item": "릴레이 사양",
     "criteria": "프리차징 전류 크기 및 전압을 고려하여 프리차지 릴레이 사양을 선정했는가?",
-    "ee_consideration": "스위칭 서지(Surge) V = L * di/dt 관리. 릴레이 융착 방지를 위한 프리차징 효율(95% 이상) 설계 확인."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "92",
     "category": "성능",
     "item": "저항 용량 선정",
     "criteria": "프리차지 저항 용량이 300ms 이내 충전을 만족하며 발열 용량이 충분한가?",
-    "ee_consideration": "LV 124(VWG 80000) 내전류 규격. 피크 전류(400A 급충 등) 발열 시 도체 온도 125℃ 이하 유지 및 De-rating 설계."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "93",
     "category": "성능",
     "item": "센서 정확도",
     "criteria": "전류센서의 측정 오차가 SOC 알고리즘 개발 요구사항(SR)을 만족하는가?",
-    "ee_consideration": "Hall-effect/Shunt 센서 선형성 확보. CAN/LIN 하이-스피드 통신 무결성 및 영점 드리프트 보정 알고리즘 연계."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "94",
     "category": "성능",
     "item": "LFP 대응",
     "criteria": "LFP 배터리 등 신규 사양 대응 시 전류센서 정확도에 대해 담당자와 협의했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "95",
     "category": "성능",
     "item": "와이어 선경",
     "criteria": "부품의 정격 및 최대 전류 부하를 고려하여 와이어 선경이 결정되었는가?",
-    "ee_consideration": "LV 124(VWG 80000) 내전류 규격. 피크 전류(400A 급충 등) 발열 시 도체 온도 125℃ 이하 유지 및 De-rating 설계."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "96",
     "category": "성능",
     "item": "R-T 테이블",
     "criteria": "온도센서의 R-T 테이블(25℃=10kΩ 등)이 BMS 하드웨어 사양과 일치하는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "Hall-effect 센서 비선형성 보정. 고자기장 간섭(Magnetic Interference) 차폐 및 CAN High-speed 통신 샘플링 레이트(500kbps+) 무결성 검증."
   },
   {
     "id": "97",
     "category": "성능",
     "item": "난연/내열 사양",
     "criteria": "사출물이 난연 등급 V0 이상 및 180℃ 이상의 열변형 온도를 만족하는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "ISO 26262 ASIL-C/D 목표. 하드웨어 결함 진단율(FIT) 및 전압/전류/온도 모니터링 시스템의 안전 메커니즘 무결성 검증."
   },
   {
     "id": "98",
     "category": "2D도면",
     "item": "BOM 구성",
     "criteria": "사양에 따라 항목별 수량, 재질, 도금 스펙 등이 BOM에 정확히 명기되었는가?",
-    "ee_consideration": "IATF 16949 핵심 요구사항. 특별특성(IC/CC) 관리 및 마킹 표준 준수 여부 전산 시스템(PLM) 연동 확인."
+    "ee_consideration": "IATF 16949 핵심 요구사항 반영. 도면 내 특별특성(Critical/Significant Characteristic) 마킹 및 양산 관리 지점(Control Plan) 연동 무결성 확인."
   },
   {
     "id": "99",
     "category": "2D도면",
     "item": "Shown on 부품",
     "criteria": "도면 내 Shown-on 부품 리스트를 누락 없이 나열하였는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "IATF 16949 핵심 요구사항 반영. 도면 내 특별특성(Critical/Significant Characteristic) 마킹 및 양산 관리 지점(Control Plan) 연동 무결성 확인."
   },
   {
     "id": "100",
     "category": "2D도면",
     "item": "커넥터 판배열",
     "criteria": "현대차 표준(ES91100-00 등)에 따라 커넥터 핀맵을 도면에 명기했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "ISO 20653 IP67/IP69K 방수 성능. 커넥터 체결 시 삽입력(Insertion Force) 75N 이하 및 조립 확인용 CPA(Connector Position Assurance) 적용 유무 기술 검토."
   },
   {
     "id": "101",
     "category": "2D도면",
     "item": "기입 위치",
     "criteria": "Female(우상), Male(좌상) 1번 핀 설정 기준을 도면에 시각화했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "IATF 16949 핵심 요구사항 반영. 도면 내 특별특성(Critical/Significant Characteristic) 마킹 및 양산 관리 지점(Control Plan) 연동 무결성 확인."
   },
   {
     "id": "102",
     "category": "2D도면",
     "item": "저항 허용 오차",
     "criteria": "온도센서의 5℃ 단위별 저항값과 오차(Tolerance)를 모두 명기했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "Hall-effect 센서 비선형성 보정. 고자기장 간섭(Magnetic Interference) 차폐 및 CAN High-speed 통신 샘플링 레이트(500kbps+) 무결성 검증."
   },
   {
     "id": "103",
     "category": "2D도면",
     "item": "길이 및 공차",
     "criteria": "시각적 위치별 와이어의 길이 및 허용 공차를 도면에 정확히 기재했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "IATF 16949 핵심 요구사항 반영. 도면 내 특별특성(Critical/Significant Characteristic) 마킹 및 양산 관리 지점(Control Plan) 연동 무결성 확인."
   },
   {
     "id": "104",
     "category": "2D도면",
     "item": "공급 업체 기입",
     "criteria": "메인 릴레이, 퓨즈 등 주요 사급품의 공급 업체와 수량을 기재했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "SAE J2344 고전압 안전. 릴레이 융착(Welding) 방지를 위한 Pre-charge 효율 95% 이상 검증 및 돌입 전류(Inrush Current) i2t 적합성 분석."
   },
   {
     "id": "105",
     "category": "2D도면",
     "item": "퓨즈 성능 표기",
     "criteria": "퓨즈의 정격 전압, 전류, 차단 용량 등 기본 사양을 표기했는가?",
-    "ee_consideration": "ISO 26262 기능 안전 (ASIL-C/D). 과전류 차단 시나리오 및 퓨즈-릴레이-BMS 간 보호 협조(Selective Coordination) 검증."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "106",
     "category": "2D도면",
     "item": "프리차지 저항",
     "criteria": "프리차지 저항의 용량(W) 및 저항치(Ω)를 도면에 명기했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "107",
     "category": "2D도면",
     "item": "채널별 사양",
     "criteria": "전류센서의 측정 범위, 동작 온도, 출력 전압 등 상세 사양을 기재했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "108",
     "category": "2D도면",
     "item": "I-T 커브(퓨즈)",
     "criteria": "퓨즈의 특성 곡선(I-T Curve)을 도면에 첨부하였는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "109",
     "category": "2D도면",
     "item": "I-T 커브(릴레이)",
     "criteria": "주요 릴레이의 특성 곡선을 도면에 기입하여 성능을 확인했는가?",
-    "ee_consideration": "스위칭 서지(Surge) V = L * di/dt 관리. 릴레이 융착 방지를 위한 프리차징 효율(95% 이상) 설계 확인."
+    "ee_consideration": "SAE J2344 고전압 안전. 릴레이 융착(Welding) 방지를 위한 Pre-charge 효율 95% 이상 검증 및 돌입 전류(Inrush Current) i2t 적합성 분석."
   },
   {
     "id": "110",
     "category": "2D도면",
     "item": "중량 기입",
     "criteria": "PRA 및 내부 주요 디바이스의 총 중량을 도면에 명기했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "IATF 16949 핵심 요구사항 반영. 도면 내 특별특성(Critical/Significant Characteristic) 마킹 및 양산 관리 지점(Control Plan) 연동 무결성 확인."
   },
   {
     "id": "111",
     "category": "2D도면",
     "item": "회로 구성도",
     "criteria": "내부 고전압 회로에 대한 다이어그램(회로도)을 도면에 기재했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "IATF 16949 핵심 요구사항 반영. 도면 내 특별특성(Critical/Significant Characteristic) 마킹 및 양산 관리 지점(Control Plan) 연동 무결성 확인."
   },
   {
     "id": "112",
     "category": "2D도면",
     "item": "버스바 스펙",
     "criteria": "버스바 단자대의 단면적(SQ) 및 재료, 도금 사양을 명기했는가?",
-    "ee_consideration": "MS153-02 동 전도율 관리. 전식(Galvanic Corrosion) 방지를 위한 볼트/단자 간 도금 사양(Sn-Ag) 매칭."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "113",
     "category": "2D도면",
     "item": "조임 토크 기준",
     "criteria": "각 체결 부위별 관리 토크 기준(HMC 관리 기준 등)을 기입했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "114",
     "category": "2D도면",
     "item": "마운팅 토크",
     "criteria": "디바이스 연결부 외에 PRA 마운팅부의 조임 토크를 명기했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "115",
     "category": "2D도면",
     "item": "안전 심볼",
     "criteria": "고전압 경고 문구 및 안전 심볼이 도면에 명확히 표기되었는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "IATF 16949 핵심 요구사항 반영. 도면 내 특별특성(Critical/Significant Characteristic) 마킹 및 양산 관리 지점(Control Plan) 연동 무결성 확인."
   },
   {
     "id": "116",
     "category": "2D도면",
     "item": "특별특성 표기",
     "criteria": "도면 내 특별특성(IC / CC) 관리 항목이 명확히 표시되었는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "IATF 16949 핵심 요구사항 반영. 도면 내 특별특성(Critical/Significant Characteristic) 마킹 및 양산 관리 지점(Control Plan) 연동 무결성 확인."
   },
   {
     "id": "117",
     "category": "2D도면",
     "item": "유출 방지 규제",
     "criteria": "60V 이상 체결부에 런다운 각도 및 최종 각도 규제를 도면에 기재했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "118",
     "category": "2D도면",
     "item": "타발유 사양",
     "criteria": "무도금 버스바 적용 시 타발유 사양을 확인하고 도면에 표기했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "119",
     "category": "2D도면",
     "item": "ES01000-00",
     "criteria": "심볼마크 표시 표준화 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "120",
     "category": "2D도면",
     "item": "ES05206-00",
     "criteria": "보통치수 허용차 - 프레스 가공 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "121",
     "category": "2D도면",
     "item": "ES05224-00",
     "criteria": "보통치수 허용차 - 플라스틱 성형품 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "122",
     "category": "2D도면",
     "item": "ES05227-00",
     "criteria": "나사의 표준 체결 토크 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "123",
     "category": "2D도면",
     "item": "ES37514-03",
     "criteria": "파워 릴레이 아세이 성능 규격 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "SAE J2344 고전압 안전. 릴레이 융착(Welding) 방지를 위한 Pre-charge 효율 95% 이상 검증 및 돌입 전류(Inrush Current) i2t 적합성 분석."
   },
   {
     "id": "124",
     "category": "2D도면",
     "item": "ES91100-00",
     "criteria": "와이어 하네스 도면 표기 및 구성법 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "IATF 16949 핵심 요구사항 반영. 도면 내 특별특성(Critical/Significant Characteristic) 마킹 및 양산 관리 지점(Control Plan) 연동 무결성 확인."
   },
   {
     "id": "125",
     "category": "2D도면",
     "item": "ES91101-00",
     "criteria": "와이어 하네스 제조공정 관리 및 시험 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "126",
     "category": "2D도면",
     "item": "ES91107-02",
     "criteria": "대전류 단자 압착 관리 규격 (선택)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "127",
     "category": "2D도면",
     "item": "ES91710-05",
     "criteria": "자동차용 전선 통합 규격 (선택)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "현대차 HMC 기술 표준(ES91100-01) 및 법규(ECE R100 Rev.3) 만족 여부. 글로벌 시장 대응을 위한 시스템 레벨의 절연 저항(100Ω/V 이상) 모니터링 기능(IMD) 연동."
   },
   {
     "id": "128",
     "category": "2D도면",
     "item": "ES91500-00",
     "criteria": "커넥터 - 일반 규격 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "ISO 20653 IP67/IP69K 방수 성능. 커넥터 체결 시 삽입력(Insertion Force) 75N 이하 및 조립 확인용 CPA(Connector Position Assurance) 적용 유무 기술 검토."
   },
   {
     "id": "129",
     "category": "2D도면",
     "item": "ES91500-02",
     "criteria": "전장품 커넥터 단자 도금 관리 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "130",
     "category": "2D도면",
     "item": "ES91500-20",
     "criteria": "고전압 커넥터 - 일반 규격 (선택)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "ISO 20653 IP67/IP69K 방수 성능. 커넥터 체결 시 삽입력(Insertion Force) 75N 이하 및 조립 확인용 CPA(Connector Position Assurance) 적용 유무 기술 검토."
   },
   {
     "id": "131",
     "category": "2D도면",
     "item": "ES91831-03",
     "criteria": "미니 퓨즈 규격 (선택)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "ISO 26262 기능 안전(ASIL-D). 과전류 발생 시 퓨즈 차단 곡선과 릴레이 스위칭 시간 간의 보호 협조(Selective Coordination) 설계로 시스템 안정성 확보."
   },
   {
     "id": "132",
     "category": "2D도면",
     "item": "ES91851-00",
     "criteria": "미디 퓨즈 규격 (선택)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "ISO 26262 기능 안전(ASIL-D). 과전류 발생 시 퓨즈 차단 곡선과 릴레이 스위칭 시간 간의 보호 협조(Selective Coordination) 설계로 시스템 안정성 확보."
   },
   {
     "id": "133",
     "category": "2D도면",
     "item": "ES91861-00",
     "criteria": "EV용 유리관 퓨즈 규격 (선택)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "ISO 26262 기능 안전(ASIL-D). 과전류 발생 시 퓨즈 차단 곡선과 릴레이 스위칭 시간 간의 보호 협조(Selective Coordination) 설계로 시스템 안정성 확보."
   },
   {
     "id": "134",
     "category": "2D도면",
     "item": "ES95230-00",
     "criteria": "래치 릴레이 규격 (선택)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "SAE J2344 고전압 안전. 릴레이 융착(Welding) 방지를 위한 Pre-charge 효율 95% 이상 검증 및 돌입 전류(Inrush Current) i2t 적합성 분석."
   },
   {
     "id": "135",
     "category": "2D도면",
     "item": "MS124-24",
     "criteria": "체결용 강선 및 볼트/너트 재질 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "136",
     "category": "2D도면",
     "item": "MS153-02",
     "criteria": "동 및 동합금의 판재 규격 (선택)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "현대차 HMC 기술 표준(ES91100-01) 및 법규(ECE R100 Rev.3) 만족 여부. 글로벌 시장 대응을 위한 시스템 레벨의 절연 저항(100Ω/V 이상) 모니터링 기능(IMD) 연동."
   },
   {
     "id": "137",
     "category": "2D도면",
     "item": "MS200-41",
     "criteria": "표준 시험 방법 - 연질 가류 고무 (선택)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "138",
     "category": "2D도면",
     "item": "MS201-07",
     "criteria": "부품 재질 표기 방법 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "139",
     "category": "2D도면",
     "item": "MS201-02",
     "criteria": "유해물질 금지 및 신고 규정 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "140",
     "category": "2D도면",
     "item": "MS213-80",
     "criteria": "난연 PP - 배터리팩 사출품용 (선택)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "141",
     "category": "2D도면",
     "item": "MS260-13",
     "criteria": "스폰지 고무 규격 (선택)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "현대차 HMC 기술 표준(ES91100-01) 및 법규(ECE R100 Rev.3) 만족 여부. 글로벌 시장 대응을 위한 시스템 레벨의 절연 저항(100Ω/V 이상) 모니터링 기능(IMD) 연동."
   },
   {
     "id": "142",
     "category": "2D도면",
     "item": "MS269-03",
     "criteria": "연질 가류 고무 규격 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "현대차 HMC 기술 표준(ES91100-01) 및 법규(ECE R100 Rev.3) 만족 여부. 글로벌 시장 대응을 위한 시스템 레벨의 절연 저항(100Ω/V 이상) 모니터링 기능(IMD) 연동."
   },
   {
     "id": "143",
     "category": "2D도면",
     "item": "MS341-17",
     "criteria": "흡음용 패드 사양 (선택)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "144",
     "category": "2D도면",
     "item": "MS373-12",
     "criteria": "마크 및 레이블 표준 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "145",
     "category": "2D도면",
     "item": "MS613-07",
     "criteria": "주석 도금 규격 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "현대차 HMC 기술 표준(ES91100-01) 및 법규(ECE R100 Rev.3) 만족 여부. 글로벌 시장 대응을 위한 시스템 레벨의 절연 저항(100Ω/V 이상) 모니터링 기능(IMD) 연동."
   },
   {
     "id": "146",
     "category": "2D도면",
     "item": "MS617-15",
     "criteria": "전기 아연 및 아연 합금 도금 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "147",
     "category": "2D도면",
     "item": "MS915-00",
     "criteria": "커넥터 일반 표준 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "ISO 20653 IP67/IP69K 방수 성능. 커넥터 체결 시 삽입력(Insertion Force) 75N 이하 및 조립 확인용 CPA(Connector Position Assurance) 적용 유무 기술 검토."
   },
   {
     "id": "148",
     "category": "2D도면",
     "item": "MS915-07",
     "criteria": "커넥터 단자 도금 - 주석 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "149",
     "category": "2D도면",
     "item": "MS917-02",
     "criteria": "구리 및 합금 단자용 재질 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "150",
     "category": "2D도면",
     "item": "MS940-01",
     "criteria": "표준 시험 방법 - 연소성 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "151",
     "category": "2D도면",
     "item": "MS941-03",
     "criteria": "열가소성 고분자 재료 - 커넥터용 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "ISO 20653 IP67/IP69K 방수 성능. 커넥터 체결 시 삽입력(Insertion Force) 75N 이하 및 조립 확인용 CPA(Connector Position Assurance) 적용 유무 기술 검토."
   },
   {
     "id": "152",
     "category": "2D도면",
     "item": "MS941-07",
     "criteria": "열가소성 고분자 재료 - 사출품용 (필수)",
-    "ee_consideration": "현대자동차 차세대 배터리 시스템 전장 부품 표준(ES91100, ES37514 등) 최신 제/개정 사항 반영 완료."
+    "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "153",
     "category": "커넥터블럭",
     "item": "갈림 방지",
     "criteria": "조립 및 진동 시 와이어 갈림 방지를 위해 하단에 내마모 테이프를 반영했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "배터리 팩 전장 시스템 설계 표준(HMC ES/MS) 및 국제 표준(ISO/IEC) 부품별 세부 사양 정합성 확인."
   },
   {
     "id": "154",
     "category": "커넥터블럭",
     "item": "W/H 길이 협의",
     "criteria": "커넥터 블록 인터락 와이어 길이에 대해 BSA 협력사와 협의를 마쳤는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "ISO 20653 IP67/IP69K 방수 성능. 커넥터 체결 시 삽입력(Insertion Force) 75N 이하 및 조립 확인용 CPA(Connector Position Assurance) 적용 유무 기술 검토."
   },
   {
     "id": "155",
     "category": "커넥터블럭",
     "item": "패키지 각도",
     "criteria": "커넥터 블록의 패키지 각도에 대해 BSA 협력사에서 최종 확인했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "ISO 20653 IP67/IP69K 방수 성능. 커넥터 체결 시 삽입력(Insertion Force) 75N 이하 및 조립 확인용 CPA(Connector Position Assurance) 적용 유무 기술 검토."
   },
   {
     "id": "156",
     "category": "커넥터블럭",
     "item": "마운팅 포인트",
     "criteria": "커넥터 블록의 고정 포인트 위치가 BSA 사양에 적합한가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "SAE J1742 고주파 진동 조건 검토. 케이블 유동에 의한 터미널 기계적 응력(Stress) 5N 이하 관리 및 고온 신축성 고려한 루프 길이 최적화."
   },
   {
     "id": "157",
     "category": "커넥터블럭",
     "item": "전원 연결성",
     "criteria": "메인 커넥터와 터미널, 버스바 간의 조립 및 전기적 연결성을 확인했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "158",
     "category": "커넥터블럭",
     "item": "버스바 도금",
     "criteria": "전원 연결 부위 버스바의 도금 사양이 규격에 맞게 설계되었는가?",
-    "ee_consideration": "MS153-02 동 전도율 관리. 전식(Galvanic Corrosion) 방지를 위한 볼트/단자 간 도금 사양(Sn-Ag) 매칭."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "159",
     "category": "커넥터블럭",
     "item": "차폐 및 수밀",
     "criteria": "커넥터 블록의 수밀 구조 및 차폐(Shield) 단자 연결성을 확인했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "160",
     "category": "커넥터블럭",
     "item": "상부커버 차폐",
     "criteria": "커넥터 블록과 배터리 상부 커버 간의 차폐 연결성을 최종 점검했는가?",
-    "ee_consideration": "배터리 시스템 전장 설계 가이드라인 및 현대차 HMC 전장 부품 표준 규격 준수성 검토."
+    "ee_consideration": "ISO 20653 IP67/IP69K 방수 성능. 커넥터 체결 시 삽입력(Insertion Force) 75N 이하 및 조립 확인용 CPA(Connector Position Assurance) 적용 유무 기술 검토."
   }
 ]

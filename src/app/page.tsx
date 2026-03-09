@@ -12,9 +12,14 @@ import {
   Maximize2,
   Cpu,
   Layers,
-  CheckCircle2
+  CheckCircle2,
+  Download,
+  Lock,
+  X,
+  Loader2
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import * as XLSX from 'xlsx';
 import data from '../data.json';
 
 const categories = [
@@ -33,6 +38,10 @@ export default function PRADashboard() {
   const [searchQuery, setSearchQuery] = useState("");
   const [mounted, setMounted] = useState(false);
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [isPasswordModalOpen, setPasswordModalOpen] = useState(false);
+  const [password, setPassword] = useState("");
+  const [isVerifying, setIsVerifying] = useState(false);
+  const [errorStatus, setErrorStatus] = useState("");
 
   useEffect(() => setMounted(true), []);
 
@@ -44,6 +53,55 @@ export default function PRADashboard() {
       item.criteria.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
+  const handleDownload = async () => {
+    setIsVerifying(true);
+    setErrorStatus("");
+
+    try {
+      const response = await fetch('/api/verify-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        // Prepare excel data
+        const excelData = data.map(item => ({
+          "번호": item.id,
+          "카테고리": item.category,
+          "검토 항목": item.item,
+          "상세 내용/기준": item.criteria,
+          "배터리 전장시스템 설계 고려사항 및 관련 규격": item.ee_consideration
+        }));
+
+        const worksheet = XLSX.utils.json_to_sheet(excelData);
+
+        // Style worksheet
+        const workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, "PRA_Checklist");
+
+        // Force column widths
+        const wscols = [
+          { wch: 6 }, { wch: 12 }, { wch: 30 }, { wch: 50 }, { wch: 80 }
+        ];
+        worksheet['!cols'] = wscols;
+
+        XLSX.writeFile(workbook, "PRA_Design_Master_Checklist.xlsx");
+
+        setPasswordModalOpen(false);
+        setPassword("");
+      } else {
+        setErrorStatus("비밀번호가 올바르지 않습니다.");
+      }
+    } catch (err) {
+      setErrorStatus("인증 시스템 오류가 발생했습니다.");
+    } finally {
+      setIsVerifying(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-[#0a0c10] text-slate-200 font-sans selection:bg-blue-500/30">
@@ -79,6 +137,15 @@ export default function PRADashboard() {
                 배터리 시스템 전장 설계 최적화를 위한 160개 기술 검토 가이드.
                 국제 표준 및 현대자동차 ES/MS 규격 기반 전문 엔지니어링 체크리스트.
               </p>
+            </div>
+            <div className="flex gap-4">
+              <button
+                onClick={() => setPasswordModalOpen(true)}
+                className="px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl flex items-center gap-3 transition-all font-bold shadow-xl shadow-blue-600/20 active:scale-95"
+              >
+                <Download className="w-5 h-5" />
+                Export to Excel
+              </button>
             </div>
           </motion.div>
         </header>
@@ -137,6 +204,79 @@ export default function PRADashboard() {
           </div>
         </div>
       </main>
+
+      {/* Password Modal */}
+      <AnimatePresence>
+        {isPasswordModalOpen && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-6">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+              onClick={() => setPasswordModalOpen(false)}
+            />
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              className="relative w-full max-w-md bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl"
+            >
+              <button
+                onClick={() => setPasswordModalOpen(false)}
+                className="absolute top-6 right-6 text-slate-500 hover:text-slate-300 transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>
+
+              <div className="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6">
+                <Lock className="w-8 h-8 text-blue-400" />
+              </div>
+
+              <h3 className="text-2xl font-bold text-white mb-2">Secure Download</h3>
+              <p className="text-slate-400 mb-8">체크리스트 엑셀 다운로드를 위해 부서 내부 비밀번호를 입력해 주세요.</p>
+
+              <div className="space-y-4">
+                <div className="relative">
+                  <input
+                    type="password"
+                    autoFocus
+                    placeholder="Enter password..."
+                    className={`w-full bg-slate-950 border ${errorStatus ? 'border-red-500/50' : 'border-slate-800'} rounded-2xl py-4 px-6 text-white focus:outline-none focus:border-blue-500/50 transition-all`}
+                    value={password}
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                      setErrorStatus("");
+                    }}
+                    onKeyDown={(e) => e.key === 'Enter' && handleDownload()}
+                  />
+                  {errorStatus && (
+                    <motion.p
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="absolute left-0 -top-6 text-xs text-red-400 font-medium"
+                    >
+                      {errorStatus}
+                    </motion.p>
+                  )}
+                </div>
+
+                <button
+                  onClick={handleDownload}
+                  disabled={isVerifying || !password}
+                  className="w-full bg-blue-600 hover:bg-blue-500 disabled:bg-slate-800 disabled:text-slate-500 disabled:cursor-not-allowed text-white font-bold py-4 rounded-2xl transition-all flex items-center justify-center gap-2"
+                >
+                  {isVerifying ? (
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                  ) : (
+                    "Confirm & Download"
+                  )}
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
@@ -164,8 +304,13 @@ function TableRow({ item, expanded, onToggle }: any) {
             <td colSpan={5} className="px-12 py-0">
               <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden pb-8 pt-4 border-t border-slate-800/50">
                 <div className="bg-slate-950/30 rounded-2xl p-6 border border-slate-800/50">
-                  <h4 className="text-xs uppercase tracking-widest font-bold text-slate-500 mb-2">System Integration Note</h4>
-                  <p className="text-slate-300 text-sm">현대자동차 HMC 자재 표준(MS) 및 기술 표준(ES) 정합성 확인 필수 항목입니다.</p>
+                  <h4 className="text-xs uppercase tracking-widest font-bold text-blue-500 mb-3 flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4" /> Technical Compliance Status
+                  </h4>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    상기 기술 검토 사항은 배터리 시스템의 <strong>전기적 안전성(Electrical Safety)</strong> 및 <strong>품질 안정화</strong>를 위한 필수 체크 포인트입니다.
+                    양산 단계 도달 전 시뮬레이션 및 실물 평가를 통해 확보된 규격 준수 여부를 최종 확인하시기 바랍니다.
+                  </p>
                 </div>
               </motion.div>
             </td>
@@ -193,7 +338,7 @@ function StandardCard({ image, title, desc }: any) {
 
 function CategoryFilter({ name, count, active, onClick }: any) {
   return (
-    <button onClick={onClick} className={`px-5 py-2.5 rounded-2xl text-sm font-semibold transition-all border ${active ? 'bg-white text-slate-950 border-white' : 'bg-slate-900/40 text-slate-400 border-slate-800/80 hover:border-slate-700'}`}>
+    <button onClick={onClick} className={`px-5 py-2.5 rounded-2xl text-sm font-semibold transition-all border ${active ? 'bg-white text-slate-950 border-white shadow-lg shadow-white/5' : 'bg-slate-900/40 text-slate-400 border-slate-800/80 hover:border-slate-700'}`}>
       {name} <span className="ml-2 text-[10px] px-1.5 py-0.5 rounded-md bg-slate-800/50">{count}</span>
     </button>
   );
