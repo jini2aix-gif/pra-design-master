@@ -1,7 +1,7 @@
 
 import { NextResponse } from 'next/server';
 
-const DOWNLOAD_PASSWORD = "전장시스템설계파트";
+const DOWNLOAD_PASSWORD = "7345477";
 
 export async function POST(request: Request) {
     try {
