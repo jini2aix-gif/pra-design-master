@@ -38,12 +38,22 @@ export default function PRADashboard() {
   const [searchQuery, setSearchQuery] = useState("");
   const [mounted, setMounted] = useState(false);
   const [expandedId, setExpandedId] = useState<string | null>(null);
-  const [isPasswordModalOpen, setPasswordModalOpen] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isPasswordModalOpen, setPasswordModalOpen] = useState(true);
   const [password, setPassword] = useState("");
   const [isVerifying, setIsVerifying] = useState(false);
   const [errorStatus, setErrorStatus] = useState("");
+  const [pendingAction, setPendingAction] = useState<'access' | 'download'>('access');
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    // Check if already authenticated in this session (optional, for UX)
+    const auth = sessionStorage.getItem('pra_auth');
+    if (auth === 'true') {
+      setIsAuthenticated(true);
+      setPasswordModalOpen(false);
+    }
+  }, []);
 
   if (!mounted) return null;
 
@@ -54,7 +64,7 @@ export default function PRADashboard() {
     return matchesCategory && matchesSearch;
   });
 
-  const handleDownload = async () => {
+  const handleVerifyPassword = async () => {
     setIsVerifying(true);
     setErrorStatus("");
 
@@ -68,29 +78,12 @@ export default function PRADashboard() {
       const result = await response.json();
 
       if (result.success) {
-        // Prepare excel data
-        const excelData = data.map(item => ({
-          "번호": item.id,
-          "카테고리": item.category,
-          "검토 항목": item.item,
-          "상세 내용/기준": item.criteria,
-          "배터리 전장시스템 설계 고려사항 및 관련 규격": item.ee_consideration
-        }));
-
-        const worksheet = XLSX.utils.json_to_sheet(excelData);
-
-        // Style worksheet
-        const workbook = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(workbook, worksheet, "PRA_Checklist");
-
-        // Force column widths
-        const wscols = [
-          { wch: 6 }, { wch: 12 }, { wch: 30 }, { wch: 50 }, { wch: 80 }
-        ];
-        worksheet['!cols'] = wscols;
-
-        XLSX.writeFile(workbook, "PRA_Design_Master_Checklist.xlsx");
-
+        if (pendingAction === 'download') {
+          generateExcel();
+        } else {
+          setIsAuthenticated(true);
+          sessionStorage.setItem('pra_auth', 'true');
+        }
         setPasswordModalOpen(false);
         setPassword("");
       } else {
@@ -101,6 +94,32 @@ export default function PRADashboard() {
     } finally {
       setIsVerifying(false);
     }
+  };
+
+  const generateExcel = () => {
+    const excelData = data.map(item => ({
+      "번호": item.id,
+      "카테고리": item.category,
+      "검토 항목": item.item,
+      "상세 내용/기준": item.criteria,
+      "배터리 전장시스템 설계 고려사항 및 관련 규격": item.ee_consideration
+    }));
+
+    const worksheet = XLSX.utils.json_to_sheet(excelData);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "PRA_Checklist");
+
+    const wscols = [
+      { wch: 6 }, { wch: 12 }, { wch: 30 }, { wch: 50 }, { wch: 80 }
+    ];
+    worksheet['!cols'] = wscols;
+
+    XLSX.writeFile(workbook, "PRA_Design_Master_Checklist.xlsx");
+  };
+
+  const openDownloadModal = () => {
+    setPendingAction('download');
+    setPasswordModalOpen(true);
   };
 
   return (
@@ -115,95 +134,105 @@ export default function PRADashboard() {
           <ShieldCheck className="text-white w-8 h-8" />
         </div>
         <div className="flex flex-col gap-8">
-          <NavIcon icon={<Layers />} active />
-          <NavIcon icon={<Zap />} />
-          <NavIcon icon={<Cpu />} />
-          <NavIcon icon={<Settings />} />
+          <NavIcon icon={<Layers />} active={selectedCategory === "전체"} onClick={() => setSelectedCategory("전체")} />
+          <NavIcon icon={<Zap />} active={selectedCategory === "회로"} onClick={() => setSelectedCategory("회로")} />
+          <NavIcon icon={<Cpu />} active={selectedCategory === "성능"} onClick={() => setSelectedCategory("성능")} />
+          <NavIcon icon={<Settings />} active={selectedCategory === "조립성"} onClick={() => setSelectedCategory("조립성")} />
         </div>
       </nav>
 
-      <main className="pl-32 pr-12 py-12 relative z-10">
-        <header className="mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="flex flex-col md:flex-row md:items-end justify-between gap-6"
-          >
-            <div>
-              <h1 className="text-5xl font-bold tracking-tight text-white mb-4">
-                PRA <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Design Master</span>
-              </h1>
-              <p className="text-slate-400 text-lg max-w-2xl leading-relaxed">
-                배터리 시스템 전장 설계 최적화를 위한 160개 기술 검토 가이드.
-                국제 표준 및 현대자동차 ES/MS 규격 기반 전문 엔지니어링 체크리스트.
-              </p>
+      {isAuthenticated ? (
+        <main className="pl-32 pr-12 py-12 relative z-10">
+          <header className="mb-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex flex-col md:flex-row md:items-end justify-between gap-6"
+            >
+              <div>
+                <h1 className="text-5xl font-bold tracking-tight text-white mb-4">
+                  PRA <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Design Master</span>
+                </h1>
+                <p className="text-slate-400 text-lg max-w-2xl leading-relaxed">
+                  배터리 시스템 전장 설계 최적화를 위한 160개 기술 검토 가이드.
+                  국제 표준 및 현대자동차 ES/MS 규격 기반 전문 엔지니어링 체크리스트.
+                </p>
+              </div>
+              <div className="flex gap-4">
+                <button
+                  onClick={openDownloadModal}
+                  className="px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl flex items-center gap-3 transition-all font-bold shadow-xl shadow-blue-600/20 active:scale-95"
+                >
+                  <Download className="w-5 h-5" />
+                  Export to Excel
+                </button>
+              </div>
+            </motion.div>
+          </header>
+
+          <section className="mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <StandardCard image="/images/standard_1.png" title="Insulation Coordination" desc="IEC 60664-1: Creepage & Clearance" />
+              <StandardCard image="/images/standard_2.png" title="HV Cable Routing" desc="ISO 19642: Bend Radius & Separation" />
+              <StandardCard image="/images/standard_3.png" title="Safety Markings" desc="ISO 7010: High Voltage Symbols" />
             </div>
-            <div className="flex gap-4">
-              <button
-                onClick={() => setPasswordModalOpen(true)}
-                className="px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl flex items-center gap-3 transition-all font-bold shadow-xl shadow-blue-600/20 active:scale-95"
-              >
-                <Download className="w-5 h-5" />
-                Export to Excel
-              </button>
+          </section>
+
+          <div className="flex flex-wrap gap-3 mb-8">
+            <CategoryFilter name="전체" active={selectedCategory === "전체"} onClick={() => setSelectedCategory("전체")} count={160} />
+            {categories.map((cat) => (
+              <CategoryFilter key={cat.name} name={cat.name} active={selectedCategory === cat.name} onClick={() => setSelectedCategory(cat.name)} count={cat.count} />
+            ))}
+          </div>
+
+          <div className="bg-slate-900/40 backdrop-blur-md rounded-3xl border border-slate-800/50 overflow-hidden shadow-2xl">
+            <div className="p-6 border-b border-slate-800/50 flex flex-col md:flex-row items-center justify-between gap-4">
+              <h2 className="text-xl font-semibold text-white flex items-center gap-2">
+                <FileText className="text-blue-400 w-5 h-5" />
+                Technical Audit Items
+                <span className="ml-2 text-sm text-slate-500 font-normal">({filteredData.length} items)</span>
+              </h2>
+              <div className="relative w-full md:w-96">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 w-4 h-4" />
+                <input
+                  type="text"
+                  placeholder="Search keywords..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-slate-950/50 border border-slate-800/80 rounded-full py-2.5 pl-11 pr-4 text-sm focus:outline-none focus:border-blue-500/50"
+                />
+              </div>
             </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-left">
+                <thead>
+                  <tr className="bg-slate-950/30 text-slate-500 text-xs uppercase tracking-wider">
+                    <th className="px-8 py-5">No.</th>
+                    <th className="px-8 py-5">Item</th>
+                    <th className="px-8 py-5">Criteria</th>
+                    <th className="px-8 py-5 text-blue-400">EE Considerations</th>
+                    <th className="px-8 py-5"></th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-800/30">
+                  {filteredData.map((item: any) => (
+                    <TableRow key={item.id} item={item} expanded={expandedId === item.id} onToggle={() => setExpandedId(expandedId === item.id ? null : item.id)} />
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </main>
+      ) : (
+        <div className="flex items-center justify-center min-h-screen">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center">
+            <Lock className="w-16 h-16 text-slate-700 mx-auto mb-4" />
+            <h2 className="text-2xl font-bold text-slate-400">Authentication Required</h2>
+            <p className="text-slate-600 mt-2">대시보드를 확인하려면 비밀번호를 입력해 주세요.</p>
           </motion.div>
-        </header>
-
-        <section className="mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <StandardCard image="/images/standard_1.png" title="Insulation Coordination" desc="IEC 60664-1: Creepage & Clearance" />
-            <StandardCard image="/images/standard_2.png" title="HV Cable Routing" desc="ISO 19642: Bend Radius & Separation" />
-            <StandardCard image="/images/standard_3.png" title="Safety Markings" desc="ISO 7010: High Voltage Symbols" />
-          </div>
-        </section>
-
-        <div className="flex flex-wrap gap-3 mb-8">
-          <CategoryFilter name="전체" active={selectedCategory === "전체"} onClick={() => setSelectedCategory("전체")} count={160} />
-          {categories.map((cat) => (
-            <CategoryFilter key={cat.name} name={cat.name} active={selectedCategory === cat.name} onClick={() => setSelectedCategory(cat.name)} count={cat.count} />
-          ))}
         </div>
-
-        <div className="bg-slate-900/40 backdrop-blur-md rounded-3xl border border-slate-800/50 overflow-hidden shadow-2xl">
-          <div className="p-6 border-b border-slate-800/50 flex flex-col md:flex-row items-center justify-between gap-4">
-            <h2 className="text-xl font-semibold text-white flex items-center gap-2">
-              <FileText className="text-blue-400 w-5 h-5" />
-              Technical Audit Items
-              <span className="ml-2 text-sm text-slate-500 font-normal">({filteredData.length} items)</span>
-            </h2>
-            <div className="relative w-full md:w-96">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 w-4 h-4" />
-              <input
-                type="text"
-                placeholder="Search keywords..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-slate-950/50 border border-slate-800/80 rounded-full py-2.5 pl-11 pr-4 text-sm focus:outline-none focus:border-blue-500/50"
-              />
-            </div>
-          </div>
-
-          <div className="overflow-x-auto">
-            <table className="w-full text-left">
-              <thead>
-                <tr className="bg-slate-950/30 text-slate-500 text-xs uppercase tracking-wider">
-                  <th className="px-8 py-5">No.</th>
-                  <th className="px-8 py-5">Item</th>
-                  <th className="px-8 py-5">Criteria</th>
-                  <th className="px-8 py-5 text-blue-400">EE Considerations</th>
-                  <th className="px-8 py-5"></th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-800/30">
-                {filteredData.map((item: any) => (
-                  <TableRow key={item.id} item={item} expanded={expandedId === item.id} onToggle={() => setExpandedId(expandedId === item.id ? null : item.id)} />
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </main>
+      )}
 
       {/* Password Modal */}
       <AnimatePresence>
@@ -214,7 +243,9 @@ export default function PRADashboard() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="absolute inset-0 bg-black/80 backdrop-blur-sm"
-              onClick={() => setPasswordModalOpen(false)}
+              onClick={() => {
+                if (isAuthenticated) setPasswordModalOpen(false);
+              }}
             />
             <motion.div
               initial={{ scale: 0.9, opacity: 0, y: 20 }}
@@ -222,19 +253,27 @@ export default function PRADashboard() {
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
               className="relative w-full max-w-md bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl"
             >
-              <button
-                onClick={() => setPasswordModalOpen(false)}
-                className="absolute top-6 right-6 text-slate-500 hover:text-slate-300 transition-colors"
-              >
-                <X className="w-6 h-6" />
-              </button>
+              {isAuthenticated && (
+                <button
+                  onClick={() => setPasswordModalOpen(false)}
+                  className="absolute top-6 right-6 text-slate-500 hover:text-slate-300 transition-colors"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              )}
 
               <div className="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6">
                 <Lock className="w-8 h-8 text-blue-400" />
               </div>
 
-              <h3 className="text-2xl font-bold text-white mb-2">Secure Download</h3>
-              <p className="text-slate-400 mb-8">체크리스트 엑셀 다운로드를 위해 부서 내부 비밀번호를 입력해 주세요.</p>
+              <h3 className="text-2xl font-bold text-white mb-2">
+                {pendingAction === 'download' ? 'Secure Download' : 'Secure Access'}
+              </h3>
+              <p className="text-slate-400 mb-8">
+                {pendingAction === 'download'
+                  ? '체크리스트 엑셀 다운로드를 위해 부서 내부 비밀번호를 입력해 주세요.'
+                  : 'PRA Design Master 대시보드 접근을 위해 비밀번호를 입력해 주세요.'}
+              </p>
 
               <div className="space-y-4">
                 <div className="relative">
@@ -248,7 +287,7 @@ export default function PRADashboard() {
                       setPassword(e.target.value);
                       setErrorStatus("");
                     }}
-                    onKeyDown={(e) => e.key === 'Enter' && handleDownload()}
+                    onKeyDown={(e) => e.key === 'Enter' && handleVerifyPassword()}
                   />
                   {errorStatus && (
                     <motion.p
@@ -262,14 +301,14 @@ export default function PRADashboard() {
                 </div>
 
                 <button
-                  onClick={handleDownload}
+                  onClick={handleVerifyPassword}
                   disabled={isVerifying || !password}
                   className="w-full bg-blue-600 hover:bg-blue-500 disabled:bg-slate-800 disabled:text-slate-500 disabled:cursor-not-allowed text-white font-bold py-4 rounded-2xl transition-all flex items-center justify-center gap-2"
                 >
                   {isVerifying ? (
                     <Loader2 className="w-5 h-5 animate-spin" />
                   ) : (
-                    "Confirm & Download"
+                    pendingAction === 'download' ? "Confirm & Download" : "Verify & Enter"
                   )}
                 </button>
               </div>
@@ -344,9 +383,12 @@ function CategoryFilter({ name, count, active, onClick }: any) {
   );
 }
 
-function NavIcon({ icon, active }: any) {
+function NavIcon({ icon, active, onClick }: any) {
   return (
-    <div className={`p-3 rounded-xl cursor-pointer ${active ? 'bg-blue-500/10 text-blue-400' : 'text-slate-500 hover:text-slate-300'}`}>
+    <div
+      onClick={onClick}
+      className={`p-3 rounded-xl cursor-pointer transition-all ${active ? 'bg-blue-500/10 text-blue-400 shadow-lg shadow-blue-500/5' : 'text-slate-500 hover:text-slate-300 hover:bg-slate-800/30'}`}
+    >
       {React.cloneElement(icon, { className: "w-6 h-6" })}
     </div>
   );

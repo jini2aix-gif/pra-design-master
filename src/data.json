@@ -827,238 +827,238 @@
   },
   {
     "id": "119",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "ES01000-00",
     "criteria": "심볼마크 표시 표준화 (필수)",
     "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "120",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "ES05206-00",
     "criteria": "보통치수 허용차 - 프레스 가공 (필수)",
     "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "121",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "ES05224-00",
     "criteria": "보통치수 허용차 - 플라스틱 성형품 (필수)",
     "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "122",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "ES05227-00",
     "criteria": "나사의 표준 체결 토크 (필수)",
     "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "123",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "ES37514-03",
     "criteria": "파워 릴레이 아세이 성능 규격 (필수)",
     "ee_consideration": "SAE J2344 고전압 안전. 릴레이 융착(Welding) 방지를 위한 Pre-charge 효율 95% 이상 검증 및 돌입 전류(Inrush Current) i2t 적합성 분석."
   },
   {
     "id": "124",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "ES91100-00",
     "criteria": "와이어 하네스 도면 표기 및 구성법 (필수)",
     "ee_consideration": "IATF 16949 핵심 요구사항 반영. 도면 내 특별특성(Critical/Significant Characteristic) 마킹 및 양산 관리 지점(Control Plan) 연동 무결성 확인."
   },
   {
     "id": "125",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "ES91101-00",
     "criteria": "와이어 하네스 제조공정 관리 및 시험 (필수)",
     "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "126",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "ES91107-02",
     "criteria": "대전류 단자 압착 관리 규격 (선택)",
     "ee_consideration": "LV 124 (VWG 80000) 표준. 400A 피크 전류(급속 충전 등) 기준 10분간 연속 통전 시 도체 온도 125℃ 이하 유지 여부(Heat Dissipation) 시뮬레이션 검토."
   },
   {
     "id": "127",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "ES91710-05",
     "criteria": "자동차용 전선 통합 규격 (선택)",
     "ee_consideration": "현대차 HMC 기술 표준(ES91100-01) 및 법규(ECE R100 Rev.3) 만족 여부. 글로벌 시장 대응을 위한 시스템 레벨의 절연 저항(100Ω/V 이상) 모니터링 기능(IMD) 연동."
   },
   {
     "id": "128",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "ES91500-00",
     "criteria": "커넥터 - 일반 규격 (필수)",
     "ee_consideration": "ISO 20653 IP67/IP69K 방수 성능. 커넥터 체결 시 삽입력(Insertion Force) 75N 이하 및 조립 확인용 CPA(Connector Position Assurance) 적용 유무 기술 검토."
   },
   {
     "id": "129",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "ES91500-02",
     "criteria": "전장품 커넥터 단자 도금 관리 (필수)",
     "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "130",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "ES91500-20",
     "criteria": "고전압 커넥터 - 일반 규격 (선택)",
     "ee_consideration": "ISO 20653 IP67/IP69K 방수 성능. 커넥터 체결 시 삽입력(Insertion Force) 75N 이하 및 조립 확인용 CPA(Connector Position Assurance) 적용 유무 기술 검토."
   },
   {
     "id": "131",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "ES91831-03",
     "criteria": "미니 퓨즈 규격 (선택)",
     "ee_consideration": "ISO 26262 기능 안전(ASIL-D). 과전류 발생 시 퓨즈 차단 곡선과 릴레이 스위칭 시간 간의 보호 협조(Selective Coordination) 설계로 시스템 안정성 확보."
   },
   {
     "id": "132",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "ES91851-00",
     "criteria": "미디 퓨즈 규격 (선택)",
     "ee_consideration": "ISO 26262 기능 안전(ASIL-D). 과전류 발생 시 퓨즈 차단 곡선과 릴레이 스위칭 시간 간의 보호 협조(Selective Coordination) 설계로 시스템 안정성 확보."
   },
   {
     "id": "133",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "ES91861-00",
     "criteria": "EV용 유리관 퓨즈 규격 (선택)",
     "ee_consideration": "ISO 26262 기능 안전(ASIL-D). 과전류 발생 시 퓨즈 차단 곡선과 릴레이 스위칭 시간 간의 보호 협조(Selective Coordination) 설계로 시스템 안정성 확보."
   },
   {
     "id": "134",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "ES95230-00",
     "criteria": "래치 릴레이 규격 (선택)",
     "ee_consideration": "SAE J2344 고전압 안전. 릴레이 융착(Welding) 방지를 위한 Pre-charge 효율 95% 이상 검증 및 돌입 전류(Inrush Current) i2t 적합성 분석."
   },
   {
     "id": "135",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS124-24",
     "criteria": "체결용 강선 및 볼트/너트 재질 (필수)",
     "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "136",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS153-02",
     "criteria": "동 및 동합금의 판재 규격 (선택)",
     "ee_consideration": "현대차 HMC 기술 표준(ES91100-01) 및 법규(ECE R100 Rev.3) 만족 여부. 글로벌 시장 대응을 위한 시스템 레벨의 절연 저항(100Ω/V 이상) 모니터링 기능(IMD) 연동."
   },
   {
     "id": "137",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS200-41",
     "criteria": "표준 시험 방법 - 연질 가류 고무 (선택)",
     "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "138",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS201-07",
     "criteria": "부품 재질 표기 방법 (필수)",
     "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "139",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS201-02",
     "criteria": "유해물질 금지 및 신고 규정 (필수)",
     "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "140",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS213-80",
     "criteria": "난연 PP - 배터리팩 사출품용 (선택)",
     "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "141",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS260-13",
     "criteria": "스폰지 고무 규격 (선택)",
     "ee_consideration": "현대차 HMC 기술 표준(ES91100-01) 및 법규(ECE R100 Rev.3) 만족 여부. 글로벌 시장 대응을 위한 시스템 레벨의 절연 저항(100Ω/V 이상) 모니터링 기능(IMD) 연동."
   },
   {
     "id": "142",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS269-03",
     "criteria": "연질 가류 고무 규격 (필수)",
     "ee_consideration": "현대차 HMC 기술 표준(ES91100-01) 및 법규(ECE R100 Rev.3) 만족 여부. 글로벌 시장 대응을 위한 시스템 레벨의 절연 저항(100Ω/V 이상) 모니터링 기능(IMD) 연동."
   },
   {
     "id": "143",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS341-17",
     "criteria": "흡음용 패드 사양 (선택)",
     "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "144",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS373-12",
     "criteria": "마크 및 레이블 표준 (필수)",
     "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "145",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS613-07",
     "criteria": "주석 도금 규격 (필수)",
     "ee_consideration": "현대차 HMC 기술 표준(ES91100-01) 및 법규(ECE R100 Rev.3) 만족 여부. 글로벌 시장 대응을 위한 시스템 레벨의 절연 저항(100Ω/V 이상) 모니터링 기능(IMD) 연동."
   },
   {
     "id": "146",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS617-15",
     "criteria": "전기 아연 및 아연 합금 도금 (필수)",
     "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "147",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS915-00",
     "criteria": "커넥터 일반 표준 (필수)",
     "ee_consideration": "ISO 20653 IP67/IP69K 방수 성능. 커넥터 체결 시 삽입력(Insertion Force) 75N 이하 및 조립 확인용 CPA(Connector Position Assurance) 적용 유무 기술 검토."
   },
   {
     "id": "148",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS915-07",
     "criteria": "커넥터 단자 도금 - 주석 (필수)",
     "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "149",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS917-02",
     "criteria": "구리 및 합금 단자용 재질 (필수)",
     "ee_consideration": "MS153-02 기준. Busbar 접촉 저항 0.1mΩ 이하 목표. 이종 금속(Cu/Al/Ag) 체결 시 전식(Galvanic Corrosion) 방지를 위한 전해 도금 사양 일치 여부 확인."
   },
   {
     "id": "150",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS940-01",
     "criteria": "표준 시험 방법 - 연소성 (필수)",
     "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
   },
   {
     "id": "151",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS941-03",
     "criteria": "열가소성 고분자 재료 - 커넥터용 (필수)",
     "ee_consideration": "ISO 20653 IP67/IP69K 방수 성능. 커넥터 체결 시 삽입력(Insertion Force) 75N 이하 및 조립 확인용 CPA(Connector Position Assurance) 적용 유무 기술 검토."
   },
   {
     "id": "152",
-    "category": "2D도면",
+    "category": "ES/MS",
     "item": "MS941-07",
     "criteria": "열가소성 고분자 재료 - 사출품용 (필수)",
     "ee_consideration": "배터리 시스템 전장 부품 전용 표준(ES37514-05) 최신 제/개정 사항 반영. 협력사 부품 승인원(ISIR)과의 설계 데이터 일치성 정밀 교차 검토."
