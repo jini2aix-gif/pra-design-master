@@ -215,7 +215,7 @@ export default function PRADashboard() {
                 </thead>
                 <tbody className="divide-y divide-slate-800/30">
                   {filteredData.map((item: any) => (
-                    <TableRow key={item.id} item={item} expanded={expandedId === item.id} onToggle={() => setExpandedId(expandedId === item.id ? null : item.id)} />
+                    <TableRow key={item.id} item={item} />
                   ))}
                 </tbody>
               </table>
@@ -318,36 +318,15 @@ export default function PRADashboard() {
   );
 }
 
-function TableRow({ item, expanded, onToggle }: any) {
+function TableRow({ item }: any) {
   return (
     <>
-      <tr onClick={onToggle} className="group hover:bg-slate-800/20 transition-all cursor-pointer">
+      <tr className="group hover:bg-slate-800/20 transition-all">
         <td className="px-8 py-6 text-sm font-mono text-slate-500">{item.id}</td>
         <td className="px-8 py-6 font-medium text-slate-200">{item.item}</td>
         <td className="px-8 py-6 text-sm text-slate-400">{item.criteria}</td>
-        <td className="px-8 py-6">
-          <ChevronRight className={`w-4 h-4 text-slate-600 transition-transform ${expanded ? 'rotate-90 text-blue-400' : ''}`} />
-        </td>
+        <td className="px-8 py-6"></td>
       </tr>
-      <AnimatePresence>
-        {expanded && (
-          <tr>
-            <td colSpan={5} className="px-12 py-0">
-              <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden pb-8 pt-4 border-t border-slate-800/50">
-                <div className="bg-slate-950/30 rounded-2xl p-6 border border-slate-800/50">
-                  <h4 className="text-xs uppercase tracking-widest font-bold text-blue-500 mb-3 flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4" /> Technical Compliance Status
-                  </h4>
-                  <p className="text-slate-300 text-sm leading-relaxed">
-                    상기 기술 검토 사항은 배터리 시스템의 <strong>전기적 안전성(Electrical Safety)</strong> 및 <strong>품질 안정화</strong>를 위한 필수 체크 포인트입니다.
-                    양산 단계 도달 전 시뮬레이션 및 실물 평가를 통해 확보된 규격 준수 여부를 최종 확인하시기 바랍니다.
-                  </p>
-                </div>
-              </motion.div>
-            </td>
-          </tr>
-        )}
-      </AnimatePresence>
     </>
   );
 }
