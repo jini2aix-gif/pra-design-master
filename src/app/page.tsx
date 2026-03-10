@@ -96,13 +96,12 @@ export default function PRADashboard() {
     }
   };
 
-  const generateExcel = () => {
+    const generateExcel = () => {
     const excelData = data.map(item => ({
       "번호": item.id,
       "카테고리": item.category,
       "검토 항목": item.item,
-      "상세 내용/기준": item.criteria,
-      "배터리 전장시스템 설계 고려사항 및 관련 규격": item.ee_consideration
+      "상세 내용/기준": item.criteria
     }));
 
     const worksheet = XLSX.utils.json_to_sheet(excelData);
@@ -110,7 +109,7 @@ export default function PRADashboard() {
     XLSX.utils.book_append_sheet(workbook, worksheet, "PRA_Checklist");
 
     const wscols = [
-      { wch: 6 }, { wch: 12 }, { wch: 30 }, { wch: 50 }, { wch: 80 }
+      { wch: 6 }, { wch: 12 }, { wch: 30 }, { wch: 80 }
     ];
     worksheet['!cols'] = wscols;
 
@@ -135,7 +134,7 @@ export default function PRADashboard() {
         </div>
         <div className="flex flex-col gap-8">
           <NavIcon icon={<Layers />} active={selectedCategory === "전체"} onClick={() => setSelectedCategory("전체")} />
-          <NavIcon icon={<Zap />} active={selectedCategory === "회로"} onClick={() => setSelectedCategory("회로")} />
+          <NavIcon icon={<Zap />} active={selectedCategory === "회로"} onClick={() => setSelectedCategory("회회로")} />
           <NavIcon icon={<Cpu />} active={selectedCategory === "성능"} onClick={() => setSelectedCategory("성능")} />
           <NavIcon icon={<Settings />} active={selectedCategory === "조립성"} onClick={() => setSelectedCategory("조립성")} />
         </div>
@@ -154,7 +153,7 @@ export default function PRADashboard() {
                   PRA <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Design Master</span>
                 </h1>
                 <p className="text-slate-400 text-lg max-w-2xl leading-relaxed">
-                  배터리 시스템 전장 설계 최적화를 위한 160개 기술 검토 가이드.
+                  배터리 시스템 전장 설계 최적화를 위한 166개 기술 검토 가이드.
                   국제 표준 및 현대자동차 ES/MS 규격 기반 전문 엔지니어링 체크리스트.
                 </p>
               </div>
@@ -179,7 +178,7 @@ export default function PRADashboard() {
           </section>
 
           <div className="flex flex-wrap gap-3 mb-8">
-            <CategoryFilter name="전체" active={selectedCategory === "전체"} onClick={() => setSelectedCategory("전체")} count={160} />
+            <CategoryFilter name="전체" active={selectedCategory === "전체"} onClick={() => setSelectedCategory("전체")} count={166} />
             {categories.map((cat) => (
               <CategoryFilter key={cat.name} name={cat.name} active={selectedCategory === cat.name} onClick={() => setSelectedCategory(cat.name)} count={cat.count} />
             ))}
@@ -211,7 +210,6 @@ export default function PRADashboard() {
                     <th className="px-8 py-5">No.</th>
                     <th className="px-8 py-5">Item</th>
                     <th className="px-8 py-5">Criteria</th>
-                    <th className="px-8 py-5 text-blue-400">EE Considerations</th>
                     <th className="px-8 py-5"></th>
                   </tr>
                 </thead>
@@ -327,12 +325,6 @@ function TableRow({ item, expanded, onToggle }: any) {
         <td className="px-8 py-6 text-sm font-mono text-slate-500">{item.id}</td>
         <td className="px-8 py-6 font-medium text-slate-200">{item.item}</td>
         <td className="px-8 py-6 text-sm text-slate-400">{item.criteria}</td>
-        <td className="px-8 py-6 text-sm text-blue-300">
-          <div className="flex items-start gap-2">
-            <ShieldCheck className="w-4 h-4 text-blue-400 mt-0.5" />
-            {item.ee_consideration}
-          </div>
-        </td>
         <td className="px-8 py-6">
           <ChevronRight className={`w-4 h-4 text-slate-600 transition-transform ${expanded ? 'rotate-90 text-blue-400' : ''}`} />
         </td>
