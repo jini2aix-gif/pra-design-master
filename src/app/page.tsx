@@ -210,7 +210,7 @@ export default function PRADashboard() {
                     <th className="px-8 py-5">No.</th>
                     <th className="px-8 py-5">Item</th>
                     <th className="px-8 py-5">Criteria</th>
-                    <th className="px-8 py-5"></th>
+                    <th className="px-8 py-5">Engineering Basis (Rationale)</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-800/30">
@@ -320,14 +320,14 @@ export default function PRADashboard() {
 
 function TableRow({ item }: any) {
   return (
-    <>
-      <tr className="group hover:bg-slate-800/20 transition-all">
-        <td className="px-8 py-6 text-sm font-mono text-slate-500">{item.id}</td>
-        <td className="px-8 py-6 font-medium text-slate-200">{item.item}</td>
-        <td className="px-8 py-6 text-sm text-slate-400">{item.criteria}</td>
-        <td className="px-8 py-6"></td>
-      </tr>
-    </>
+    <tr className="group hover:bg-slate-800/20 transition-all">
+      <td className="px-8 py-6 text-sm font-mono text-slate-500">{item.id}</td>
+      <td className="px-8 py-6 font-medium text-slate-200">{item.item}</td>
+      <td className="px-8 py-6 text-sm text-slate-400">{item.criteria}</td>
+      <td className="px-8 py-6 text-sm text-blue-400/80 leading-relaxed font-light italic">
+        {item.engineering_basis || "Review pending based on technical standards."}
+      </td>
+    </tr>
   );
 }
 
