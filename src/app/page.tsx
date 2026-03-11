@@ -23,14 +23,14 @@ import * as XLSX from 'xlsx';
 import data from '../data.json';
 
 const categories = [
-  { name: "구조", icon: <Layers className="w-5 h-5" />, color: "from-blue-500 to-indigo-600", count: 57 },
-  { name: "조립성", icon: <Settings className="w-5 h-5" />, color: "from-emerald-500 to-teal-600", count: 17 },
-  { name: "정비성", icon: <Settings className="w-5 h-5" />, color: "from-orange-500 to-amber-600", count: 9 },
-  { name: "회로", icon: <Zap className="w-5 h-5" />, color: "from-purple-500 to-pink-600", count: 5 },
+  { name: "구조", icon: <Layers className="w-5 h-5" />, color: "from-blue-500 to-indigo-600", count: 53 },
+  { name: "조립성(조립기술/의장요구사항)", icon: <Settings className="w-5 h-5" />, color: "from-emerald-500 to-teal-600", count: 29 },
+  { name: "정비성(A/S)", icon: <Settings className="w-5 h-5" />, color: "from-orange-500 to-amber-600", count: 15 },
   { name: "성능", icon: <Cpu className="w-5 h-5" />, color: "from-red-500 to-rose-600", count: 9 },
-  { name: "2D도면", icon: <FileText className="w-5 h-5" />, color: "from-cyan-500 to-sky-600", count: 21 },
-  { name: "ES/MS", icon: <ShieldCheck className="w-5 h-5" />, color: "from-slate-500 to-slate-700", count: 34 },
-  { name: "커넥터블럭", icon: <Maximize2 className="w-5 h-5" />, color: "from-violet-500 to-purple-600", count: 8 },
+  { name: "2D도면 검도 체크리스트", icon: <FileText className="w-5 h-5" />, color: "from-cyan-500 to-sky-600", count: 21 },
+  { name: "ES/MS", icon: <ShieldCheck className="w-5 h-5" />, color: "from-slate-500 to-slate-700", count: 27 },
+  { name: "커넥터블럭 일체형 PRA", icon: <Maximize2 className="w-5 h-5" />, color: "from-violet-500 to-purple-600", count: 16 },
+  { name: "퓨즈통합 PRA", icon: <Zap className="w-5 h-5" />, color: "from-yellow-500 to-amber-600", count: 6 },
 ];
 
 export default function PRADashboard() {
@@ -153,7 +153,7 @@ export default function PRADashboard() {
                   PRA <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Design Master</span>
                 </h1>
                 <p className="text-slate-400 text-lg max-w-2xl leading-relaxed">
-                  배터리 시스템 전장 설계 최적화를 위한 166개 기술 검토 가이드.
+                  배터리 시스템 전장 설계 최적화를 위한 176개 기술 검토 가이드.
                   국제 표준 및 현대자동차 ES/MS 규격 기반 전문 엔지니어링 체크리스트.
                 </p>
               </div>
@@ -178,7 +178,7 @@ export default function PRADashboard() {
           </section>
 
           <div className="flex flex-wrap gap-3 mb-8">
-            <CategoryFilter name="전체" active={selectedCategory === "전체"} onClick={() => setSelectedCategory("전체")} count={166} />
+            <CategoryFilter name="전체" active={selectedCategory === "전체"} onClick={() => setSelectedCategory("전체")} count={176} />
             {categories.map((cat) => (
               <CategoryFilter key={cat.name} name={cat.name} active={selectedCategory === cat.name} onClick={() => setSelectedCategory(cat.name)} count={cat.count} />
             ))}
