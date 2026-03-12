@@ -97,11 +97,12 @@ export default function PRADashboard() {
   };
 
     const generateExcel = () => {
-    const excelData = data.map(item => ({
+    const excelData = data.map((item: any) => ({
       "번호": item.id,
       "카테고리": item.category,
       "검토 항목": item.item,
-      "상세 내용/기준": item.criteria
+      "상세 내용/기준": item.criteria,
+      "엔지니어링 근거 (Engineering Basis)": item.engineering_basis || "기준 검토 중"
     }));
 
     const worksheet = XLSX.utils.json_to_sheet(excelData);
@@ -109,7 +110,7 @@ export default function PRADashboard() {
     XLSX.utils.book_append_sheet(workbook, worksheet, "PRA_Checklist");
 
     const wscols = [
-      { wch: 6 }, { wch: 12 }, { wch: 30 }, { wch: 80 }
+      { wch: 6 }, { wch: 15 }, { wch: 30 }, { wch: 60 }, { wch: 100 }
     ];
     worksheet['!cols'] = wscols;
 
