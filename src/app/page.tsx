@@ -98,11 +98,8 @@ export default function PRADashboard() {
 
     const generateExcel = () => {
     const excelData = data.map((item: any) => {
-      // 1. ** 제거 및 줄바꿈/구조화 정리
       let basis = item.engineering_basis || "기준 검토 중";
-      basis = basis.replace(/\*\*/g, ""); // ** 제거
-      
-      // 기호 체계 통일 (예: 1. -> 1) ) 및 줄바꿈 강화
+      basis = basis.replace(/\*\*/g, ""); 
       basis = basis.replace(/(\d)\.\s/g, "\n$1) "); 
       basis = basis.replace(/-\s/g, "\n• ");
       basis = basis.trim();
@@ -112,6 +109,7 @@ export default function PRADashboard() {
         "카테고리": item.category,
         "검토 항목": item.item,
         "상세 내용/기준": item.criteria,
+        "관련 표준": item.related_standards || "-",
         "엔지니어링 근거 (Engineering Basis)": basis
       };
     });
@@ -119,15 +117,12 @@ export default function PRADashboard() {
     const worksheet = XLSX.utils.json_to_sheet(excelData);
     
     // 셀 속성 설정 (자동 줄바꿈 및 상단 정렬)
-    const range = XLSX.utils.decode_range(worksheet['!ref'] || "A1:E1");
+    const range = XLSX.utils.decode_range(worksheet['!ref'] || "A1:F1");
     for (let R = range.s.r; R <= range.e.r; ++R) {
       for (let C = range.s.c; C <= range.e.c; ++C) {
         const address = XLSX.utils.encode_col(C) + (R + 1);
         if (!worksheet[address]) continue;
         if (!worksheet[address].s) worksheet[address].s = {};
-        
-        // 자동 줄바꿈 활성화 (Note: xlsx-style 또는 Pro 버전 없이 기본 xlsx는 s(style) 속성 제한적일 수 있음)
-        // 하지만 일부 환경/버전에서는 지원하므로 명시
         worksheet[address].s = {
           alignment: { wrapText: true, vertical: "top" }
         };
@@ -138,7 +133,7 @@ export default function PRADashboard() {
     XLSX.utils.book_append_sheet(workbook, worksheet, "PRA_Checklist");
 
     const wscols = [
-      { wch: 6 }, { wch: 15 }, { wch: 30 }, { wch: 60 }, { wch: 100 }
+      { wch: 6 }, { wch: 15 }, { wch: 30 }, { wch: 60 }, { wch: 40 }, { wch: 100 }
     ];
     worksheet['!cols'] = wscols;
 
@@ -232,17 +227,18 @@ export default function PRADashboard() {
               </div>
             </div>
 
-            <div className="overflow-x-auto">
-              <table className="w-full text-left">
+            <div className="overflow-x-auto rounded-3xl border border-slate-800/50 bg-slate-900/20 backdrop-blur-sm shadow-2xl">
+              <table className="w-full text-left border-collapse min-w-[1200px]">
                 <thead>
-                  <tr className="bg-slate-950/30 text-slate-500 text-xs uppercase tracking-wider">
-                    <th className="px-8 py-5">No.</th>
-                    <th className="px-8 py-5">Item</th>
-                    <th className="px-8 py-5">Criteria</th>
-                    <th className="px-8 py-5">Engineering Basis (Rationale)</th>
+                  <tr className="bg-slate-800/30 border-b border-slate-700/50">
+                    <th className="px-8 py-5 text-xs font-semibold text-slate-400 uppercase tracking-wider w-20">ID</th>
+                    <th className="px-8 py-5 text-xs font-semibold text-slate-400 uppercase tracking-wider w-40">검토 항목</th>
+                    <th className="px-8 py-5 text-xs font-semibold text-slate-400 uppercase tracking-wider w-64">상세 내용/기준</th>
+                    <th className="px-8 py-5 text-xs font-semibold text-slate-400 uppercase tracking-wider w-48 text-blue-400/80">관련 표준</th>
+                    <th className="px-8 py-5 text-xs font-semibold text-slate-400 uppercase tracking-wider">엔지니어링 근거 (Rationale)</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-800/30">
+                <tbody>
                   {filteredData.map((item: any) => (
                     <TableRow key={item.id} item={item} />
                   ))}
@@ -353,7 +349,8 @@ function TableRow({ item }: any) {
       <td className="px-8 py-6 text-sm font-mono text-slate-500">{item.id}</td>
       <td className="px-8 py-6 font-medium text-slate-200">{item.item}</td>
       <td className="px-8 py-6 text-sm text-slate-400">{item.criteria}</td>
-      <td className="px-8 py-6 text-sm text-blue-400/80 leading-relaxed font-light italic whitespace-pre-line">
+      <td className="px-8 py-6 text-sm font-semibold text-blue-400/90 whitespace-pre-wrap">{item.related_standards || "-"}</td>
+      <td className="px-8 py-6 text-sm text-slate-300/80 leading-relaxed font-light italic whitespace-pre-line">
         {item.engineering_basis || "Review pending based on technical standards."}
       </td>
     </tr>
