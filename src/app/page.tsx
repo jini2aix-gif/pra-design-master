@@ -188,11 +188,12 @@ export default function PRADashboard() {
             >
               <div>
                 <h1 className="text-5xl font-bold tracking-tight text-white mb-4">
-                  PRA <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Design Master</span>
+                  PRA <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Design Master v2.0</span>
                 </h1>
                 <p className="text-slate-400 text-lg max-w-2xl leading-relaxed">
                   배터리 시스템 전장 설계 최적화를 위한 176개 기술 검토 가이드. 💡
                   국제 표준 및 현대자동차 ES/MS 규격 기반 전문 엔지니어링 체크리스트.
+                  {/* Updated at 2026-03-12 12:20 */}
                 </p>
               </div>
               <div className="flex gap-4">
