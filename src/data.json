@@ -20,7 +20,7 @@
     "category": "구조",
     "item": "HV 케이블 텐션",
     "criteria": "고전압 케이블이 과한 인장력(텐션)을 받지 않도록 설계되었는가?",
-    "engineering_basis": "최소 곡률 반경(10D 이상을 확보하여 이어 내부 가닥(Strand 신선 손상. 절연 열화를 방지함",
+    "engineering_basis": "최소 곡률 반경(10D 이상을 확보하여 이어 내부 가닥(Strand) 신선 손상. 절연 열화를 방지함",
     "related_standards": "-"
   },
   {
@@ -36,7 +36,7 @@
     "category": "구조",
     "item": "하네스 최적화",
     "criteria": "고전압 케이블의 벤딩(곡률) 반경이 규정치 내로 적정한가?",
-    "engineering_basis": "최소 곡률 반경(10D 이상을 확보하여 이어 내부 가닥(Strand 신선 손상. 절연 열화를 방지함",
+    "engineering_basis": "최소 곡률 반경(10D 이상을 확보하여 이어 내부 가닥(Strand) 신선 손상. 절연 열화를 방지함",
     "related_standards": "-"
   },
   {
@@ -44,7 +44,7 @@
     "category": "구조",
     "item": "고전압/저전압 하네스 분리",
     "criteria": "정격전류 3A당 1SQ 기준을 준수하며 선정 근거 자료를 첨부하였는가?",
-    "engineering_basis": "전류 밀도(3A/mm^2를 고려한 허용 전류 설계로 도체. 절연재의 열적 손상(상승 온도 40K 이하을 예방함",
+    "engineering_basis": "전류 밀도(3A/mm^2)를 고려한 허용 전류 설계로 도체. 절연재의 열적 손상(상승 온도 40K 이하을 예방함",
     "related_standards": "IEC 60227, MS"
   },
   {
@@ -52,7 +52,7 @@
     "category": "구조",
     "item": "커넥터 오 조립 방지",
     "criteria": "고전압 케이블의 선경(SQ) 선정이 전기적 부하에 타당한가?",
-    "engineering_basis": "전류 밀도(3A/mm^2를 고려한 허용 전류 설계로 도체. 절연재의 열적 손상(상승 온도 40K 이하을 예방함",
+    "engineering_basis": "전류 밀도(3A/mm^2)를 고려한 허용 전류 설계로 도체. 절연재의 열적 손상(상승 온도 40K 이하을 예방함",
     "related_standards": "IEC 60227, MS"
   },
   {
@@ -60,7 +60,7 @@
     "category": "구조",
     "item": "고전압회로 분리(ISO회로)",
     "criteria": "불필요한 와이어 길이 과다를 방지하여 중량 및 원가를 최적화했는가?",
-    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding 또는 이격 배치 적용",
+    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding) 또는 이격 배치 적용",
     "related_standards": "-"
   },
   {
@@ -76,7 +76,7 @@
     "category": "구조",
     "item": "배선 다발 구성",
     "criteria": "저전압(LV) 와이어와 고전압(HV) 와이어 다발을 물리적으로 분리했는가?",
-    "engineering_basis": "고전압/저전압 회로 간 물리적 격리(Segregation를 통해 EMI 간섭. 절연 파괴 시 저전압 부품 소손을 방지함",
+    "engineering_basis": "고전압/저전압 회로 간 물리적 격리(Segregation)를 통해 EMI 간섭. 절연 파괴 시 저전압 부품 소손을 방지함",
     "related_standards": "ECE R100, ISO 26262 Functional Safety"
   },
   {
@@ -92,7 +92,7 @@
     "category": "구조",
     "item": "ISO 퓨즈결합 피 체결계 적합성",
     "criteria": "와이어 길이 조절 및 커넥터 이원화 등을 통해 오체결 방지 방안이 있는가?",
-    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding 또는 이격 배치 적용",
+    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding) 또는 이격 배치 적용",
     "related_standards": "-"
   },
   {
@@ -100,7 +100,7 @@
     "category": "구조",
     "item": "오체결 방지",
     "criteria": "내부 커넥터류가 물리적으로 오체결을 방지할 수 있는 구조인가?",
-    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding 또는 이격 배치 적용",
+    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding) 또는 이격 배치 적용",
     "related_standards": "-"
   },
   {
@@ -124,7 +124,7 @@
     "category": "구조",
     "item": "커넥터 오 조립 방지(릴레이 간)",
     "criteria": "릴레이 체결 커넥터 오 조립 근본개선 목적 이격거리 확보 or 오조립 방지 안이 적용 되었는가?",
-    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding 또는 이격 배치 적용",
+    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding) 또는 이격 배치 적용",
     "related_standards": "-"
   },
   {
@@ -140,7 +140,7 @@
     "category": "구조",
     "item": "링터미널 오 조립 방지",
     "criteria": "퓨즈 연결 와이어 및 버스바의 이격거리가 전압별 기준을 준수하는가?",
-    "engineering_basis": "전압별(400V/800V 공기 절연 파괴(Clearance. 표면 트래킹(Creepage 방지를 위한 최소 설계 치수 확보",
+    "engineering_basis": "전압별(400V/800V 공기 절연 파괴(Clearance). 표면 트래킹(Creep)age 방지를 위한 최소 설계 치수 확보",
     "related_standards": "-"
   },
   {
@@ -148,7 +148,7 @@
     "category": "구조",
     "item": "커넥터 고정력",
     "criteria": "퓨즈 (+ / -) 단자 간의 이격거리는 충분히 확보되었는가?",
-    "engineering_basis": "전압별(400V/800V 공기 절연 파괴(Clearance. 표면 트래킹(Creepage 방지를 위한 최소 설계 치수 확보",
+    "engineering_basis": "전압별(400V/800V 공기 절연 파괴(Clearance). 표면 트래킹(Creep)age 방지를 위한 최소 설계 치수 확보",
     "related_standards": "-"
   },
   {
@@ -172,7 +172,7 @@
     "category": "구조",
     "item": "설체결 방지",
     "criteria": "퓨즈 및 단자류의 설체결(느슨함) 방지를 위한 기구적 대책이 있는가?",
-    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding 또는 이격 배치 적용",
+    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding) 또는 이격 배치 적용",
     "related_standards": "-"
   },
   {
@@ -196,7 +196,7 @@
     "category": "구조",
     "item": "온도센서 회전방지",
     "criteria": "우 방향 나사산 사용 기준 회전방지 구조 온도센서 좌측에 배치할 것.",
-    "engineering_basis": "볼트 체결 시 첫 번째 나사산이 전체 하중의 약 34%. 두 번째가 약 23%. 세 번째가 약 15%를 부담함. - 너트 상단으로 2~3개의 나사산이 노출되어야 전체 하중이 나사산에 균등하게 분산되며. 정적/동적 하중 하에서 나사산 파손(Thread Stripping을 방지함. - 특히 Cu/Al 버스바 체결 시 재료의 연성. 크립(Creep 현상으로 인한 축력 저하를 방지하기 위한 최소 체결 길이 확보가 필수적임",
+    "engineering_basis": "볼트 체결 시 첫 번째 나사산이 전체 하중의 약 34%. 두 번째가 약 23%. 세 번째가 약 15%를 부담함. - 너트 상단으로 2~3개의 나사산이 노출되어야 전체 하중이 나사산에 균등하게 분산되며. 정적/동적 하중 하에서 나사산 파손(Thread Stripping)을 방지함. - 특히 Cu/Al 버스바 체결 시 재료의 연성. 크립(Creep) 현상으로 인한 축력 저하를 방지하기 위한 최소 체결 길이 확보가 필수적임",
     "related_standards": "-"
   },
   {
@@ -204,7 +204,7 @@
     "category": "구조",
     "item": "온도센서 와이어 보호",
     "criteria": "기구적으로 오조립이 불가능하도록 Poka-yoke 설계가 적용되었는가?",
-    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding 또는 이격 배치 적용",
+    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding) 또는 이격 배치 적용",
     "related_standards": "-"
   },
   {
@@ -220,7 +220,7 @@
     "category": "구조",
     "item": "이격거리 예외",
     "criteria": "오조립 방지 구조를 별도 제안하여 승인된 경우, 이격거리 규제를 준수하는가?",
-    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding 또는 이격 배치 적용",
+    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding) 또는 이격 배치 적용",
     "related_standards": "-"
   },
   {
@@ -228,7 +228,7 @@
     "category": "구조",
     "item": "온도센서 체결토크 영향성",
     "criteria": "프리차지 릴레이와 저항 커넥터가 동일할 경우 이격거리를 확보했는가?",
-    "engineering_basis": "토크 시 내부 세라믹 단자부 스트레스 인가로 인한 수밀 파손. 저토크 시 접촉 저항 증가(I^2R. 고온 융착 위험. - M6 : 8~9 Nm (전동 공구 사용 시 동적 토크 편차 ±1Nm 관리. - M4 : 2.8~3.0 Nm. - 체결 시 반복 체결 회수 증가에 따른 K-Factor(마찰 계수 변화 고려 필요",
+    "engineering_basis": "토크 시 내부 세라믹 단자부 스트레스 인가로 인한 수밀 파손. 저토크 시 접촉 저항 증가(I^2R). 고온 융착 위험. - M6 : 8~9 Nm (전동 공구 사용 시 동적 토크 편차 ±1Nm 관리. - M4 : 2.8~3.0 Nm. - 체결 시 반복 체결 회수 증가에 따른 K-Factor(마찰 계수 변화 고려 필요",
     "related_standards": "-"
   },
   {
@@ -236,7 +236,7 @@
     "category": "구조",
     "item": "BPA-PRA 마운팅 홀 일치성",
     "criteria": "오조립 방지를 위해 터미널 형상을 다르게 설계하였는가?",
-    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding 또는 이격 배치 적용",
+    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding) 또는 이격 배치 적용",
     "related_standards": "-"
   },
   {
@@ -268,7 +268,7 @@
     "category": "구조",
     "item": "공간/연면거리 확보",
     "criteria": "400V(공간 : 5mm / 연면 : 10mm), 800V (공간 : 10mm / 연면 : 15mm) 확보 했는가? 버스바 등 도체 (+/-) 간 이격 거리를 최대한 확보했는가? 불가 시 단차 or 격벽을 절연거리 기준에 따라 반영할 것.",
-    "engineering_basis": "1 : 800V DC 고전압 인가 시 절연 파괴(Flashover. 표면 트래킹에 의한 아크 사고 방지. 2 상세 : 오염도 2. 재질 Group IIIa. 연면거리(Creepage 8.0mm 이상 확보. 3 환경 보정: 해발 2000m 사용 고려 시 공간거리(Clearance에 고도 보정 계수 1.48 적용하여 2.22mm 이상 설계 필수",
+    "engineering_basis": "1 : 800V DC 고전압 인가 시 절연 파괴(Flashover. 표면 트래킹에 의한 아크 사고 방지. 2 상세 : 오염도 2. 재질 Group IIIa. 연면거리(Creep)age 8.0mm 이상 확보. 3 환경 보정: 해발 2000m 사용 고려 시 공간거리(Clearance)에 고도 보정 계수 1.48 적용하여 2.22mm 이상 설계 필수",
     "related_standards": "-"
   },
   {
@@ -292,7 +292,7 @@
     "category": "구조",
     "item": "고전압 단자 격벽",
     "criteria": "고전압 단자 격벽이 회전방지 역활을 할수 있도록 충분히 높은기? (상대 버스바 조립 높이보다 격벽의 높이가 높을 것.)",
-    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding 또는 이격 배치 적용",
+    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding) 또는 이격 배치 적용",
     "related_standards": "-"
   },
   {
@@ -300,7 +300,7 @@
     "category": "구조",
     "item": "전류센서 무부하 오차",
     "criteria": "작동 범위 및 공차 상태에서 주변 부품과의 간섭은 전혀 없는가?",
-    "engineering_basis": "메인 릴레이 작동 시 발생하는 자기장(B-field이 홀 센서의 자기 회로에 간섭하여 SOC(충전 상태 오차 유발. - 릴레이 코일. 접점부로부터 최소 40mm 이상 이격하여 정밀도 확보(Target: SOC Error < 1%. - 자기 차폐(Shielding 플레이트 적용 시 투자율(Permeability이 높은 상자성체 재질 사용 여부 확인",
+    "engineering_basis": "메인 릴레이 작동 시 발생하는 자기장(B-field)이 홀 센서의 자기 회로에 간섭하여 SOC(충전 상태 오차 유발. - 릴레이 코일. 접점부로부터 최소 40mm 이상 이격하여 정밀도 확보(Target: SOC Error < 1%). - 자기 차폐(Shielding 플레이트 적용 시 투자율(Permeability)이 높은 상자성체 재질 사용 여부 확인",
     "related_standards": "-"
   },
   {
@@ -308,7 +308,7 @@
     "category": "구조",
     "item": "전류센서 - 릴레이 이격",
     "criteria": "전류센서와 릴레이 간 이격거리가 40mm 이상인가? (Hall 센서 기준, 릴레이 On/Off 하여 전압값 비교)",
-    "engineering_basis": "메인 릴레이 작동 시 발생하는 자기장(B-field이 홀 센서의 자기 회로에 간섭하여 SOC(충전 상태 오차 유발. - 릴레이 코일. 접점부로부터 최소 40mm 이상 이격하여 정밀도 확보(Target: SOC Error < 1%. - 자기 차폐(Shielding 플레이트 적용 시 투자율(Permeability이 높은 상자성체 재질 사용 여부 확인",
+    "engineering_basis": "메인 릴레이 작동 시 발생하는 자기장(B-field)이 홀 센서의 자기 회로에 간섭하여 SOC(충전 상태 오차 유발. - 릴레이 코일. 접점부로부터 최소 40mm 이상 이격하여 정밀도 확보(Target: SOC Error < 1%). - 자기 차폐(Shielding 플레이트 적용 시 투자율(Permeability)이 높은 상자성체 재질 사용 여부 확인",
     "related_standards": "-"
   },
   {
@@ -324,7 +324,7 @@
     "category": "구조",
     "item": "PRA 방열설계",
     "criteria": "나사 체결 시 단자가 돌아가지 않도록 회전 방지(Anti-rotation) 구조를 갖췄는가?",
-    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding 또는 이격 배치 적용",
+    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding) 또는 이격 배치 적용",
     "related_standards": "-"
   },
   {
@@ -348,7 +348,7 @@
     "category": "구조",
     "item": "와이어 소손 방지",
     "criteria": "회전 방지 구조 설계 시 온도센서 와이어가 씹히거나 소손될 우려는 없는가?",
-    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding 또는 이격 배치 적용",
+    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding) 또는 이격 배치 적용",
     "related_standards": "-"
   },
   {
@@ -364,7 +364,7 @@
     "category": "구조",
     "item": "록타이트 특성",
     "criteria": "메인릴레이 고전압단자 체결볼트에 록타이트 적용 시 재질에 따른 토크 특성 및 축력을 점검했는가? (록타이트 재질에 따라 체결토크를 상향해야 기존 동등수준의 축력을 확보할 수 있음)",
-    "engineering_basis": "록타이트 도포 시 나사산 마찰 계수(Friction Coefficient가 변화하여 동일 토크 체결 시에도 축력(Clamping Force이 상이해짐. 축력이 도할 경우 릴레이 단자부 탭 손상(Stripping 또는 나사 파단이 발생할 수 있으므로. 윤활 상태를 고려한 토크 보정 계수(K-factor 적용 여부 확인 필수",
+    "engineering_basis": "록타이트 도포 시 나사산 마찰 계수(Friction Coefficient가 변화하여 동일 토크 체결 시에도 축력(Clamping Force)이 상이해짐. 축력이 도할 경우 릴레이 단자부 탭 손상(Stripping 또는 나사 파단이 발생할 수 있으므로. 윤활 상태를 고려한 토크 보정 계수(K-factor 적용 여부 확인 필수",
     "related_standards": "ISO  16047, MS124-24"
   },
   {
@@ -372,7 +372,7 @@
     "category": "구조",
     "item": "록타이트에 의한 손상",
     "criteria": "도포범위에 따른 메인 릴레이 단자대의 손상 여부를 확인했는가? (록타이트 볼트는 메인릴레이 단자대의 손상을 유발할 수 있고, 전체도포/부분도포 별로 손상정도가 다름)",
-    "engineering_basis": "록타이트 도포 시 나사산 마찰 계수(Friction Coefficient가 변화하여 동일 토크 체결 시에도 축력(Clamping Force이 상이해짐. 축력이 도할 경우 릴레이 단자부 탭 손상(Stripping 또는 나사 파단이 발생할 수 있으므로. 윤활 상태를 고려한 토크 보정 계수(K-factor 적용 여부 확인 필수",
+    "engineering_basis": "록타이트 도포 시 나사산 마찰 계수(Friction Coefficient가 변화하여 동일 토크 체결 시에도 축력(Clamping Force)이 상이해짐. 축력이 도할 경우 릴레이 단자부 탭 손상(Stripping 또는 나사 파단이 발생할 수 있으므로. 윤활 상태를 고려한 토크 보정 계수(K-factor 적용 여부 확인 필수",
     "related_standards": "ISO  16047, MS124-24"
   },
   {
@@ -388,7 +388,7 @@
     "category": "구조",
     "item": "전류센서 EMC 영향성",
     "criteria": "체결 토크에 의한 센서 변형을 방지하기 위해 링터미널 및 레그 두께가 충분한가?",
-    "engineering_basis": "메인 릴레이 작동 시 발생하는 자기장(B-field이 홀 센서의 자기 회로에 간섭하여 SOC(충전 상태 오차 유발. - 릴레이 코일. 접점부로부터 최소 40mm 이상 이격하여 정밀도 확보(Target: SOC Error < 1%. - 자기 차폐(Shielding 플레이트 적용 시 투자율(Permeability이 높은 상자성체 재질 사용 여부 확인",
+    "engineering_basis": "메인 릴레이 작동 시 발생하는 자기장(B-field)이 홀 센서의 자기 회로에 간섭하여 SOC(충전 상태 오차 유발. - 릴레이 코일. 접점부로부터 최소 40mm 이상 이격하여 정밀도 확보(Target: SOC Error < 1%). - 자기 차폐(Shielding 플레이트 적용 시 투자율(Permeability)이 높은 상자성체 재질 사용 여부 확인",
     "related_standards": "-"
   },
   {
@@ -428,7 +428,7 @@
     "category": "구조",
     "item": "HVIL (High Voltage Interlock) 타이밍",
     "criteria": "커넥터 탈거 시 HVIL이 주 단차보다 먼저 개방되도록 설계되었는가?",
-    "engineering_basis": "볼트 체결 시 첫 번째 나사산이 전체 하중의 약 34%. 두 번째가 약 23%. 세 번째가 약 15%를 부담함. - 너트 상단으로 2~3개의 나사산이 노출되어야 전체 하중이 나사산에 균등하게 분산되며. 정적/동적 하중 하에서 나사산 파손(Thread Stripping을 방지함. - 특히 Cu/Al 버스바 체결 시 재료의 연성. 크립(Creep 현상으로 인한 축력 저하를 방지하기 위한 최소 체결 길이 확보가 필수적임",
+    "engineering_basis": "볼트 체결 시 첫 번째 나사산이 전체 하중의 약 34%. 두 번째가 약 23%. 세 번째가 약 15%를 부담함. - 너트 상단으로 2~3개의 나사산이 노출되어야 전체 하중이 나사산에 균등하게 분산되며. 정적/동적 하중 하에서 나사산 파손(Thread Stripping)을 방지함. - 특히 Cu/Al 버스바 체결 시 재료의 연성. 크립(Creep) 현상으로 인한 축력 저하를 방지하기 위한 최소 체결 길이 확보가 필수적임",
     "related_standards": "-"
   },
   {
@@ -476,7 +476,7 @@
     "category": "성능",
     "item": "전류센서 정확도",
     "criteria": "전류센서 정확도 사양은 PRA SR을 만족할 것. 신규사양(LFP등) 개발 시, SOC개발(알고리즘) 담당자의 의견을 확인할 것.",
-    "engineering_basis": "메인 릴레이 작동 시 발생하는 자기장(B-field이 홀 센서의 자기 회로에 간섭하여 SOC(충전 상태 오차 유발. - 릴레이 코일. 접점부로부터 최소 40mm 이상 이격하여 정밀도 확보(Target: SOC Error < 1%. - 자기 차폐(Shielding 플레이트 적용 시 투자율(Permeability이 높은 상자성체 재질 사용 여부 확인",
+    "engineering_basis": "메인 릴레이 작동 시 발생하는 자기장(B-field)이 홀 센서의 자기 회로에 간섭하여 SOC(충전 상태 오차 유발. - 릴레이 코일. 접점부로부터 최소 40mm 이상 이격하여 정밀도 확보(Target: SOC Error < 1%). - 자기 차폐(Shielding 플레이트 적용 시 투자율(Permeability)이 높은 상자성체 재질 사용 여부 확인",
     "related_standards": "-"
   },
   {
@@ -508,7 +508,7 @@
     "category": "성능",
     "item": "아크 제어(Magnetic Blow-out)",
     "criteria": "메인 릴레이 차단 시 발생하는 아크를 제어하기 위한 주변 자성체 배치가 적절한가?",
-    "engineering_basis": "전자기학(Lorentz Force. 릴레이 설계. 고전압 DC 차단 시 영구 자석의 자기장이 아크를 아크 슈트(Arc Chute 방향으로 유도하여 접점 손상을 최소화하고 차단 신뢰성을 확보함. 주변 철제 구조물에 의한 자기장 왜곡 여부 확인 필수",
+    "engineering_basis": "전자기학(Lorentz Force). 릴레이 설계. 고전압 DC 차단 시 영구 자석의 자기장이 아크를 아크 슈트(Arc Chute) 방향으로 유도하여 접점 손상을 최소화하고 차단 신뢰성을 확보함. 주변 철제 구조물에 의한 자기장 왜곡 여부 확인 필수",
     "related_standards": "-"
   },
   {
@@ -516,7 +516,7 @@
     "category": "성능",
     "item": "통신 절연(Galvanic Isolation)",
     "criteria": "전류/전압 센서의 통신 라인과 고전압 라인 간의 절연 내압이 충분한가?",
-    "engineering_basis": "• 17 고전압 노이즈(EMI가 BMS 제어 회로(LV로 유입되어 오작동 또는 하드웨어 소손을 일으키는 것을 방지하기 위해 최소 2.5kV 이상의 Galvanic 구조를 확보해야 함",
+    "engineering_basis": "• 17 고전압 노이즈(EMI)가 BMS 제어 회로(LV로 유입되어 오작동 또는 하드웨어 소손을 일으키는 것을 방지하기 위해 최소 2.5kV 이상의 Galvanic 구조를 확보해야 함",
     "related_standards": "IEC 60747, ISO 26262, Isolation변압기/커플러"
   },
   {
@@ -596,7 +596,7 @@
     "category": "정비성(A/S)",
     "item": "전류센서 위치",
     "criteria": "온도센서의 R-T 테이블(25℃=10kΩ 등)이 BMS 하드웨어 사양과 일치하는가?",
-    "engineering_basis": "메인 릴레이 작동 시 발생하는 자기장(B-field이 홀 센서의 자기 회로에 간섭하여 SOC(충전 상태 오차 유발. - 릴레이 코일. 접점부로부터 최소 40mm 이상 이격하여 정밀도 확보(Target: SOC Error < 1%. - 자기 차폐(Shielding 플레이트 적용 시 투자율(Permeability이 높은 상자성체 재질 사용 여부 확인",
+    "engineering_basis": "메인 릴레이 작동 시 발생하는 자기장(B-field)이 홀 센서의 자기 회로에 간섭하여 SOC(충전 상태 오차 유발. - 릴레이 코일. 접점부로부터 최소 40mm 이상 이격하여 정밀도 확보(Target: SOC Error < 1%). - 자기 차폐(Shielding 플레이트 적용 시 투자율(Permeability)이 높은 상자성체 재질 사용 여부 확인",
     "related_standards": "-"
   },
   {
@@ -668,7 +668,7 @@
     "category": "2D도면 검도 체크리스트",
     "item": "마운팅 토크",
     "criteria": "디바이스 연결부 외에 PRA 마운팅부의 조임 토크를 명기했는가?",
-    "engineering_basis": "토크 시 내부 세라믹 단자부 스트레스 인가로 인한 수밀 파손. 저토크 시 접촉 저항 증가(I^2R. 고온 융착 위험. - M6 : 8~9 Nm (전동 공구 사용 시 동적 토크 편차 ±1Nm 관리. - M4 : 2.8~3.0 Nm. - 체결 시 반복 체결 회수 증가에 따른 K-Factor(마찰 계수 변화 고려 필요",
+    "engineering_basis": "토크 시 내부 세라믹 단자부 스트레스 인가로 인한 수밀 파손. 저토크 시 접촉 저항 증가(I^2R). 고온 융착 위험. - M6 : 8~9 Nm (전동 공구 사용 시 동적 토크 편차 ±1Nm 관리. - M4 : 2.8~3.0 Nm. - 체결 시 반복 체결 회수 증가에 따른 K-Factor(마찰 계수 변화 고려 필요",
     "related_standards": "-"
   },
   {
@@ -676,7 +676,7 @@
     "category": "2D도면 검도 체크리스트",
     "item": "릴레이/ 퓨즈 기본사양",
     "criteria": "릴레이/퓨즈의 정격전압, 정격전류 및 차단 용량 기본 사양을 표기했는가?",
-    "engineering_basis": "특정 전류 이벤트(단락 등 발생 시 정해진 전선 허용 전류(I^2t 이내에서 차단하여 차량 화재 예방",
+    "engineering_basis": "특정 전류 이벤트(단락 등 발생 시 정해진 전선 허용 전류(I^2t) 이내에서 차단하여 차량 화재 예방",
     "related_standards": "ES91851 Midi Fuse Spec, ISO  8820"
   },
   {
@@ -684,7 +684,7 @@
     "category": "2D도면 검도 체크리스트",
     "item": "전류센서사양",
     "criteria": "2ch일 경우 각 채널 별 동작 온도, 출력전압, 채널 별 측정 범위 등 상세 사양을 기재했는가?",
-    "engineering_basis": "메인 릴레이 작동 시 발생하는 자기장(B-field이 홀 센서의 자기 회로에 간섭하여 SOC(충전 상태 오차 유발. - 릴레이 코일. 접점부로부터 최소 40mm 이상 이격하여 정밀도 확보(Target: SOC Error < 1%. - 자기 차폐(Shielding 플레이트 적용 시 투자율(Permeability이 높은 상자성체 재질 사용 여부 확인",
+    "engineering_basis": "메인 릴레이 작동 시 발생하는 자기장(B-field)이 홀 센서의 자기 회로에 간섭하여 SOC(충전 상태 오차 유발. - 릴레이 코일. 접점부로부터 최소 40mm 이상 이격하여 정밀도 확보(Target: SOC Error < 1%). - 자기 차폐(Shielding 플레이트 적용 시 투자율(Permeability)이 높은 상자성체 재질 사용 여부 확인",
     "related_standards": "-"
   },
   {
@@ -692,7 +692,7 @@
     "category": "2D도면 검도 체크리스트",
     "item": "퓨즈특성곡선",
     "criteria": "퓨즈의 시간-전류 곡선(I-T Curve)을 도면에 첨부했는가? Main / E-awd / ICCU / OBC / ISOL 등 퓨즈 I-T Curve 기입",
-    "engineering_basis": "특정 전류 이벤트(단락 등 발생 시 정해진 전선 허용 전류(I^2t 이내에서 차단하여 차량 화재 예방",
+    "engineering_basis": "특정 전류 이벤트(단락 등 발생 시 정해진 전선 허용 전류(I^2t) 이내에서 차단하여 차량 화재 예방",
     "related_standards": "ES91851 Midi Fuse Spec, ISO  8820"
   },
   {
@@ -700,7 +700,7 @@
     "category": "2D도면 검도 체크리스트",
     "item": "마운팅 토크",
     "criteria": "Device 연결 부 외 PRA 마운팅부의 조입 토크 사양을 명기했는가?",
-    "engineering_basis": "토크 시 내부 세라믹 단자부 스트레스 인가로 인한 수밀 파손. 저토크 시 접촉 저항 증가(I^2R. 고온 융착 위험. - M6 : 8~9 Nm (전동 공구 사용 시 동적 토크 편차 ±1Nm 관리. - M4 : 2.8~3.0 Nm. - 체결 시 반복 체결 회수 증가에 따른 K-Factor(마찰 계수 변화 고려 필요",
+    "engineering_basis": "토크 시 내부 세라믹 단자부 스트레스 인가로 인한 수밀 파손. 저토크 시 접촉 저항 증가(I^2R). 고온 융착 위험. - M6 : 8~9 Nm (전동 공구 사용 시 동적 토크 편차 ±1Nm 관리. - M4 : 2.8~3.0 Nm. - 체결 시 반복 체결 회수 증가에 따른 K-Factor(마찰 계수 변화 고려 필요",
     "related_standards": "-"
   },
   {
@@ -724,7 +724,7 @@
     "item": "블럭 나사산 도금처리",
     "criteria": "커넥터블럭의 나사산 부분은 도장/도금이 마스킹 되었는가?",
     "id": "91",
-    "engineering_basis": "볼트 체결 시 첫 번째 나사산이 전체 하중의 약 34%. 두 번째가 약 23%. 세 번째가 약 15%를 부담함. - 너트 상단으로 2~3개의 나사산이 노출되어야 전체 하중이 나사산에 균등하게 분산되며. 정적/동적 하중 하에서 나사산 파손(Thread Stripping을 방지함. - 특히 Cu/Al 버스바 체결 시 재료의 연성. 크립(Creep 현상으로 인한 축력 저하를 방지하기 위한 최소 체결 길이 확보가 필수적임",
+    "engineering_basis": "볼트 체결 시 첫 번째 나사산이 전체 하중의 약 34%. 두 번째가 약 23%. 세 번째가 약 15%를 부담함. - 너트 상단으로 2~3개의 나사산이 노출되어야 전체 하중이 나사산에 균등하게 분산되며. 정적/동적 하중 하에서 나사산 파손(Thread Stripping)을 방지함. - 특히 Cu/Al 버스바 체결 시 재료의 연성. 크립(Creep) 현상으로 인한 축력 저하를 방지하기 위한 최소 체결 길이 확보가 필수적임",
     "related_standards": "-"
   },
   {
@@ -732,7 +732,7 @@
     "item": "공간거리",
     "criteria": "메인퓨즈/퓨즈케이스 간 충분히 이격 하였는가?",
     "id": "92",
-    "engineering_basis": "800V DC 시스템. (Pollution Degree 2. Material Group IIIa:. * 연면거리(Creepage: 최소 8.0 mm 확보 필수. * 공간거리(Clearance: 기본 1.5 mm이나 고도 2000m 보정(x1.48 적용 시 2.22 mm 이상 설계. - : 고전압 아크 방전 방지. 절연 파괴에 의한 감전 사고 예방",
+    "engineering_basis": "800V DC 시스템. (Pollution Degree 2. Material Group IIIa:. * 연면거리(Creep)age: 최소 8.0 mm 확보 필수. * 공간거리(Clearance): 기본 1.5 mm이나 고도 2000m 보정(x1.48 적용 시 2.22 mm 이상 설계. - : 고전압 아크 방전 방지. 절연 파괴에 의한 감전 사고 예방",
     "related_standards": "-"
   },
   {
@@ -812,7 +812,7 @@
     "category": "ES/MS",
     "item": "ES91107-02",
     "criteria": "대전류 단자 압착 관리 규격 (선택)",
-    "engineering_basis": "1 : 단자-전선 간 전기적 저항. 기계적 결합력의 최적화로 고전압 시스템의 발열. 화재를 방지함. 2 정량적 인장 강도. (Minimum Pull-out Force:. • 25.0 mm²: 1,900 N 이상 | 50.0 mm²: 2,800 N 이상 3 품질 관리: 압착 높이(CH는 단자 제조사. 대비 ±0.05mm 이내 관리. 단면 밀도 95% 이상 확보 필수 (Micro-section 분석 . 4 참고: [ Crimp Standards](https:/www.te.com/content/dam/te-com/documents/about-te/product-compliance/te-standard-crimp-quality.pdf",
+    "engineering_basis": "1 : 단자-전선 간 전기적 저항. 기계적 결합력의 최적화로 고전압 시스템의 발열. 화재를 방지함. 2 정량적 인장 강도. (Minimum Pull-out Force:. • 25.0 mm²: 1,900 N 이상 | 50.0 mm²: 2,800 N 이상 3 품질 관리: 압착 높이(CH)는 단자 제조사. 대비 ±0.05mm 이내 관리. 단면 밀도 95% 이상 확보 필수 (Micro-section 분석) . 4 참고: [ Crimp Standards](https:/www.te.com/content/dam/te-com/documents/about-te/product-compliance/te-standard-crimp-quality.pdf",
     "related_standards": "USCAR-21"
   },
   {
@@ -836,7 +836,7 @@
     "category": "ES/MS",
     "item": "ES91851-00",
     "criteria": "미디 퓨즈 규격 (선택)",
-    "engineering_basis": "1 : 전류(Short-circuit 등 발생 시 이어링 하네스의 허용 에너지(I^2t 한계점 도달 전 회로를 차단함. 2 선정: 정상 부하 전류의 110~125% 수준에서 정격 전류를 선정하고. 전선의 열적 내구성 곡선 하단에서 차단되도록 설계함",
+    "engineering_basis": "1 : 전류(Short-circuit) 등 발생 시 이어링 하네스의 허용 에너지(I^2t) 한계점 도달 전 회로를 차단함. 2 선정: 정상 부하 전류의 110~125% 수준에서 정격 전류를 선정하고. 전선의 열적 내구성 곡선 하단에서 차단되도록 설계함",
     "related_standards": "-"
   },
   {
@@ -844,7 +844,7 @@
     "category": "ES/MS",
     "item": "ES91861-00",
     "criteria": "EV용 유리관 퓨즈 규격 (선택)",
-    "engineering_basis": "특정 전류 이벤트(단락 등 발생 시 정해진 전선 허용 전류(I^2t 이내에서 차단하여 차량 화재 예방",
+    "engineering_basis": "특정 전류 이벤트(단락 등 발생 시 정해진 전선 허용 전류(I^2t) 이내에서 차단하여 차량 화재 예방",
     "related_standards": "ES91851 Midi Fuse Spec, ISO  8820"
   },
   {
@@ -1228,7 +1228,7 @@
     "category": "조립성(조립기술/의장요구사항)",
     "item": "러버 부시 간섭",
     "criteria": "PRA 러버 부시 조립 시 주변 볼트 및 구조물과 간섭이 없는가?",
-    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic Corrosion을 방지하고 축력을 보증함",
+    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic) Corrosion)을 방지하고 축력을 보증함",
     "related_standards": "-"
   },
   {
@@ -1236,7 +1236,7 @@
     "category": "조립성(조립기술/의장요구사항)",
     "item": "수냉 면압패드",
     "criteria": "고전압 단자용 링터미널 조립용 하드웨어(Bolt/Nut)가 적합한 사양인가?",
-    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic Corrosion을 방지하고 축력을 보증함",
+    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic) Corrosion)을 방지하고 축력을 보증함",
     "related_standards": "-"
   },
   {
@@ -1244,7 +1244,7 @@
     "category": "조립성(조립기술/의장요구사항)",
     "item": "나사산 높이",
     "criteria": "너트 체결 완료 후 노출되는 나사산의 개수가 3개 이상인가?",
-    "engineering_basis": "볼트 체결 시 첫 번째 나사산이 전체 하중의 약 34%. 두 번째가 약 23%. 세 번째가 약 15%를 부담함. - 너트 상단으로 2~3개의 나사산이 노출되어야 전체 하중이 나사산에 균등하게 분산되며. 정적/동적 하중 하에서 나사산 파손(Thread Stripping을 방지함. - 특히 Cu/Al 버스바 체결 시 재료의 연성. 크립(Creep 현상으로 인한 축력 저하를 방지하기 위한 최소 체결 길이 확보가 필수적임",
+    "engineering_basis": "볼트 체결 시 첫 번째 나사산이 전체 하중의 약 34%. 두 번째가 약 23%. 세 번째가 약 15%를 부담함. - 너트 상단으로 2~3개의 나사산이 노출되어야 전체 하중이 나사산에 균등하게 분산되며. 정적/동적 하중 하에서 나사산 파손(Thread Stripping)을 방지함. - 특히 Cu/Al 버스바 체결 시 재료의 연성. 크립(Creep) 현상으로 인한 축력 저하를 방지하기 위한 최소 체결 길이 확보가 필수적임",
     "related_standards": "-"
   },
   {
@@ -1252,7 +1252,7 @@
     "category": "조립성(조립기술/의장요구사항)",
     "item": "AS Tool 접근성",
     "criteria": "링터미널 체결 볼트의 호칭경이 전류량(대전류/저전류)에 맞게 선정되었는가?",
-    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic Corrosion을 방지하고 축력을 보증함",
+    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic) Corrosion)을 방지하고 축력을 보증함",
     "related_standards": "-"
   },
   {
@@ -1260,7 +1260,7 @@
     "category": "조립성(조립기술/의장요구사항)",
     "item": "PRA 조립성 (협력사 협의)",
     "criteria": "링터미널의 폭이 체결용 볼트/너트의 와셔 면적보다 넓어 면압이 충분한가?",
-    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic Corrosion을 방지하고 축력을 보증함",
+    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic) Corrosion)을 방지하고 축력을 보증함",
     "related_standards": "-"
   },
   {
@@ -1276,7 +1276,7 @@
     "category": "조립성(조립기술/의장요구사항)",
     "item": "PRA 마운팅 부 정합성",
     "criteria": "메인 릴레이 단자부 볼트 길이 사양이 적절한지 협력사와 협의했는가?",
-    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic Corrosion을 방지하고 축력을 보증함",
+    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic) Corrosion)을 방지하고 축력을 보증함",
     "related_standards": "-"
   },
   {
@@ -1284,7 +1284,7 @@
     "category": "조립성(조립기술/의장요구사항)",
     "item": "링터미널 H/W 사양 적합성",
     "criteria": "릴레이 탑 부분의 여유 길이를 점검하여 볼트 체결 불량을 방지했는가?",
-    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic Corrosion을 방지하고 축력을 보증함",
+    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic) Corrosion)을 방지하고 축력을 보증함",
     "related_standards": "-"
   },
   {
@@ -1292,7 +1292,7 @@
     "category": "조립성(조립기술/의장요구사항)",
     "item": "체결계 신뢰성",
     "criteria": "릴레이 단자부 내부 나사산 깊이를 고려하여 볼트 길이를 최적화했는가?",
-    "engineering_basis": "볼트 체결 시 첫 번째 나사산이 전체 하중의 약 34%. 두 번째가 약 23%. 세 번째가 약 15%를 부담함. - 너트 상단으로 2~3개의 나사산이 노출되어야 전체 하중이 나사산에 균등하게 분산되며. 정적/동적 하중 하에서 나사산 파손(Thread Stripping을 방지함. - 특히 Cu/Al 버스바 체결 시 재료의 연성. 크립(Creep 현상으로 인한 축력 저하를 방지하기 위한 최소 체결 길이 확보가 필수적임",
+    "engineering_basis": "볼트 체결 시 첫 번째 나사산이 전체 하중의 약 34%. 두 번째가 약 23%. 세 번째가 약 15%를 부담함. - 너트 상단으로 2~3개의 나사산이 노출되어야 전체 하중이 나사산에 균등하게 분산되며. 정적/동적 하중 하에서 나사산 파손(Thread Stripping)을 방지함. - 특히 Cu/Al 버스바 체결 시 재료의 연성. 크립(Creep) 현상으로 인한 축력 저하를 방지하기 위한 최소 체결 길이 확보가 필수적임",
     "related_standards": "-"
   },
   {
@@ -1300,7 +1300,7 @@
     "category": "조립성(조립기술/의장요구사항)",
     "item": "링터미널 체결계 호칭경 적합성",
     "criteria": "링터미널 체결 볼트/너트의 호칭경(센싱용/대전류/저전류)이 적합한가?",
-    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic Corrosion을 방지하고 축력을 보증함",
+    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic) Corrosion)을 방지하고 축력을 보증함",
     "related_standards": "-"
   },
   {
@@ -1308,7 +1308,7 @@
     "category": "조립성(조립기술/의장요구사항)",
     "item": "링터미널 면압",
     "criteria": "공정상의 볼트 체결 토크 및 속도 기준이 릴레이 사양 내에 있는가?",
-    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic Corrosion을 방지하고 축력을 보증함",
+    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic) Corrosion)을 방지하고 축력을 보증함",
     "related_standards": "-"
   },
   {
@@ -1316,7 +1316,7 @@
     "category": "조립성(조립기술/의장요구사항)",
     "item": "링터미널 압착 치수편차",
     "criteria": "링터미널 압착 시 발생하는 치수편차를  설계시 고려했는가? (실물은 압착공정에서 편차 발생 가능)",
-    "engineering_basis": "압착 품질은 단면 분석(Micro-section을 통한 압축률(Crimp Compaction. 고착력(Pull-out force으로 검증함. - 정량적 인장력:. * 2.5 mm²: 210N 이상. * 6.0 mm²: 320N 이상. * 25 mm²: 1900N 이상. * 50 mm²: 2800N 이상 - 검사항목: Crimp Height(CH. Crimp Width(CW. Bell-mouth (입구 R부. Brush length (심선 돌출 길이 ~1.0mm. - : 압착 불량 시 접촉 저항 증가로 인한 온도 상승. 아크 발생 위험 방지",
+    "engineering_basis": "압착 품질은 단면 분석(Micro-section을 통한 압축률(Crimp Compaction. 고착력(Pull-out force으로 검증함. - 정량적 인장력:. * 2.5 mm²: 210N 이상. * 6.0 mm²: 320N 이상. * 25 mm²: 1900N 이상. * 50 mm²: 2800N 이상 - 검사항목: Crimp Height(CH). Crimp Width(CW). Bell-mouth (입구 R부. Brush length (심선 돌출 길이 ~1.0mm. - : 압착 불량 시 접촉 저항 증가로 인한 온도 상승. 아크 발생 위험 방지",
     "related_standards": "SAE J1742"
   },
   {
@@ -1324,7 +1324,7 @@
     "category": "조립성(조립기술/의장요구사항)",
     "item": "메인릴레이 단자볼트 적합성",
     "criteria": "메인 릴레이 체결 볼트 등이 HMC 표준 부품 및 도면 사양과 일치하는가?",
-    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic Corrosion을 방지하고 축력을 보증함",
+    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic) Corrosion)을 방지하고 축력을 보증함",
     "related_standards": "-"
   },
   {
@@ -1332,7 +1332,7 @@
     "category": "조립성(조립기술/의장요구사항)",
     "item": "릴레이 단자부 나사산 깊이",
     "criteria": "릴레이 단자부 나사산 깊이를 고려하여 볼트 길이를 선정했는가? 릴레이 협력사와 릴레이 탭 부분 여유길이 확보여부 점검할 것. (공차고려). 탭 부분 여유길이를 점검하여, 간섭에 의한 볼트 체결불량 발생을 방지할 것. (예) 릴레이 단자부 나사산 깊이 (최소, 보증) > 볼트 길이 + 버스바 두께.",
-    "engineering_basis": "볼트 체결 시 첫 번째 나사산이 전체 하중의 약 34%. 두 번째가 약 23%. 세 번째가 약 15%를 부담함. - 너트 상단으로 2~3개의 나사산이 노출되어야 전체 하중이 나사산에 균등하게 분산되며. 정적/동적 하중 하에서 나사산 파손(Thread Stripping을 방지함. - 특히 Cu/Al 버스바 체결 시 재료의 연성. 크립(Creep 현상으로 인한 축력 저하를 방지하기 위한 최소 체결 길이 확보가 필수적임",
+    "engineering_basis": "볼트 체결 시 첫 번째 나사산이 전체 하중의 약 34%. 두 번째가 약 23%. 세 번째가 약 15%를 부담함. - 너트 상단으로 2~3개의 나사산이 노출되어야 전체 하중이 나사산에 균등하게 분산되며. 정적/동적 하중 하에서 나사산 파손(Thread Stripping)을 방지함. - 특히 Cu/Al 버스바 체결 시 재료의 연성. 크립(Creep) 현상으로 인한 축력 저하를 방지하기 위한 최소 체결 길이 확보가 필수적임",
     "related_standards": "-"
   },
   {
@@ -1340,7 +1340,7 @@
     "category": "조립성(조립기술/의장요구사항)",
     "item": "릴레이 단자부 축력",
     "criteria": "조립 불량 방지가 필요한 구간에 매직스레드(Magic Thread) 볼트를 적용했는가?",
-    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic Corrosion을 방지하고 축력을 보증함",
+    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic) Corrosion)을 방지하고 축력을 보증함",
     "related_standards": "-"
   },
   {
@@ -1364,7 +1364,7 @@
     "category": "조립성(조립기술/의장요구사항)",
     "item": "릴레이 체결 하드웨어 표준부품 적용",
     "criteria": "릴레이 체결 볼트 등에 HMC 표준 부품을 적용하고 도면에 표기했는가? (예) M6볼트 : 와이엠 / 11403-06127K",
-    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic Corrosion을 방지하고 축력을 보증함",
+    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic) Corrosion)을 방지하고 축력을 보증함",
     "related_standards": "-"
   },
   {
@@ -1372,7 +1372,7 @@
     "category": "조립성(조립기술/의장요구사항)",
     "item": "최대체결토크(1.1배 시험)",
     "criteria": "최대 체결 토크의 1.1배에서도 나사산 손상이 없는지 실물로 확인했는가?",
-    "engineering_basis": "볼트 체결 시 첫 번째 나사산이 전체 하중의 약 34%. 두 번째가 약 23%. 세 번째가 약 15%를 부담함. - 너트 상단으로 2~3개의 나사산이 노출되어야 전체 하중이 나사산에 균등하게 분산되며. 정적/동적 하중 하에서 나사산 파손(Thread Stripping을 방지함. - 특히 Cu/Al 버스바 체결 시 재료의 연성. 크립(Creep 현상으로 인한 축력 저하를 방지하기 위한 최소 체결 길이 확보가 필수적임",
+    "engineering_basis": "볼트 체결 시 첫 번째 나사산이 전체 하중의 약 34%. 두 번째가 약 23%. 세 번째가 약 15%를 부담함. - 너트 상단으로 2~3개의 나사산이 노출되어야 전체 하중이 나사산에 균등하게 분산되며. 정적/동적 하중 하에서 나사산 파손(Thread Stripping)을 방지함. - 특히 Cu/Al 버스바 체결 시 재료의 연성. 크립(Creep) 현상으로 인한 축력 저하를 방지하기 위한 최소 체결 길이 확보가 필수적임",
     "related_standards": "-"
   },
   {
@@ -1412,7 +1412,7 @@
     "category": "조립성(조립기술/의장요구사항)",
     "item": "퓨즈 기계적 내구 (조립간)",
     "criteria": "조립 및 정비 시 볼트/너트 파단 토크가 권장 체결 토크보다 충분히 큰가?",
-    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic Corrosion을 방지하고 축력을 보증함",
+    "engineering_basis": "재질(철/스테인리스/구리 간 전위차를 최소화하여 전식(Galvanic) Corrosion)을 방지하고 축력을 보증함",
     "related_standards": "-"
   },
   {
