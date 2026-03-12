@@ -47,7 +47,6 @@ export default function PRADashboard() {
 
   useEffect(() => {
     setMounted(true);
-    // Check if already authenticated in this session (optional, for UX)
     const auth = sessionStorage.getItem('pra_auth');
     if (auth === 'true') {
       setIsAuthenticated(true);
@@ -99,7 +98,6 @@ export default function PRADashboard() {
   const generateExcel = () => {
     const headers = ["번호", "카테고리", "검토 항목", "상세 내용/기준", "관련 표준", "엔지니어링 근거 (Engineering Basis)"];
     
-    // Prepare data rows
     const rows = data.map((item: any) => {
       let basis = item.engineering_basis || "기준 검토 중";
       basis = basis.replace(/\*\*/g, ""); 
@@ -118,11 +116,9 @@ export default function PRADashboard() {
     });
 
     const worksheet = XLSX.utils.aoa_to_sheet([headers, ...rows]);
-    
-    // 스타일 정의
     const headerStyle = {
       font: { bold: true, size: 12, name: '맑은 고딕' },
-      fill: { fgColor: { rgb: "E9ECEF" } }, // 옅은 그레이 배경
+      fill: { fgColor: { rgb: "E9ECEF" } },
       alignment: { horizontal: "center", vertical: "center", wrapText: true },
       border: {
         top: { style: "thin" }, bottom: { style: "thin" }, left: { style: "thin" }, right: { style: "thin" }
@@ -137,32 +133,25 @@ export default function PRADashboard() {
       }
     };
 
-    // 범위 확인 및 스타일 적용
     const range = XLSX.utils.decode_range(worksheet['!ref'] || "A1:F1");
     for (let R = range.s.r; R <= range.e.r; ++R) {
       for (let C = range.s.c; C <= range.e.c; ++C) {
         const address = XLSX.utils.encode_cell({ r: R, c: C });
         if (!worksheet[address]) continue;
-        
-        if (R === 0) {
-          // 헤더 스타일
-          worksheet[address].s = headerStyle;
-        } else {
-          // 콘텐츠 스타일
-          worksheet[address].s = contentStyle;
-        }
+        if (R === 0) worksheet[address].s = headerStyle;
+        else worksheet[address].s = contentStyle;
       }
     }
 
-    const wscols = [
-      { wch: 8 }, { wch: 20 }, { wch: 35 }, { wch: 65 }, { wch: 45 }, { wch: 110 }
-    ];
+    const wscols = [{ wch: 8 }, { wch: 20 }, { wch: 35 }, { wch: 65 }, { wch: 45 }, { wch: 110 }];
     worksheet['!cols'] = wscols;
-
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, "PRA_Checklist");
-
     XLSX.writeFile(workbook, "PRA_Design_Master_Checklist.xlsx");
+  };
+
+  const toggleExpand = (id: string) => {
+    setExpandedId(expandedId === id ? null : id);
   };
 
   const openDownloadModal = () => {
@@ -183,7 +172,7 @@ export default function PRADashboard() {
         </div>
         <div className="flex flex-col gap-8">
           <NavIcon icon={<Layers />} active={selectedCategory === "전체"} onClick={() => setSelectedCategory("전체")} />
-          <NavIcon icon={<Zap />} active={selectedCategory === "회로"} onClick={() => setSelectedCategory("회회로")} />
+          <NavIcon icon={<Zap />} active={selectedCategory === "회로"} onClick={() => setSelectedCategory("회로")} />
           <NavIcon icon={<Cpu />} active={selectedCategory === "성능"} onClick={() => setSelectedCategory("성능")} />
           <NavIcon icon={<Settings />} active={selectedCategory === "조립성"} onClick={() => setSelectedCategory("조립성")} />
         </div>
@@ -202,7 +191,7 @@ export default function PRADashboard() {
                   PRA <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Design Master</span>
                 </h1>
                 <p className="text-slate-400 text-lg max-w-2xl leading-relaxed">
-                  배터리 시스템 전장 설계 최적화를 위한 176개 기술 검토 가이드.
+                  배터리 시스템 전장 설계 최적화를 위한 176개 기술 검토 가이드. 💡
                   국제 표준 및 현대자동차 ES/MS 규격 기반 전문 엔지니어링 체크리스트.
                 </p>
               </div>
@@ -252,7 +241,7 @@ export default function PRADashboard() {
               </div>
             </div>
 
-            <div className="overflow-x-auto rounded-3xl border border-slate-800/50 bg-slate-900/20 backdrop-blur-sm shadow-2xl">
+            <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse min-w-[1200px]">
                 <thead>
                   <tr className="bg-slate-800/30 border-b border-slate-700/50">
@@ -263,9 +252,14 @@ export default function PRADashboard() {
                     <th className="px-8 py-5 text-xs font-semibold text-slate-400 uppercase tracking-wider">엔지니어링 근거 (Rationale)</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="divide-y divide-slate-800/50">
                   {filteredData.map((item: any) => (
-                    <TableRow key={item.id} item={item} />
+                    <TableRow 
+                      key={item.id} 
+                      item={item} 
+                      isExpanded={expandedId === item.id}
+                      onToggle={() => toggleExpand(item.id)}
+                    />
                   ))}
                 </tbody>
               </table>
@@ -368,17 +362,69 @@ export default function PRADashboard() {
   );
 }
 
-function TableRow({ item }: any) {
+function TableRow({ item, isExpanded, onToggle }: any) {
   return (
-    <tr className="group hover:bg-slate-800/20 transition-all">
-      <td className="px-8 py-6 text-sm font-mono text-slate-500">{item.id}</td>
-      <td className="px-8 py-6 font-medium text-slate-200">{item.item}</td>
-      <td className="px-8 py-6 text-sm text-slate-400">{item.criteria}</td>
-      <td className="px-8 py-6 text-sm font-semibold text-blue-400/90 whitespace-pre-wrap">{item.related_standards || "-"}</td>
-      <td className="px-8 py-6 text-sm text-slate-300/80 leading-relaxed font-light italic whitespace-pre-line">
-        {item.engineering_basis || "Review pending based on technical standards."}
-      </td>
-    </tr>
+    <React.Fragment>
+      <tr 
+        onClick={onToggle}
+        className={`group transition-all cursor-pointer ${isExpanded ? 'bg-blue-600/5' : 'hover:bg-slate-800/20'}`}
+      >
+        <td className="px-8 py-6 text-sm font-mono text-slate-500">
+          <div className="flex items-center gap-4">
+            <ChevronRight className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-90 text-blue-400' : 'text-slate-600'}`} />
+            {item.id}
+          </div>
+        </td>
+        <td className="px-8 py-6 font-semibold text-slate-200">{item.item}</td>
+        <td className="px-8 py-6 text-sm text-slate-400">
+          <div className="line-clamp-2">
+            {item.criteria.split('\n')[0]}...
+          </div>
+        </td>
+        <td className="px-8 py-6 text-sm font-semibold text-blue-400/90 whitespace-pre-wrap">
+          {item.related_standards || "-"}
+        </td>
+        <td className="px-8 py-6 text-sm text-slate-300/60 leading-relaxed font-light italic truncate max-w-xs">
+          {item.engineering_basis?.substring(0, 50)}...
+        </td>
+      </tr>
+      
+      <AnimatePresence>
+        {isExpanded && (
+          <tr>
+            <td colSpan={5} className="bg-slate-950/40 px-8 py-0">
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                className="overflow-hidden"
+              >
+                <div className="py-8 grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-slate-800/30">
+                  <div className="space-y-4">
+                    <h4 className="text-xs uppercase tracking-widest text-blue-400 font-bold flex items-center gap-2">
+                      <FileText className="w-4 h-4" />
+                      상세 내용 및 검토 기준
+                    </h4>
+                    <div className="bg-slate-900/50 rounded-2xl p-6 border border-slate-800/50 text-slate-300 leading-loose text-[15px] whitespace-pre-wrap">
+                      {item.criteria}
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <h4 className="text-xs uppercase tracking-widest text-indigo-400 font-bold flex items-center gap-2">
+                      <Zap className="w-4 h-4" />
+                      엔지니어링 근거 (Jenny's Rationale)
+                    </h4>
+                    <div className="bg-indigo-500/5 rounded-2xl p-6 border border-indigo-500/10 text-slate-300 leading-loose text-[15px] whitespace-pre-wrap">
+                      {item.engineering_basis}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </td>
+          </tr>
+        )}
+      </AnimatePresence>
+    </React.Fragment>
   );
 }
 
