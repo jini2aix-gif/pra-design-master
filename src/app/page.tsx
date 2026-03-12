@@ -188,7 +188,7 @@ export default function PRADashboard() {
             >
               <div>
                 <h1 className="text-5xl font-bold tracking-tight text-white mb-4">
-                  PRA <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Design Master v2.0</span>
+                  PRA <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Design Check List</span>
                 </h1>
                 <p className="text-slate-400 text-lg max-w-2xl leading-relaxed">
                   배터리 시스템 전장 설계 최적화를 위한 176개 기술 검토 가이드. 💡
@@ -247,9 +247,9 @@ export default function PRADashboard() {
                 <thead>
                   <tr className="bg-slate-800/30 border-b border-slate-700/50">
                     <th className="px-8 py-5 text-xs font-semibold text-slate-400 uppercase tracking-wider w-20">ID</th>
-                    <th className="px-8 py-5 text-xs font-semibold text-slate-400 uppercase tracking-wider w-40">검토 항목</th>
-                    <th className="px-8 py-5 text-xs font-semibold text-slate-400 uppercase tracking-wider w-64">상세 내용/기준</th>
-                    <th className="px-8 py-5 text-xs font-semibold text-slate-400 uppercase tracking-wider w-48 text-blue-400/80">관련 표준</th>
+                    <th className="px-8 py-5 text-xs font-semibold text-slate-400 uppercase tracking-wider w-80">검토 항목</th>
+                    <th className="px-8 py-5 text-xs font-semibold text-slate-400 uppercase tracking-wider w-72">상세 내용/기준</th>
+                    <th className="px-8 py-5 text-xs font-semibold text-slate-400 uppercase tracking-wider w-56 text-blue-400/80">관련 표준</th>
                     <th className="px-8 py-5 text-xs font-semibold text-slate-400 uppercase tracking-wider">엔지니어링 근거 (Rationale)</th>
                   </tr>
                 </thead>
@@ -368,25 +368,36 @@ function TableRow({ item, isExpanded, onToggle }: any) {
     <React.Fragment>
       <tr 
         onClick={onToggle}
-        className={`group transition-all cursor-pointer ${isExpanded ? 'bg-blue-600/5' : 'hover:bg-slate-800/20'}`}
+        className={`group transition-all cursor-pointer relative ${isExpanded ? 'bg-blue-600/10' : 'hover:bg-slate-800/40'}`}
       >
         <td className="px-8 py-6 text-sm font-mono text-slate-500">
           <div className="flex items-center gap-4">
-            <ChevronRight className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-90 text-blue-400' : 'text-slate-600'}`} />
+            <ChevronRight className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? 'rotate-90 text-blue-400' : 'text-slate-600 group-hover:text-blue-400/50'}`} />
             {item.id}
           </div>
         </td>
-        <td className="px-8 py-6 font-semibold text-slate-200">{item.item}</td>
-        <td className="px-8 py-6 text-sm text-slate-400">
-          <div className="line-clamp-2">
-            {item.criteria.split('\n')[0]}...
+        <td className="px-8 py-6 font-semibold text-slate-200">
+          <div className="flex flex-col gap-1">
+            <span>{item.item}</span>
+            {!isExpanded && (
+              <span className="text-[10px] text-blue-500/0 group-hover:text-blue-500/60 transition-all font-bold uppercase tracking-widest">
+                Click to view details
+              </span>
+            )}
           </div>
         </td>
-        <td className="px-8 py-6 text-sm font-semibold text-blue-400/90 whitespace-pre-wrap">
+        <td className="px-8 py-6 text-sm text-slate-400">
+          <div className="line-clamp-2 leading-relaxed">
+            {item.criteria.split('\n')[0]}
+          </div>
+        </td>
+        <td className="px-8 py-6 text-sm font-semibold text-blue-400/80 whitespace-pre-wrap">
           {item.related_standards || "-"}
         </td>
-        <td className="px-8 py-6 text-sm text-slate-300/60 leading-relaxed font-light italic truncate max-w-xs">
-          {item.engineering_basis?.substring(0, 50)}...
+        <td className="px-8 py-6 text-sm text-slate-400/40 leading-relaxed font-light italic">
+          <div className="truncate max-w-[200px]">
+            {item.engineering_basis?.substring(0, 40)}...
+          </div>
         </td>
       </tr>
       
