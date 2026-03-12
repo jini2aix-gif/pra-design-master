@@ -19,7 +19,7 @@ import {
   Loader2
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import * as XLSX from 'xlsx';
+import XLSX from 'xlsx-js-style';
 import data from '../data.json';
 
 const categories = [
@@ -58,10 +58,10 @@ export default function PRADashboard() {
   if (!mounted) return null;
 
   const filteredData = data.filter((item: any) => {
+    const matchesSearch = item.item.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                         item.criteria.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === "전체" || item.category === selectedCategory;
-    const matchesSearch = item.item.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.criteria.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
+    return matchesSearch && matchesCategory;
   });
 
   const handleVerifyPassword = async () => {
@@ -96,46 +96,71 @@ export default function PRADashboard() {
     }
   };
 
-    const generateExcel = () => {
-    const excelData = data.map((item: any) => {
+  const generateExcel = () => {
+    const headers = ["번호", "카테고리", "검토 항목", "상세 내용/기준", "관련 표준", "엔지니어링 근거 (Engineering Basis)"];
+    
+    // Prepare data rows
+    const rows = data.map((item: any) => {
       let basis = item.engineering_basis || "기준 검토 중";
       basis = basis.replace(/\*\*/g, ""); 
       basis = basis.replace(/(\d)\.\s/g, "\n$1) "); 
       basis = basis.replace(/-\s/g, "\n• ");
       basis = basis.trim();
 
-      return {
-        "번호": item.id,
-        "카테고리": item.category,
-        "검토 항목": item.item,
-        "상세 내용/기준": item.criteria,
-        "관련 표준": item.related_standards || "-",
-        "엔지니어링 근거 (Engineering Basis)": basis
-      };
+      return [
+        item.id,
+        item.category,
+        item.item,
+        item.criteria,
+        item.related_standards || "-",
+        basis
+      ];
     });
 
-    const worksheet = XLSX.utils.json_to_sheet(excelData);
+    const worksheet = XLSX.utils.aoa_to_sheet([headers, ...rows]);
     
-    // 셀 속성 설정 (자동 줄바꿈 및 상단 정렬)
+    // 스타일 정의
+    const headerStyle = {
+      font: { bold: true, size: 12, name: '맑은 고딕' },
+      fill: { fgColor: { rgb: "E9ECEF" } }, // 옅은 그레이 배경
+      alignment: { horizontal: "center", vertical: "center", wrapText: true },
+      border: {
+        top: { style: "thin" }, bottom: { style: "thin" }, left: { style: "thin" }, right: { style: "thin" }
+      }
+    };
+
+    const contentStyle = {
+      font: { size: 11, name: '맑은 고딕' },
+      alignment: { vertical: "top", wrapText: true },
+      border: {
+        top: { style: "thin" }, bottom: { style: "thin" }, left: { style: "thin" }, right: { style: "thin" }
+      }
+    };
+
+    // 범위 확인 및 스타일 적용
     const range = XLSX.utils.decode_range(worksheet['!ref'] || "A1:F1");
     for (let R = range.s.r; R <= range.e.r; ++R) {
       for (let C = range.s.c; C <= range.e.c; ++C) {
-        const address = XLSX.utils.encode_col(C) + (R + 1);
+        const address = XLSX.utils.encode_cell({ r: R, c: C });
         if (!worksheet[address]) continue;
-        if (!worksheet[address].s) worksheet[address].s = {};
-        worksheet[address].s = {
-          alignment: { wrapText: true, vertical: "top" }
-        };
+        
+        if (R === 0) {
+          // 헤더 스타일
+          worksheet[address].s = headerStyle;
+        } else {
+          // 콘텐츠 스타일
+          worksheet[address].s = contentStyle;
+        }
       }
     }
 
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, "PRA_Checklist");
-
     const wscols = [
-      { wch: 6 }, { wch: 15 }, { wch: 30 }, { wch: 60 }, { wch: 40 }, { wch: 100 }
+      { wch: 8 }, { wch: 20 }, { wch: 35 }, { wch: 65 }, { wch: 45 }, { wch: 110 }
     ];
     worksheet['!cols'] = wscols;
+
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "PRA_Checklist");
 
     XLSX.writeFile(workbook, "PRA_Design_Master_Checklist.xlsx");
   };
