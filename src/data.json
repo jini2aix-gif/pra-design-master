@@ -2,77 +2,69 @@
   {
     "id": "1",
     "category": "구조",
-    "item": "PRA 탑재성",
-    "criteria": "배터리 시스템 내부 PRA 경로면에서 타 부품과 간섭이 없는가?",
-    "engineering_basis": "조립 공차. 거동 범위를 고려하여 3D 정합성을 검증함으로서 물리적 충돌로 인한 피로 파손을 방지함",
-    "related_standards": "ISO 16750-3, Clause 4.1 (Vibration Test), LV 124 K-01 (Storage), K-05 (Shock), K-11 (Water)"
+    "item": "PRA 시스템 탑재성 및 3D 정합성 검증",
+    "criteria": "BSA 케이스와 PRA 간 전 방향(X, Y, Z) 최소 이격 거리 10mm 이상 확보 및 고전압 절연 간극 준수, 조립/정비 영역 확보 유무",
+    "engineering_basis": "1) 이종 협력사 간 마스터 엔벨로프(Master Envelope) 관리 및 3D 정합성 검증 필수\n2) ISO 16750-3 진동 환경에서의 동적 변위 고려로 물리적 타격 및 마모 피로 방지\n3) IEC 60664-1 기반 고도 및 오염 등급을 고려한 절연 거리 확보로 Arc Flash 예방",
+    "related_standards": "ISO 6469-3, IEC 60664-1, ISO 16750-3, 현대차 ES 91500"
   },
   {
     "id": "2",
     "category": "구조",
-    "item": "PRA 사이즈",
-    "criteria": "BSA 조립성을 고려하여 PRA의 외부 치수 및 사이즈가 적절한가?",
-    "engineering_basis": "환경 시험. 설계 타당성 검토",
-    "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
+    "item": "PRA 설계 컴팩트화 및 공간 최적화",
+    "criteria": "BSA 내부 에너지 밀도 극대화를 위한 PRA 외곽 체적 효율성(Volumetric Efficiency) 및 인터페이스 통합 설계 적정성 확인",
+    "engineering_basis": "1) Housing 데드 스페이스 최소화 및 적층 구조 활용으로 배터리 팩 내 Cell 탑재 공간 추가 확보\n2) 고주파 공진 주파수 회피 설계를 통한 기계적 내구 신뢰성 향상 (소형화 및 강성 보강)\n3) 밀집 배치 시 발생하는 열 밀도(Thermal Density) 제어를 위한 전도/대류 경로 최적화 및 열원 분리 설계",
+    "related_standards": "ISO 16750-3, ISO 6469-3, SAE J1742, 현대차 MS 915-02"
   },
   {
     "id": "3",
     "category": "구조",
-    "item": "HV 케이블 텐션",
-    "criteria": "고전압 케이블이 과한 인장력(텐션)을 받지 않도록 설계되었는가?",
-    "engineering_basis": "최소 곡률 반경(10D 이상을 확보하여 이어 내부 가닥(Strand) 신선 손상. 절연 열화를 방지함",
-    "related_standards": "-"
+    "item": "HV 케이블 레이아웃 텐션 관리 및 압착 신뢰성",
+    "criteria": "진동 대응 여유 길이(Slack) 확보, 정적/동적 곡률 반경 준수, 고전압 단자 고정점 설계 및 USCAR-21 기반 압착 품질 충족 여부",
+    "engineering_basis": "1) 최소 곡률 반경(정적 6xOD, 동적 10xOD 이상) 확보로 내부 도체 가닥(Strand) 신선 손상 및 절연 열화 방지\n2) USCAR-21 기준 압착 인장 강도(10SQ: ≥450N, 25SQ: ≥1200N 등) 확보로 접촉 저항 및 국부 발열(I²R) 예방\n3) Straight Exit Policy 적용(커넥터 출구단 15mm 이상 직선 구간 유지)으로 터미널 압착부 기계적 스트레스 원천 차단",
+    "related_standards": "ISO 19642-5, SAE/USCAR-21, IEC 60352-2, 현대차 ES 91101"
   },
   {
     "id": "4",
     "category": "구조",
-    "item": "버스바단면적 적합성",
-    "criteria": "커넥터 정위치 체결 후 케이블 및 관련 부품의 변형이 없는가?",
-    "engineering_basis": "환경 시험. 설계 타당성 검토",
-    "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
+    "item": "버스바 단면적 적합성 및 주요 부품(릴레이) 열 열화 방지 검증",
+    "criteria": "정격/Peak 전류 기반 단면적 및 표피 효과 고려, PRA ES(37514-30) 온도 성능(Δ80도 이내, 최종 140도 미만) 및 열 해석 정합성 확인",
+    "engineering_basis": "1) 릴레이 신뢰성 사수(Critical Point): 환경 온도 60도에서 온도 상승을 80도로 제한하여 릴레이 내부 허용 온도(140도)를 유지, 접점 및 코일 절연 보호\n2) 방열 면적 최적화: 버스바 배치 및 체결부 중복 설계 시 층간 발열 누적 CAE 사전 검증 시행\n3) 발열 체계 선순환: 발열 80도 이내 관리로 사출 Housing 열 변형 방지 및 장기 접촉 저항 상승 차단\n4) 해석 신뢰도 확보: 릴레이 부하 및 실 접촉 저항(Contact Resistance) 양산 공차 반영 여부 교차 검증 필수",
+    "related_standards": "DIN 43671, IEC 61439-1, 현대차 ES 37514-30, 현대차 MS 210-05"
   },
   {
     "id": "5",
     "category": "구조",
-    "item": "하네스 최적화",
-    "criteria": "고전압 케이블의 벤딩(곡률) 반경이 규정치 내로 적정한가?",
-    "engineering_basis": "최소 곡률 반경(10D 이상을 확보하여 이어 내부 가닥(Strand) 신선 손상. 절연 열화를 방지함",
-    "related_standards": "-"
+    "item": "PRA 내부 하네스 설계 최적화 및 신뢰성 검증",
+    "criteria": "고정점(100~150mm 간격) 및 Slack(5~10mm) 확보, 에지 보호 프로텍터 적용, 고전압 이격 거리 및 조립/정비성 검증",
+    "engineering_basis": "1) 부족한 Slack 관리 미흡 시 진동에 의한 Terminal Pin Back-out(단자 이탈) 및 통신 에러 유발\n2) 날카로운 에지(Sharp Edge) 통과 부위 보호 미비 시 Insulation Chafe에 의한 기구부 단락(Short) 및 화재 위험\n3) 릴레이 동작 노이즈에 의한 Signal Noise Interference 방지를 위해 신호선-버스바 간 이격 설계 필수\n4) 장기 진동 내구 관점에서 미고정 하네스의 반복 굽힘 스트레스로 인한 Wire Fatigue Crack(전선 피로 파괴) 방지\n5) 모세관 현상(Capillary Action)에 의한 수분 유입 및 BMS 내부 침투 방지 설계 검토",
+    "related_standards": "IPC/WHMA-A-620, USCAR-2, ISO 19642-3, LV 124"
   },
   {
     "id": "6",
     "category": "구조",
-    "item": "고전압/저전압 하네스 분리",
-    "criteria": "정격전류 3A당 1SQ 기준을 준수하며 선정 근거 자료를 첨부하였는가?",
-    "engineering_basis": "전류 밀도(3A/mm^2)를 고려한 허용 전류 설계로 도체. 절연재의 열적 손상(상승 온도 40K 이하을 예방함",
-    "related_standards": "IEC 60227, Clause 3.1 (Conductor Sizing), MS"
+    "item": "HV 전압 센싱(ISO) 라인과 저전압(LV) 하네스 물리적 분리 및 간섭 방지",
+    "criteria": "HV 전압 센싱용 ISO 라인(mA급 소전류이나 HV 전위 보유)과 저전압 센싱/통신 라인 간의 물리적 이격(50mm 이상) 또는 절연 격벽 적용 여부",
+    "engineering_basis": "1) 고전압 유입 사고 예방: ISO 라인(HV 전위)과 LV 라인 상호 피복 손상 시 저전압 회로(12V)에 고전압 유입되어 BMS/LDC 등 제어기 소손 및 화재 발생 방지\n2) 신호 무결성 확보: 릴레이 동작 시 발생하는 전자기적 노이즈가 ISO 센싱 라인을 타고 LV 제어부로 전도되어 SOC 오계산이나 허위 절연 경고 방지\n3) EMC 안테나 효과 차단: ISO 라인이 버스바 노이즈를 LV 영역으로 전달하는 안테나 역할을 수행하여 전자기 간섭(EMI) 유발하는 것을 물리적 이격으로 차단\n4) 트래킹(Tracking) 현상 방지: 수분/오염물 침투 시 좁은 이격 거리 내의 연면 거리(Creepage) 부족으로 인한 미세 누설 전류 및 절연 저항 하락 예방",
+    "related_standards": "ISO 6469-3, ECE R100, CISPR 25, IPC-2221"
   },
   {
     "id": "7",
     "category": "구조",
-    "item": "커넥터 오 조립 방지",
-    "criteria": "고전압 케이블의 선경(SQ) 선정이 전기적 부하에 타당한가?",
-    "engineering_basis": "전류 밀도(3A/mm^2)를 고려한 허용 전류 설계로 도체. 절연재의 열적 손상(상승 온도 40K 이하을 예방함",
-    "related_standards": "IEC 60227, Clause 3.1 (Conductor Sizing), MS"
+    "item": "커넥터 오조립 방지(Poka-yoke) 및 체결 신뢰성 검증",
+    "criteria": "기계적 키코딩(Keying), 색상 구분(Color-coding), 하네스 길이 규제 적용, CPA/TPA 2중 잠금 장치 반영 여부",
+    "engineering_basis": "1) 단자 손상 방지: 키코딩 및 물리적 돌기 구조(Rib)로 오삽입 시도 자체를 차단하여 Bent Pin 및 접촉 불량 예방\n2) 오구동 및 회로 소손 차단: 동일 핀 맵 교차 조립 방지로 센싱 라인 고전압 유입 및 의도치 않은 릴레이 작동(Safety Risk) 방지\n3) 진동 내구 신뢰성: CPA(Connector Position Assurance) 적용으로 '가상 체결(Virtual Mating)'을 방지하여 주행 중 시동 꺼짐 등 이탈 사고 예방\n4) 수분 침투 방지: 완전 체결 유도로 하우징 실링(Seal) 압착 품질을 확보하여 터미널 부식 및 트래킹(Tracking) 현상 차단",
+    "related_standards": "USCAR-2, USCAR-12, ISO 20860, 현대차 ES 91500"
   },
   {
     "id": "8",
     "category": "구조",
-    "item": "고전압회로 분리(ISO회로)",
-    "criteria": "불필요한 와이어 길이 과다를 방지하여 중량 및 원가를 최적화했는가?",
-    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding) 또는 이격 배치 적용",
-    "related_standards": "-"
+    "item": "고전압 케이블(프리차지 등) 경로 최적화 및 재료비/중량 효율화 검증",
+    "criteria": "최단 경로 설계 적용, 과도한 슬랙(Slack) 배제(필요 최소치 3~5% 준수), 통합 라우팅 및 케이블 굴곡 단순화 유무 확인",
+    "engineering_basis": "1) 원가/중량 효율성: 불필요한 슬랙(100mm 단위) 제거를 통한 대량 양산 재료비 손실 방지 및 시스템 경량화\n2) Whipping 현상 차단: 과도한 여유 길이로 인해 진동 시 케이블이 주변 부품과 충돌하여 발생하는 피복 마모(Abrasion) 및 충격 손상 방지\n3) EMI 안테나 효과 억제: 불필요한 케이블 루프(Loop)를 최소화하여 고주파 스위칭 노이즈가 외부로 방사되는 안테나 효과 원천 차단\n4) 전압 강하 최소화: 케이블 길이 단축에 따른 저항(R) 및 인덕턴스(L) 감소로 센싱 정밀도 향상 및 에너지 효율 증대",
+    "related_standards": "ISO 19642-9, ISO 14572, 현대차 ES 37514, VDA 6.3"
   },
   {
     "id": "9",
-    "category": "구조",
-    "item": "경로 설정",
-    "criteria": "고전압 테이블(Busbar/Cable)의 경로 설정이 레이아웃상 적정한가?",
-    "engineering_basis": "조립 공차. 거동 범위를 고려하여 3D 정합성을 검증함으로서 물리적 충돌로 인한 피로 파손을 방지함",
-    "related_standards": "ISO 16750-3, Clause 4.1 (Vibration Test), LV 124 K-01 (Storage), K-05 (Shock), K-11 (Water)"
-  },
-  {
-    "id": "10",
     "category": "구조",
     "item": "배선 다발 구성",
     "criteria": "저전압(LV) 와이어와 고전압(HV) 와이어 다발을 물리적으로 분리했는가?",
@@ -80,23 +72,7 @@
     "related_standards": "ECE R100.02, Annex 8 (REESS Safety Tests), ISO 26262-3 (HARA - Exposure Assessment)"
   },
   {
-    "id": "11",
-    "category": "구조",
-    "item": "절연거리(ISO회로)",
-    "criteria": "고전압 와이어와 저전압 와이어의 배선 경로를 별도로 구성하였는가?",
-    "engineering_basis": "조립 공차. 거동 범위를 고려하여 3D 정합성을 검증함으로서 물리적 충돌로 인한 피로 파손을 방지함",
-    "related_standards": "ISO 16750-3, Clause 4.1 (Vibration Test), LV 124 K-01 (Storage), K-05 (Shock), K-11 (Water)"
-  },
-  {
-    "id": "12",
-    "category": "구조",
-    "item": "ISO 퓨즈결합 피 체결계 적합성",
-    "criteria": "와이어 길이 조절 및 커넥터 이원화 등을 통해 오체결 방지 방안이 있는가?",
-    "engineering_basis": "휴먼 에러로 인한 제품 불량을 원천 차단하기 위한 기구적 키 코딩(Key-coding) 또는 이격 배치 적용",
-    "related_standards": "-"
-  },
-  {
-    "id": "13",
+    "id": "10",
     "category": "구조",
     "item": "오체결 방지",
     "criteria": "내부 커넥터류가 물리적으로 오체결을 방지할 수 있는 구조인가?",
@@ -104,7 +80,7 @@
     "related_standards": "-"
   },
   {
-    "id": "14",
+    "id": "11",
     "category": "구조",
     "item": "하네스 고정구조",
     "criteria": "ISO 와이어(+/-)가 각각 별도로 구성되었는가?",
@@ -112,15 +88,7 @@
     "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "15",
-    "category": "구조",
-    "item": "하네스 클립배치",
-    "criteria": "ISO 와이어 (+ / -)를 각각 별도 다발로 구성하여 절연을 확보했는가?",
-    "engineering_basis": "환경 시험. 설계 타당성 검토",
-    "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
-  },
-  {
-    "id": "16",
+    "id": "12",
     "category": "구조",
     "item": "커넥터 오 조립 방지(릴레이 간)",
     "criteria": "릴레이 체결 커넥터 오 조립 근본개선 목적 이격거리 확보 or 오조립 방지 안이 적용 되었는가?",
@@ -128,7 +96,7 @@
     "related_standards": "-"
   },
   {
-    "id": "17",
+    "id": "13",
     "category": "구조",
     "item": "커넥터 오 조립 방지(프리차지릴레이)",
     "criteria": "ISO 와이어가 릴레이 전단(BATT <-> 릴레이 사이)에서 적절히 분기되는가?",
@@ -136,7 +104,7 @@
     "related_standards": "ISO 26262-3 (HARA - Exposure Assessment)"
   },
   {
-    "id": "18",
+    "id": "14",
     "category": "구조",
     "item": "링터미널 오 조립 방지",
     "criteria": "퓨즈 연결 와이어 및 버스바의 이격거리가 전압별 기준을 준수하는가?",
@@ -144,7 +112,7 @@
     "related_standards": "-"
   },
   {
-    "id": "19",
+    "id": "15",
     "category": "구조",
     "item": "커넥터 고정력",
     "criteria": "퓨즈 (+ / -) 단자 간의 이격거리는 충분히 확보되었는가?",
@@ -152,7 +120,7 @@
     "related_standards": "-"
   },
   {
-    "id": "20",
+    "id": "16",
     "category": "구조",
     "item": "MIDI 퓨즈 매칭",
     "criteria": "MIDI 퓨즈 적용 시 퓨즈 단자와 터미널 간의 매칭 근거 자료가 있는가?",
@@ -160,7 +128,7 @@
     "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "21",
+    "id": "17",
     "category": "구조",
     "item": "상대물 버스바",
     "criteria": "ISO 퓨즈 조립을 위한 상대물 버스바 두께가 퓨즈 사양에 적합한가?",
@@ -168,7 +136,7 @@
     "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "22",
+    "id": "18",
     "category": "구조",
     "item": "설체결 방지",
     "criteria": "퓨즈 및 단자류의 설체결(느슨함) 방지를 위한 기구적 대책이 있는가?",
@@ -176,7 +144,7 @@
     "related_standards": "-"
   },
   {
-    "id": "23",
+    "id": "19",
     "category": "구조",
     "item": "ISO 퓨즈 커버",
     "criteria": "ISO 퓨즈 커버가 퓨즈의 설체결을 보완하거나 보호할 수 있는 구조인가?",
@@ -184,7 +152,7 @@
     "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "24",
+    "id": "20",
     "category": "구조",
     "item": "W/H 고정 구조",
     "criteria": "250mm 이상의 구간에서 고정 클립 또는 하우징 고정 구조를 반영했는가?",
@@ -192,7 +160,7 @@
     "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "25",
+    "id": "21",
     "category": "구조",
     "item": "온도센서 회전방지",
     "criteria": "우 방향 나사산 사용 기준 회전방지 구조 온도센서 좌측에 배치할 것.",
@@ -200,7 +168,7 @@
     "related_standards": "-"
   },
   {
-    "id": "26",
+    "id": "22",
     "category": "구조",
     "item": "온도센서 와이어 보호",
     "criteria": "기구적으로 오조립이 불가능하도록 Poka-yoke 설계가 적용되었는가?",
@@ -208,7 +176,7 @@
     "related_standards": "-"
   },
   {
-    "id": "27",
+    "id": "23",
     "category": "구조",
     "item": "온도센서 바디 절연",
     "criteria": "메인 릴레이와 보조 릴레이(OBC 등)가 혼동되지 않도록 구성했는가?",
@@ -216,7 +184,7 @@
     "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "28",
+    "id": "24",
     "category": "구조",
     "item": "이격거리 예외",
     "criteria": "오조립 방지 구조를 별도 제안하여 승인된 경우, 이격거리 규제를 준수하는가?",
@@ -224,7 +192,7 @@
     "related_standards": "-"
   },
   {
-    "id": "29",
+    "id": "25",
     "category": "구조",
     "item": "온도센서 체결토크 영향성",
     "criteria": "프리차지 릴레이와 저항 커넥터가 동일할 경우 이격거리를 확보했는가?",
@@ -232,7 +200,7 @@
     "related_standards": "-"
   },
   {
-    "id": "30",
+    "id": "26",
     "category": "구조",
     "item": "BPA-PRA 마운팅 홀 일치성",
     "criteria": "오조립 방지를 위해 터미널 형상을 다르게 설계하였는가?",
@@ -240,7 +208,7 @@
     "related_standards": "-"
   },
   {
-    "id": "31",
+    "id": "27",
     "category": "구조",
     "item": "체결 후 나사산",
     "criteria": "BPA 버스바 체결 이후 너트 상단에 2~3개 나사산 여유가 남는가?",
@@ -248,7 +216,7 @@
     "related_standards": "-"
   },
   {
-    "id": "32",
+    "id": "28",
     "category": "구조",
     "item": "고전압커넥터 - PRA 마운팅 홀 일치성",
     "criteria": "커넥터 고정을 위한 하우징 구조가 커넥터 제조사의 가이드를 따르는가?",
@@ -256,7 +224,7 @@
     "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "33",
+    "id": "29",
     "category": "구조",
     "item": "커넥터 핀 맵(Pin-Map)",
     "criteria": "커넥터 핀 배열은 Male 커넥터 상부 레버 기준(매칭면 정면을 바로보는 기준) 좌측 상단 부터 1~ (BSA업체에 커넥터 핀맵 표시 사진공유) 커넥터 핀 배열 좌상단 1번핀, 좌에서 우로 N+1 (이미지 참조)",
@@ -264,7 +232,7 @@
     "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "34",
+    "id": "30",
     "category": "구조",
     "item": "공간/연면거리 확보",
     "criteria": "400V(공간 : 5mm / 연면 : 10mm), 800V (공간 : 10mm / 연면 : 15mm) 확보 했는가? 버스바 등 도체 (+/-) 간 이격 거리를 최대한 확보했는가? 불가 시 단차 or 격벽을 절연거리 기준에 따라 반영할 것.",
@@ -272,7 +240,7 @@
     "related_standards": "-"
   },
   {
-    "id": "35",
+    "id": "31",
     "category": "구조",
     "item": "버스바 레이아웃",
     "criteria": "적절한 버스바 길이와 경로로 내부 레이아웃을 구성하였는가?",
@@ -280,7 +248,7 @@
     "related_standards": "ISO 16750-3, Clause 4.1 (Vibration Test), LV 124 K-01 (Storage), K-05 (Shock), K-11 (Water)"
   },
   {
-    "id": "36",
+    "id": "32",
     "category": "구조",
     "item": "인터페이스 커넥터 오 조립방지",
     "criteria": "버스바의 전체적인 경로가 조립 및 절연 면에서 적절한가?",
@@ -288,7 +256,7 @@
     "related_standards": "ISO 16750-3, Clause 4.1 (Vibration Test), LV 124 K-01 (Storage), K-05 (Shock), K-11 (Water)"
   },
   {
-    "id": "37",
+    "id": "33",
     "category": "구조",
     "item": "고전압 단자 격벽",
     "criteria": "고전압 단자 격벽이 회전방지 역활을 할수 있도록 충분히 높은기? (상대 버스바 조립 높이보다 격벽의 높이가 높을 것.)",
@@ -296,7 +264,7 @@
     "related_standards": "-"
   },
   {
-    "id": "38",
+    "id": "34",
     "category": "구조",
     "item": "전류센서 무부하 오차",
     "criteria": "작동 범위 및 공차 상태에서 주변 부품과의 간섭은 전혀 없는가?",
@@ -304,7 +272,7 @@
     "related_standards": "-"
   },
   {
-    "id": "39",
+    "id": "35",
     "category": "구조",
     "item": "전류센서 - 릴레이 이격",
     "criteria": "전류센서와 릴레이 간 이격거리가 40mm 이상인가? (Hall 센서 기준, 릴레이 On/Off 하여 전압값 비교)",
@@ -312,7 +280,7 @@
     "related_standards": "-"
   },
   {
-    "id": "40",
+    "id": "36",
     "category": "구조",
     "item": "BSA와의 간극",
     "criteria": "전류센서의 방향이 배터리 방전 시 (+) 값이 나오는 방향으로 설계되었는가?",
@@ -320,7 +288,7 @@
     "related_standards": "SAE J1742"
   },
   {
-    "id": "41",
+    "id": "37",
     "category": "구조",
     "item": "PRA 방열설계",
     "criteria": "나사 체결 시 단자가 돌아가지 않도록 회전 방지(Anti-rotation) 구조를 갖췄는가?",
@@ -328,7 +296,7 @@
     "related_standards": "-"
   },
   {
-    "id": "42",
+    "id": "38",
     "category": "구조",
     "item": "고정리브",
     "criteria": "PRA Control 커넥터 등 커넥터의 움직임이 없도록 고정 리브를 설계 했는가?",
@@ -336,7 +304,7 @@
     "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "43",
+    "id": "39",
     "category": "구조",
     "item": "온도센서 방지",
     "criteria": "온도센서 체결 시 센서가 회전하여 와이어가 꼬이지 않도록 설계했는가?",
@@ -344,7 +312,7 @@
     "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "44",
+    "id": "40",
     "category": "구조",
     "item": "와이어 소손 방지",
     "criteria": "회전 방지 구조 설계 시 온도센서 와이어가 씹히거나 소손될 우려는 없는가?",
@@ -352,7 +320,7 @@
     "related_standards": "-"
   },
   {
-    "id": "45",
+    "id": "41",
     "category": "구조",
     "item": "메인릴레이 체결볼트 길이 적합성",
     "criteria": "메인릴레이 고전압단자대 체결볼트의 길이는 메인 릴레이 단자대 탭 끝단에 대한 여유길이를 확보 하였는가? (공차 고려하여 볼트가 단자대 탭 끝부분과 완전 접촉 시 볼트 풀림을 유발)",
@@ -360,7 +328,7 @@
     "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "46",
+    "id": "42",
     "category": "구조",
     "item": "록타이트 특성",
     "criteria": "메인릴레이 고전압단자 체결볼트에 록타이트 적용 시 재질에 따른 토크 특성 및 축력을 점검했는가? (록타이트 재질에 따라 체결토크를 상향해야 기존 동등수준의 축력을 확보할 수 있음)",
@@ -368,7 +336,7 @@
     "related_standards": "ISO  16047, MS124-24"
   },
   {
-    "id": "47",
+    "id": "43",
     "category": "구조",
     "item": "록타이트에 의한 손상",
     "criteria": "도포범위에 따른 메인 릴레이 단자대의 손상 여부를 확인했는가? (록타이트 볼트는 메인릴레이 단자대의 손상을 유발할 수 있고, 전체도포/부분도포 별로 손상정도가 다름)",
@@ -376,7 +344,7 @@
     "related_standards": "ISO  16047, MS124-24"
   },
   {
-    "id": "48",
+    "id": "44",
     "category": "구조",
     "item": "메인릴레이 마운팅 치수",
     "criteria": "온도센서 체결 시 센서 자체가 틀어지거나 기계적 변형이 발생하지 않는가?",
@@ -384,7 +352,7 @@
     "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "49",
+    "id": "45",
     "category": "구조",
     "item": "전류센서 EMC 영향성",
     "criteria": "체결 토크에 의한 센서 변형을 방지하기 위해 링터미널 및 레그 두께가 충분한가?",
@@ -392,7 +360,7 @@
     "related_standards": "-"
   },
   {
-    "id": "50",
+    "id": "46",
     "category": "구조",
     "item": "와이어 고정",
     "criteria": "모든 와이어는 고정구조를 갖추었으며 ASSY시 커버 및 타 부품 사이 와이어 협착 가능성이 없는가?",
@@ -400,7 +368,7 @@
     "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "51",
+    "id": "47",
     "category": "구조",
     "item": "BMU 정비창",
     "criteria": "고전압 커넥터/버스바와 인버터(INV) 단자 볼트 사이즈가 적절한가?",
@@ -408,7 +376,7 @@
     "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "52",
+    "id": "48",
     "category": "구조",
     "item": "PRA 상부커버 비 개방 점검",
     "criteria": "HV 커넥터 체결 홀과 BATT 단자 스터드 볼트 규격이 상호 일치하는가?",
@@ -416,7 +384,7 @@
     "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "53",
+    "id": "49",
     "category": "구조",
     "item": "ICCU퓨즈 교체성",
     "criteria": "ASSY(조립) 상태에서 BDU 또는 PRA 상부 커버의 탈거가 용이한가?",
@@ -424,7 +392,7 @@
     "related_standards": "ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "54",
+    "id": "50",
     "category": "구조",
     "item": "HVIL (High Voltage Interlock) 타이밍",
     "criteria": "커넥터 탈거 시 HVIL이 주 단차보다 먼저 개방되도록 설계되었는가?",
@@ -432,7 +400,7 @@
     "related_standards": "-"
   },
   {
-    "id": "55",
+    "id": "51",
     "category": "성능",
     "item": "커넥터 판배열",
     "criteria": "현대차 표준(ES91100-00 등)에 따라 커넥터 핀맵을 도면에 명기했는가?",
@@ -440,7 +408,7 @@
     "related_standards": "ES37514 Power Relay Assembly Spec, ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "56",
+    "id": "52",
     "category": "성능",
     "item": "기입 위치",
     "criteria": "Female(우상), Male(좌상) 1번 핀 설정 기준을 도면에 시각화했는가?",
@@ -448,7 +416,7 @@
     "related_standards": "ES37514 Power Relay Assembly Spec, ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "57",
+    "id": "53",
     "category": "성능",
     "item": "프리차지릴레이 사양",
     "criteria": "온도센서의 5℃ 단위별 저항값과 오차(Tolerance)를 모두 명기했는가?",
@@ -456,7 +424,7 @@
     "related_standards": "ISO 26262-3 (HARA - Exposure Assessment)"
   },
   {
-    "id": "58",
+    "id": "54",
     "category": "성능",
     "item": "길이 및 공차",
     "criteria": "시각적 위치별 와이어의 길이 및 허용 공차를 도면에 정확히 기재했는가?",
@@ -464,7 +432,7 @@
     "related_standards": "ES37514 Power Relay Assembly Spec, ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "59",
+    "id": "55",
     "category": "성능",
     "item": "프리차지저항 용량",
     "criteria": "PE부품의 CAP사양을 점검하고, 저항크기(ohm)와 저항용량(W)를 선정할 것. (1) 저항크기(ohm) : 5타우 < 300ms 만족할 것. (2)저항용량(W) : W=1/2*c*v2/2초 [W] 만족 할 것.",
@@ -472,7 +440,7 @@
     "related_standards": "ISO 26262-3 (HARA - Exposure Assessment)"
   },
   {
-    "id": "60",
+    "id": "56",
     "category": "성능",
     "item": "전류센서 정확도",
     "criteria": "전류센서 정확도 사양은 PRA SR을 만족할 것. 신규사양(LFP등) 개발 시, SOC개발(알고리즘) 담당자의 의견을 확인할 것.",
@@ -480,7 +448,7 @@
     "related_standards": "-"
   },
   {
-    "id": "61",
+    "id": "57",
     "category": "성능",
     "item": "채널별 사양",
     "criteria": "전류센서의 측정 범위, 동작 온도, 출력 전압 등 상세 사양을 기재했는가?",
@@ -488,7 +456,7 @@
     "related_standards": "ES37514 Power Relay Assembly Spec, ISO 16750-3 (Mechanical), ISO 16750-4 (Climatic)"
   },
   {
-    "id": "62",
+    "id": "58",
     "category": "성능",
     "item": "온도센서 범위",
     "criteria": "R-T 테이블은 25도 = 10kohm이 맞는가? 온도센서의 측정범위는 PRA 과온 DTC의 온도조건 보다 충분히 클 것. R-T테이블이 25eh=10kohm이 아닌 경우, BMS H/W 담당자와 협의할 것. (풀업저항 점검)",
@@ -496,7 +464,7 @@
     "related_standards": "-"
   },
   {
-    "id": "63",
+    "id": "59",
     "category": "성능",
     "item": "난연/열변형",
     "criteria": "사출물이 난연등급 V0이상 및 열변형온도 180도 이상을 만족하는가? PRA 사출물은 난연등급 V0이고, 열변형온도는 180도 이상일 것. (PA66+PPE)는 요구사양 만족으로 간주하고, (PA66+PPE)가 아닌 경우에는 비교표 작성할 것.",
@@ -504,7 +472,7 @@
     "related_standards": "ISO 6469-1, UL 94"
   },
   {
-    "id": "64",
+    "id": "60",
     "category": "성능",
     "item": "아크 제어(Magnetic Blow-out)",
     "criteria": "메인 릴레이 차단 시 발생하는 아크를 제어하기 위한 주변 자성체 배치가 적절한가?",
@@ -512,7 +480,7 @@
     "related_standards": "-"
   },
   {
-    "id": "65",
+    "id": "61",
     "category": "성능",
     "item": "통신 절연(Galvanic Isolation)",
     "criteria": "전류/전압 센서의 통신 라인과 고전압 라인 간의 절연 내압이 충분한가?",
@@ -520,7 +488,7 @@
     "related_standards": "IEC 60747, ISO 26262-3 (HARA - Exposure Assessment), Isolation변압기/커플러"
   },
   {
-    "id": "66",
+    "id": "62",
     "category": "정비성(A/S)",
     "item": "외부커넥터 체결방향",
     "criteria": "BSA 조립상태에서 외부 커넥터 체결방향(수평 등)이 적절한가? 수평방향 체결을 권장하며 수평방향 체결이 어려운 경우에는 H 방향으로 커넥터 체결하고 신뢰성을 점검할 것.",
@@ -528,7 +496,7 @@
     "related_standards": "-"
   },
   {
-    "id": "67",
+    "id": "63",
     "category": "정비성(A/S)",
     "item": "고정후크 강건성",
     "criteria": "부품 조립 시(저항, 릴레이 등) 고정 후크가 재질/두께 문제로 파손 될 우려는 없는가?",
@@ -536,7 +504,7 @@
     "related_standards": "ISO 26262-3 (HARA - Exposure Assessment)"
   },
   {
-    "id": "68",
+    "id": "64",
     "category": "정비성(A/S)",
     "item": "버스바 인입부 표기",
     "criteria": "BSA 성능 요구서(SR)의 정격 및 최대 전류 사양을 만족하는가?",
@@ -544,7 +512,7 @@
     "related_standards": "ISO 20430"
   },
   {
-    "id": "69",
+    "id": "65",
     "category": "정비성(A/S)",
     "item": "프리차지 저항 소손 체크",
     "criteria": "전류 사양 및 급속 충전 전류를 고려하여 버스바 단면적(SQ)을 선정했는가?",
@@ -552,7 +520,7 @@
     "related_standards": "ISO 26262-3 (HARA - Exposure Assessment)"
   },
   {
-    "id": "70",
+    "id": "66",
     "category": "정비성(A/S)",
     "item": "프리차지 저항 A/S",
     "criteria": "프리차징 전류 크기 및 전압을 고려하여 프리차지 릴레이 사양을 선정했는가?",
@@ -560,7 +528,7 @@
     "related_standards": "ISO 26262-3 (HARA - Exposure Assessment)"
   },
   {
-    "id": "71",
+    "id": "67",
     "category": "정비성(A/S)",
     "item": "하드웨어 A/S 리유저블",
     "criteria": "반복 정비 시 고전압 단자부 볼트/너트의 파손 우려는 없는가? (볼트/너트 파단토크는 체결토크보다 충분히 클 것)",
@@ -568,7 +536,7 @@
     "related_standards": "ISO 20430"
   },
   {
-    "id": "72",
+    "id": "68",
     "category": "정비성(A/S)",
     "item": "센서 정확도",
     "criteria": "전류센서의 측정 오차가 SOC 알고리즘 개발 요구사항(SR)을 만족하는가?",
@@ -576,7 +544,7 @@
     "related_standards": "ISO  26262"
   },
   {
-    "id": "73",
+    "id": "69",
     "category": "정비성(A/S)",
     "item": "LFP 대응",
     "criteria": "LFP 배터리 등 신규 사양 대응 시 전류센서 정확도에 대해 담당자와 협의했는가?",
@@ -584,7 +552,7 @@
     "related_standards": "ISO  26262"
   },
   {
-    "id": "74",
+    "id": "70",
     "category": "정비성(A/S)",
     "item": "와이어 선경",
     "criteria": "부품의 정격 및 최대 전류 부하를 고려하여 와이어 선경이 결정되었는가?",
@@ -592,7 +560,7 @@
     "related_standards": "ISO 20430"
   },
   {
-    "id": "75",
+    "id": "71",
     "category": "정비성(A/S)",
     "item": "전류센서 위치",
     "criteria": "온도센서의 R-T 테이블(25℃=10kΩ 등)이 BMS 하드웨어 사양과 일치하는가?",
@@ -600,7 +568,7 @@
     "related_standards": "-"
   },
   {
-    "id": "76",
+    "id": "72",
     "category": "정비성(A/S)",
     "item": "난연/내열 사양",
     "criteria": "사출물이 난연 등급 V0 이상 및 180℃ 이상의 열변형 온도를 만족하는가?",
@@ -608,7 +576,7 @@
     "related_standards": "ISO 6469, UL 94 Flammability"
   },
   {
-    "id": "77",
+    "id": "73",
     "category": "정비성(A/S)",
     "item": "BOM 구성",
     "criteria": "사양에 따라 항목별 수량, 재질, 도금 스펙 등이 BOM에 정확히 명기되었는가?",
@@ -616,7 +584,7 @@
     "related_standards": "ISO 20430"
   },
   {
-    "id": "78",
+    "id": "74",
     "category": "정비성(A/S)",
     "item": "Shown on 부품",
     "criteria": "도면 내 Shown-on 부품 리스트를 누락 없이 나열하였는가?",
@@ -627,7 +595,7 @@
     "category": "정비성(A/S)",
     "item": "링터미널 오조립 방지",
     "criteria": "오조립 방지 대책이 적용 되어 있는지 확인할 것. (예) 터미널 형상 이원화, 컬러 테이핑, 와이어 길이 차이 등",
-    "id": "79",
+    "id": "75",
     "engineering_basis": "HMC 서비스 정비 지침. 반복 정비 시 내구성. 정비 안전성 확보",
     "related_standards": "ISO 20430"
   },
@@ -635,12 +603,12 @@
     "category": "정비성(A/S)",
     "item": "상부케이스 탈거",
     "criteria": "진동/충격에 의한 커버열림 or 파손을 방지하며, 상부케이스 탈거는 용이할 것.",
-    "id": "80",
+    "id": "76",
     "engineering_basis": "HMC 서비스 정비 지침. 반복 정비 시 내구성. 정비 안전성 확보",
     "related_standards": "ISO 20430"
   },
   {
-    "id": "81",
+    "id": "77",
     "category": "정비성(A/S)",
     "item": "압력 평형(Ventilation)",
     "criteria": "내부 온도 변화에 따른 결로 방지 및 압력 평형을 위한 숨구멍(Breather)이 반영되었는가?",
@@ -648,7 +616,7 @@
     "related_standards": "-"
   },
   {
-    "id": "82",
+    "id": "78",
     "category": "2D도면 검도 체크리스트",
     "item": "BOM 상세 Spec",
     "criteria": "Shown on 부품 존재 시, 부품 별 BOM List 각각 나열할 것. Opt 사양에 따라 BOM 구성 및 수량/재질/도금 사양 등 Spec 명기할 것.",
@@ -656,7 +624,7 @@
     "related_standards": "ISO 10209"
   },
   {
-    "id": "83",
+    "id": "79",
     "category": "2D도면 검도 체크리스트",
     "item": "커넥터 핀맵",
     "criteria": "ES91100-00에 준하여 커네거 락킹부 상부 위치하여 Female 커넥터는 우측상단 1번 / Male 커넥터는 좌측상단 1번으로 설정하여 핀맵 기입할 것.",
@@ -664,7 +632,7 @@
     "related_standards": "-"
   },
   {
-    "id": "84",
+    "id": "80",
     "category": "2D도면 검도 체크리스트",
     "item": "마운팅 토크",
     "criteria": "디바이스 연결부 외에 PRA 마운팅부의 조임 토크를 명기했는가?",
@@ -672,7 +640,7 @@
     "related_standards": "-"
   },
   {
-    "id": "85",
+    "id": "81",
     "category": "2D도면 검도 체크리스트",
     "item": "릴레이/ 퓨즈 기본사양",
     "criteria": "릴레이/퓨즈의 정격전압, 정격전류 및 차단 용량 기본 사양을 표기했는가?",
@@ -680,7 +648,7 @@
     "related_standards": "ES91851 Midi Fuse Spec, ISO  8820"
   },
   {
-    "id": "86",
+    "id": "82",
     "category": "2D도면 검도 체크리스트",
     "item": "전류센서사양",
     "criteria": "2ch일 경우 각 채널 별 동작 온도, 출력전압, 채널 별 측정 범위 등 상세 사양을 기재했는가?",
@@ -688,7 +656,7 @@
     "related_standards": "-"
   },
   {
-    "id": "87",
+    "id": "83",
     "category": "2D도면 검도 체크리스트",
     "item": "퓨즈특성곡선",
     "criteria": "퓨즈의 시간-전류 곡선(I-T Curve)을 도면에 첨부했는가? Main / E-awd / ICCU / OBC / ISOL 등 퓨즈 I-T Curve 기입",
@@ -696,7 +664,7 @@
     "related_standards": "ES91851 Midi Fuse Spec, ISO  8820"
   },
   {
-    "id": "88",
+    "id": "84",
     "category": "2D도면 검도 체크리스트",
     "item": "마운팅 토크",
     "criteria": "Device 연결 부 외 PRA 마운팅부의 조입 토크 사양을 명기했는가?",
@@ -704,7 +672,7 @@
     "related_standards": "-"
   },
   {
-    "id": "89",
+    "id": "85",
     "category": "2D도면 검도 체크리스트",
     "item": "무도금협력사",
     "criteria": "무도금 버스바 사용 시 버스바 협력사와 원소재업체가 2D 도면에 표기되어 있는가? 타발유 사양 점검하고 2D 도면에 표기되어 있는가?",
@@ -712,7 +680,7 @@
     "related_standards": "MS613-07, MS617-15 도금"
   },
   {
-    "id": "90",
+    "id": "86",
     "category": "2D도면 검도 체크리스트",
     "item": "체결부 관리기준",
     "criteria": "2D 도면 주기에 체결부 관리기준 문구를 표기 했는가? (부품의 체결 부 중 고전압(60V 이상) 통전부 또는 씰링부는 체결불량 유출방지를 위해 런 다운 각도와 최종각도 규제를 적용할 것.",
@@ -723,7 +691,7 @@
     "category": "커넥터블럭 일체형 PRA",
     "item": "블럭 나사산 도금처리",
     "criteria": "커넥터블럭의 나사산 부분은 도장/도금이 마스킹 되었는가?",
-    "id": "91",
+    "id": "87",
     "engineering_basis": "볼트 체결 시 첫 번째 나사산이 전체 하중의 약 34%. 두 번째가 약 23%. 세 번째가 약 15%를 부담함. - 너트 상단으로 2~3개의 나사산이 노출되어야 전체 하중이 나사산에 균등하게 분산되며. 정적/동적 하중 하에서 나사산 파손(Thread Stripping)을 방지함. - 특히 Cu/Al 버스바 체결 시 재료의 연성. 크립(Creep) 현상으로 인한 축력 저하를 방지하기 위한 최소 체결 길이 확보가 필수적임",
     "related_standards": "-"
   },
@@ -731,12 +699,12 @@
     "category": "퓨즈통합 PRA",
     "item": "공간거리",
     "criteria": "메인퓨즈/퓨즈케이스 간 충분히 이격 하였는가?",
-    "id": "92",
+    "id": "88",
     "engineering_basis": "800V DC 시스템. (Pollution Degree 2. Material Group IIIa:. * 연면거리(Creep)age: 최소 8.0 mm 확보 필수. * 공간거리(Clearance): 기본 1.5 mm이나 고도 2000m 보정(x1.48 적용 시 2.22 mm 이상 설계. - : 고전압 아크 방전 방지. 절연 파괴에 의한 감전 사고 예방",
     "related_standards": "-"
   },
   {
-    "id": "93",
+    "id": "89",
     "category": "ES/MS",
     "item": "온도센서 R-T 테이블",
     "criteria": "온도센서의 5도 단위 저항값 및 허용공차(Tolerance)를 명기 했는가?",
@@ -744,7 +712,7 @@
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
   {
-    "id": "94",
+    "id": "90",
     "category": "ES/MS",
     "item": "치수/혀용공차",
     "criteria": "각 위치별 상세길이 및 허용공차를 모두 명기했는가?",
@@ -752,7 +720,7 @@
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
   {
-    "id": "95",
+    "id": "91",
     "category": "ES/MS",
     "item": "특별특성 표기",
     "criteria": "도면 내 특별특성(IC / CC) 관리 항목이 명확히 표시되었는가?",
@@ -760,7 +728,7 @@
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
   {
-    "id": "96",
+    "id": "92",
     "category": "ES/MS",
     "item": "ES01000-00",
     "criteria": "심볼마크 표시 표준화 (필수)",
@@ -768,7 +736,7 @@
     "related_standards": "ES01000-00 (현대차 시스템 규격)"
   },
   {
-    "id": "97",
+    "id": "93",
     "category": "ES/MS",
     "item": "ES05206-00",
     "criteria": "보통치수 허용차 - 프레스 가공 (필수)",
@@ -776,7 +744,7 @@
     "related_standards": "ES05206-00 (현대차 시스템 규격)"
   },
   {
-    "id": "98",
+    "id": "94",
     "category": "ES/MS",
     "item": "회로 다이어그램",
     "criteria": "내부 고전압 회로 구성도에 대한 다이어그램(회로도)을 삽입했는가?",
@@ -784,7 +752,7 @@
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
   {
-    "id": "99",
+    "id": "95",
     "category": "ES/MS",
     "item": "버스바 스펙",
     "criteria": "나사의 표준 체결 토크 (필수)",
@@ -792,7 +760,7 @@
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
   {
-    "id": "100",
+    "id": "96",
     "category": "ES/MS",
     "item": "ES37514-03",
     "criteria": "파워 릴레이 아세이 성능 규격 (필수)",
@@ -800,7 +768,7 @@
     "related_standards": "ES37514-03 (현대차 시스템 규격)"
   },
   {
-    "id": "101",
+    "id": "97",
     "category": "ES/MS",
     "item": "ES91101-00",
     "criteria": "와이어 하네스 제조공정 관리 및 시험 (필수)",
@@ -808,7 +776,7 @@
     "related_standards": "ES91101-00 (현대차 시스템 규격)"
   },
   {
-    "id": "102",
+    "id": "98",
     "category": "ES/MS",
     "item": "ES91107-02",
     "criteria": "대전류 단자 압착 관리 규격 (선택)",
@@ -816,7 +784,7 @@
     "related_standards": "USCAR-21, Clause 4.4 (Pull-out Force Requirements)"
   },
   {
-    "id": "103",
+    "id": "99",
     "category": "ES/MS",
     "item": "도면 공차 협의",
     "criteria": "도면 공차에 대해 PRA/BSA 협력사 상호 간 합의가 되었는가?",
@@ -824,7 +792,7 @@
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
   {
-    "id": "104",
+    "id": "100",
     "category": "ES/MS",
     "item": "2D/3D 하네스 일치성",
     "criteria": "2D 도면상의 하네스 사양과 3D 데이터 간 불일치 사항은 없는가?",
@@ -832,7 +800,7 @@
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
   {
-    "id": "105",
+    "id": "101",
     "category": "ES/MS",
     "item": "ES91851-00",
     "criteria": "미디 퓨즈 규격 (선택)",
@@ -840,7 +808,7 @@
     "related_standards": "-"
   },
   {
-    "id": "106",
+    "id": "102",
     "category": "ES/MS",
     "item": "ES91861-00",
     "criteria": "EV용 유리관 퓨즈 규격 (선택)",
@@ -848,7 +816,7 @@
     "related_standards": "ES91851 Midi Fuse Spec, ISO  8820"
   },
   {
-    "id": "107",
+    "id": "103",
     "category": "ES/MS",
     "item": "ES95230-00",
     "criteria": "래치 릴레이 규격 (선택)",
@@ -856,7 +824,7 @@
     "related_standards": "ES95230-00 (현대차 시스템 규격)"
   },
   {
-    "id": "108",
+    "id": "104",
     "category": "ES/MS",
     "item": "MS124-24",
     "criteria": "체결용 강선 및 볼트/너트 재질 (필수)",
@@ -864,7 +832,7 @@
     "related_standards": "-"
   },
   {
-    "id": "109",
+    "id": "105",
     "category": "ES/MS",
     "item": "MS153-02",
     "criteria": "동 및 동합금의 판재 규격 (선택)",
@@ -872,7 +840,7 @@
     "related_standards": "MS153-02 (현대차 내부 재질 규격)"
   },
   {
-    "id": "110",
+    "id": "106",
     "category": "ES/MS",
     "item": "MS200-41",
     "criteria": "표준 시험 방법 - 연질 가류 고무 (선택)",
@@ -880,7 +848,7 @@
     "related_standards": "MS200-41 (현대차 내부 재질 규격)"
   },
   {
-    "id": "111",
+    "id": "107",
     "category": "ES/MS",
     "item": "MS201-07",
     "criteria": "부품 재질 표기 방법 (필수)",
@@ -888,7 +856,7 @@
     "related_standards": "MS201-07 (현대차 내부 재질 규격)"
   },
   {
-    "id": "112",
+    "id": "108",
     "category": "ES/MS",
     "item": "ES91101-02",
     "criteria": "유해물질 금지 및 신고 규정 (필수)",
@@ -896,7 +864,7 @@
     "related_standards": "ES91101-02 (현대차 시스템 규격)"
   },
   {
-    "id": "113",
+    "id": "109",
     "category": "ES/MS",
     "item": "MS213-80",
     "criteria": "난연 PP - 배터리팩 사출품용 (선택)",
@@ -904,7 +872,7 @@
     "related_standards": "-"
   },
   {
-    "id": "114",
+    "id": "110",
     "category": "ES/MS",
     "item": "MS260-13",
     "criteria": "스폰지 고무 규격 (선택)",
@@ -912,7 +880,7 @@
     "related_standards": "MS260-13 (현대차 내부 재질 규격)"
   },
   {
-    "id": "115",
+    "id": "111",
     "category": "ES/MS",
     "item": "MS269-03",
     "criteria": "연질 가류 고무 규격 (필수)",
@@ -920,7 +888,7 @@
     "related_standards": "MS269-03 (현대차 내부 재질 규격)"
   },
   {
-    "id": "116",
+    "id": "112",
     "category": "ES/MS",
     "item": "MS341-17",
     "criteria": "흡음용 패드 사양 (선택)",
@@ -928,7 +896,7 @@
     "related_standards": "MS341-17 (현대차 내부 재질 규격)"
   },
   {
-    "id": "117",
+    "id": "113",
     "category": "ES/MS",
     "item": "MS373-12",
     "criteria": "마크 및 레이블 표준 (필수)",
@@ -936,7 +904,7 @@
     "related_standards": "MS373-12 (현대차 내부 재질 규격)"
   },
   {
-    "id": "118",
+    "id": "114",
     "category": "ES/MS",
     "item": "MS613-07",
     "criteria": "주석 도금 규격 (필수)",
@@ -944,7 +912,7 @@
     "related_standards": "MS613-07, MS617-15 도금"
   },
   {
-    "id": "119",
+    "id": "115",
     "category": "ES/MS",
     "item": "MS617-15",
     "criteria": "전기 아연 및 아연 합금 도금 (필수)",
@@ -952,7 +920,7 @@
     "related_standards": "MS613-07, MS617-15 도금"
   },
   {
-    "id": "120",
+    "id": "116",
     "category": "ES/MS",
     "item": "MS915-00",
     "criteria": "커넥터 일반 표준 (필수)",
@@ -960,7 +928,7 @@
     "related_standards": "MS915-00 (현대차 내부 재질 규격)"
   },
   {
-    "id": "121",
+    "id": "117",
     "category": "ES/MS",
     "item": "MS915-07",
     "criteria": "커넥터 단자 도금 - 주석 (필수)",
@@ -968,7 +936,7 @@
     "related_standards": "MS613-07, MS617-15 도금"
   },
   {
-    "id": "122",
+    "id": "118",
     "category": "ES/MS",
     "item": "MS917-02",
     "criteria": "구리 및 합금 단자용 재질 (필수)",
@@ -976,7 +944,7 @@
     "related_standards": "MS917-02 (현대차 내부 재질 규격)"
   },
   {
-    "id": "123",
+    "id": "119",
     "category": "ES/MS",
     "item": "MS940-01",
     "criteria": "표준 시험 방법 - 연소성 (필수)",
@@ -984,7 +952,7 @@
     "related_standards": "MS940-01 (현대차 내부 재질 규격)"
   },
   {
-    "id": "124",
+    "id": "120",
     "category": "ES/MS",
     "item": "MS941-03",
     "criteria": "열가소성 고분자 재료 - 커넥터용 (필수)",
@@ -992,7 +960,7 @@
     "related_standards": "MS941-03 (현대차 내부 재질 규격)"
   },
   {
-    "id": "125",
+    "id": "121",
     "category": "ES/MS",
     "item": "MS941-07",
     "criteria": "열가소성 고분자 재료 - 사출품용 (필수)",
@@ -1000,7 +968,7 @@
     "related_standards": "MS941-07 (현대차 내부 재질 규격)"
   },
   {
-    "id": "126",
+    "id": "122",
     "category": "ES/MS",
     "item": "갈림 방지",
     "criteria": "조립 및 진동 시 와이어 갈림 방지를 위해 하단에 내마모 테이프를 반영했는가?",
@@ -1008,7 +976,7 @@
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
   {
-    "id": "127",
+    "id": "123",
     "category": "ES/MS",
     "item": "W/H 길이 협의",
     "criteria": "커넥터 블록 인터락 와이어 길이에 대해 BSA 협력사와 협의를 마쳤는가?",
@@ -1016,7 +984,7 @@
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
   {
-    "id": "128",
+    "id": "124",
     "category": "ES/MS",
     "item": "패키지 각도",
     "criteria": "커넥터 블록의 패키지 각도에 대해 BSA 협력사에서 최종 확인했는가?",
@@ -1024,7 +992,7 @@
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
   {
-    "id": "129",
+    "id": "125",
     "category": "ES/MS",
     "item": "마운팅 포인트",
     "criteria": "커넥터 블록의 고정 포인트 위치가 BSA 사양에 적합한가?",
@@ -1032,7 +1000,7 @@
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
   {
-    "id": "130",
+    "id": "126",
     "category": "ES/MS",
     "item": "전원 연결성",
     "criteria": "메인 커넥터와 터미널, 버스바 간의 조립 및 전기적 연결성을 확인했는가?",
@@ -1040,7 +1008,7 @@
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
   {
-    "id": "131",
+    "id": "127",
     "category": "ES/MS",
     "item": "MS611-15",
     "criteria": "전원 연결 부위 버스바의 도금 사양이 규격에 맞게 설계되었는가?",
@@ -1048,7 +1016,7 @@
     "related_standards": "MS613-07, MS617-15 도금"
   },
   {
-    "id": "132",
+    "id": "128",
     "category": "ES/MS",
     "item": "MS613-01",
     "criteria": "커넥터 블록의 수밀 구조 및 차폐(Shield) 단자 연결성을 확인했는가?",
@@ -1056,7 +1024,7 @@
     "related_standards": "MS613-01 (현대차 내부 재질 규격)"
   },
   {
-    "id": "133",
+    "id": "129",
     "category": "ES/MS",
     "item": "MS911-02",
     "criteria": "커넥터 블록과 배터리 상부 커버 간의 차폐 연결성을 최종 점검했는가?",
@@ -1064,7 +1032,7 @@
     "related_standards": "MS911-02 (현대차 내부 재질 규격)"
   },
   {
-    "id": "134",
+    "id": "130",
     "category": "ES/MS",
     "item": "MS915-00",
     "criteria": "",
@@ -1072,7 +1040,7 @@
     "related_standards": "MS915-00 (현대차 내부 재질 규격)"
   },
   {
-    "id": "135",
+    "id": "131",
     "category": "ES/MS",
     "item": "MS941-03",
     "criteria": "",
@@ -1080,7 +1048,7 @@
     "related_standards": "MS941-03 (현대차 내부 재질 규격)"
   },
   {
-    "id": "136",
+    "id": "132",
     "category": "ES/MS",
     "item": "인터락 하네스 길이",
     "criteria": "BSA협력사와 커넥터 블록 내 인터락 하네스 길이를 협의 했는가?",
@@ -1088,7 +1056,7 @@
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
   {
-    "id": "137",
+    "id": "133",
     "category": "ES/MS",
     "item": "커넥터블럭 각도",
     "criteria": "커넥터블럭의 각도는 BSA협력사에서 확인했는가?",
@@ -1096,7 +1064,7 @@
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
   {
-    "id": "138",
+    "id": "134",
     "category": "ES/MS",
     "item": "커넥터블럭 마운팅",
     "criteria": "커넥터 블럭의 마운팅 포인트 위치는 BSA협력사에서 확인했는가?",
@@ -1107,7 +1075,7 @@
     "category": "ES/MS",
     "item": "MS941-07",
     "criteria": "열가소성 고분자 재료 : 와이어링 하네스용 (사출부품)(필수)",
-    "id": "139",
+    "id": "135",
     "engineering_basis": "현대차 내부 재질. 시험 사양양산 신뢰성. 공급망 관리를 위해 각 컴포넌트별 명시된 테스트 시퀀스를 통해야 함",
     "related_standards": "MS941-07 (현대차 내부 재질 규격)"
   },
@@ -1115,7 +1083,7 @@
     "category": "ES/MS",
     "item": "고전압커넥터 커넥션",
     "criteria": "커넥터협력사와 고전압 커넥터 FF 터미널과 커넥터블럭 버스바와의 연결성을 확인했는가?",
-    "id": "140",
+    "id": "136",
     "engineering_basis": "현대차 내부 재질. 시험 사양양산 신뢰성. 공급망 관리를 위해 각 컴포넌트별 명시된 테스트 시퀀스를 통해야 함",
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
@@ -1123,7 +1091,7 @@
     "category": "ES/MS",
     "item": "고전압 차폐(커넥터 - 블럭)",
     "criteria": "커넥터 협력사와 고전압 커넥터 차폐단자와 커넥터블럭 금속부의 연결성을 확인했는가?",
-    "id": "141",
+    "id": "137",
     "engineering_basis": "현대차 내부 재질. 시험 사양양산 신뢰성. 공급망 관리를 위해 각 컴포넌트별 명시된 테스트 시퀀스를 통해야 함",
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
@@ -1131,7 +1099,7 @@
     "category": "ES/MS",
     "item": "수밀구조",
     "criteria": "커넥터협력사와 커넥터블럭과 고전압커넥터의 수밀구조 구성을 확인했는가?",
-    "id": "142",
+    "id": "138",
     "engineering_basis": "현대차 내부 재질. 시험 사양양산 신뢰성. 공급망 관리를 위해 각 컴포넌트별 명시된 테스트 시퀀스를 통해야 함",
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
@@ -1139,7 +1107,7 @@
     "category": "ES/MS",
     "item": "인터락 커넥터 조립성/연결성",
     "criteria": "커넥터협력사와 인터락커넥터의 조립성, 와이어링 연결성을 확인했는가?",
-    "id": "143",
+    "id": "139",
     "engineering_basis": "현대차 내부 재질. 시험 사양양산 신뢰성. 공급망 관리를 위해 각 컴포넌트별 명시된 테스트 시퀀스를 통해야 함",
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
@@ -1147,7 +1115,7 @@
     "category": "ES/MS",
     "item": "고전압 차폐(블럭 - BSA상부커버)",
     "criteria": "BSA협력사와 커넥터 블럭과 배터리상부커버와의 차폐 연결성을 확인했는가?",
-    "id": "144",
+    "id": "140",
     "engineering_basis": "현대차 내부 재질. 시험 사양양산 신뢰성. 공급망 관리를 위해 각 컴포넌트별 명시된 테스트 시퀀스를 통해야 함",
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
@@ -1155,7 +1123,7 @@
     "category": "ES/MS",
     "item": "수밀구조(블럭-BSA상부커버)",
     "criteria": "BSA협력사와 커넥터블럭과 배터리상부커버 간 수밀구조 구성을 확인했는가?",
-    "id": "145",
+    "id": "141",
     "engineering_basis": "현대차 내부 재질. 시험 사양양산 신뢰성. 공급망 관리를 위해 각 컴포넌트별 명시된 테스트 시퀀스를 통해야 함",
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
@@ -1163,7 +1131,7 @@
     "category": "ES/MS",
     "item": "버스바 방열",
     "criteria": "커넥터블럭과 PRA 간 버스바는 방열성능이 확보 되었는가?",
-    "id": "146",
+    "id": "142",
     "engineering_basis": "현대차 내부 재질. 시험 사양양산 신뢰성. 공급망 관리를 위해 각 컴포넌트별 명시된 테스트 시퀀스를 통해야 함",
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
@@ -1171,7 +1139,7 @@
     "category": "ES/MS",
     "item": "방열구조",
     "criteria": "메인퓨즈의 방열홀은 충분히 확보 하였는가?",
-    "id": "147",
+    "id": "143",
     "engineering_basis": "현대차 내부 재질. 시험 사양양산 신뢰성. 공급망 관리를 위해 각 컴포넌트별 명시된 테스트 시퀀스를 통해야 함",
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
@@ -1179,7 +1147,7 @@
     "category": "ES/MS",
     "item": "퓨즈내구 (열적)",
     "criteria": "메인퓨즈의 버스바 온도상승은 퓨즈내구에 문제가 없는가?",
-    "id": "148",
+    "id": "144",
     "engineering_basis": "현대차 내부 재질. 시험 사양양산 신뢰성. 공급망 관리를 위해 각 컴포넌트별 명시된 테스트 시퀀스를 통해야 함",
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
@@ -1187,7 +1155,7 @@
     "category": "ES/MS",
     "item": "퓨즈내구 (기계적)",
     "criteria": "메인퓨즈 체결토크, 체결속도는 퓨즈의 내구 및 성능에 문제가 없는가?",
-    "id": "149",
+    "id": "145",
     "engineering_basis": "현대차 내부 재질. 시험 사양양산 신뢰성. 공급망 관리를 위해 각 컴포넌트별 명시된 테스트 시퀀스를 통해야 함",
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
@@ -1195,7 +1163,7 @@
     "category": "ES/MS",
     "item": "퓨즈-릴레이 매칭성",
     "criteria": "메인퓨즈의 메인릴레이 간 매칭성은 사전 검증이 되었는가?",
-    "id": "150",
+    "id": "146",
     "engineering_basis": "현대차 내부 재질. 시험 사양양산 신뢰성. 공급망 관리를 위해 각 컴포넌트별 명시된 테스트 시퀀스를 통해야 함",
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
@@ -1203,12 +1171,12 @@
     "category": "ES/MS",
     "item": "퓨즈내구(전기적)",
     "criteria": "메인퓨즈는 차량의 최대전류 등을 고려하여 충분한 내구를 확보했는가?",
-    "id": "151",
+    "id": "147",
     "engineering_basis": "현대차 내부 재질. 시험 사양양산 신뢰성. 공급망 관리를 위해 각 컴포넌트별 명시된 테스트 시퀀스를 통해야 함",
     "related_standards": "현대차 ES/MS 품질 연계 표준"
   },
   {
-    "id": "152",
+    "id": "148",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "고전압커넥터 오조립 방지",
     "criteria": "BDU용 고전압 커넥터에 오조립 방지 기능이 있는가 (인접 커넥터간 키코딩 적용)",
@@ -1216,7 +1184,7 @@
     "related_standards": "-"
   },
   {
-    "id": "153",
+    "id": "149",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "홀 사이즈 공차",
     "criteria": "BSA 파트(판재)와의 조립을 위해 홀 사이즈 및 공차를 공유했는가?",
@@ -1224,7 +1192,7 @@
     "related_standards": "IATF 16949, Clause 8.5.1 (Production/Service Control)"
   },
   {
-    "id": "154",
+    "id": "150",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "러버 부시 간섭",
     "criteria": "PRA 러버 부시 조립 시 주변 볼트 및 구조물과 간섭이 없는가?",
@@ -1232,7 +1200,7 @@
     "related_standards": "-"
   },
   {
-    "id": "155",
+    "id": "151",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "수냉 면압패드",
     "criteria": "고전압 단자용 링터미널 조립용 하드웨어(Bolt/Nut)가 적합한 사양인가?",
@@ -1240,7 +1208,7 @@
     "related_standards": "-"
   },
   {
-    "id": "156",
+    "id": "152",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "나사산 높이",
     "criteria": "너트 체결 완료 후 노출되는 나사산의 개수가 3개 이상인가?",
@@ -1248,7 +1216,7 @@
     "related_standards": "-"
   },
   {
-    "id": "157",
+    "id": "153",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "AS Tool 접근성",
     "criteria": "링터미널 체결 볼트의 호칭경이 전류량(대전류/저전류)에 맞게 선정되었는가?",
@@ -1256,7 +1224,7 @@
     "related_standards": "-"
   },
   {
-    "id": "158",
+    "id": "154",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "PRA 조립성 (협력사 협의)",
     "criteria": "링터미널의 폭이 체결용 볼트/너트의 와셔 면적보다 넓어 면압이 충분한가?",
@@ -1264,7 +1232,7 @@
     "related_standards": "-"
   },
   {
-    "id": "159",
+    "id": "155",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "PRA 마운팅 부 홀 사이즈 공차",
     "criteria": "링터미널이 압착된 상태에서의 치수 편차를 고려하여 설계를 검토했는가?",
@@ -1272,7 +1240,7 @@
     "related_standards": "IATF 16949, Clause 8.5.1 (Production/Service Control)"
   },
   {
-    "id": "160",
+    "id": "156",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "PRA 마운팅 부 정합성",
     "criteria": "메인 릴레이 단자부 볼트 길이 사양이 적절한지 협력사와 협의했는가?",
@@ -1280,7 +1248,7 @@
     "related_standards": "-"
   },
   {
-    "id": "161",
+    "id": "157",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "링터미널 H/W 사양 적합성",
     "criteria": "릴레이 탑 부분의 여유 길이를 점검하여 볼트 체결 불량을 방지했는가?",
@@ -1288,7 +1256,7 @@
     "related_standards": "-"
   },
   {
-    "id": "162",
+    "id": "158",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "체결계 신뢰성",
     "criteria": "릴레이 단자부 내부 나사산 깊이를 고려하여 볼트 길이를 최적화했는가?",
@@ -1296,7 +1264,7 @@
     "related_standards": "-"
   },
   {
-    "id": "163",
+    "id": "159",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "링터미널 체결계 호칭경 적합성",
     "criteria": "링터미널 체결 볼트/너트의 호칭경(센싱용/대전류/저전류)이 적합한가?",
@@ -1304,7 +1272,7 @@
     "related_standards": "-"
   },
   {
-    "id": "164",
+    "id": "160",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "링터미널 면압",
     "criteria": "공정상의 볼트 체결 토크 및 속도 기준이 릴레이 사양 내에 있는가?",
@@ -1312,7 +1280,7 @@
     "related_standards": "-"
   },
   {
-    "id": "165",
+    "id": "161",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "링터미널 압착 치수편차",
     "criteria": "링터미널 압착 시 발생하는 치수편차를  설계시 고려했는가? (실물은 압착공정에서 편차 발생 가능)",
@@ -1320,7 +1288,7 @@
     "related_standards": "SAE J1742"
   },
   {
-    "id": "166",
+    "id": "162",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "메인릴레이 단자볼트 적합성",
     "criteria": "메인 릴레이 체결 볼트 등이 HMC 표준 부품 및 도면 사양과 일치하는가?",
@@ -1328,7 +1296,7 @@
     "related_standards": "-"
   },
   {
-    "id": "167",
+    "id": "163",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "릴레이 단자부 나사산 깊이",
     "criteria": "릴레이 단자부 나사산 깊이를 고려하여 볼트 길이를 선정했는가? 릴레이 협력사와 릴레이 탭 부분 여유길이 확보여부 점검할 것. (공차고려). 탭 부분 여유길이를 점검하여, 간섭에 의한 볼트 체결불량 발생을 방지할 것. (예) 릴레이 단자부 나사산 깊이 (최소, 보증) > 볼트 길이 + 버스바 두께.",
@@ -1336,7 +1304,7 @@
     "related_standards": "-"
   },
   {
-    "id": "168",
+    "id": "164",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "릴레이 단자부 축력",
     "criteria": "조립 불량 방지가 필요한 구간에 매직스레드(Magic Thread) 볼트를 적용했는가?",
@@ -1344,7 +1312,7 @@
     "related_standards": "-"
   },
   {
-    "id": "169",
+    "id": "165",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "릴레이 단자부 체결 토크/속도",
     "criteria": "릴레이 협력사와 사양협의할 것. 1) 250A급 메인릴레이 체결토크 : 8~9Nm (Target 체결토크 : 8.5Nm) 2) 80A급 메인릴레이 체결토크 : 2.8~3.0Nm (Target 체결토크 : 2.9Nm)",
@@ -1352,7 +1320,7 @@
     "related_standards": "-"
   },
   {
-    "id": "170",
+    "id": "166",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "릴레이 단자부 누적공차",
     "criteria": "상부 케이스 조립 시 내부 커넥터 및 와이어가 끼이거나 씹힐 우려가 없는가?",
@@ -1360,7 +1328,7 @@
     "related_standards": "IATF 16949, Clause 8.5.1 (Production/Service Control)"
   },
   {
-    "id": "171",
+    "id": "167",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "릴레이 체결 하드웨어 표준부품 적용",
     "criteria": "릴레이 체결 볼트 등에 HMC 표준 부품을 적용하고 도면에 표기했는가? (예) M6볼트 : 와이엠 / 11403-06127K",
@@ -1368,7 +1336,7 @@
     "related_standards": "-"
   },
   {
-    "id": "172",
+    "id": "168",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "최대체결토크(1.1배 시험)",
     "criteria": "최대 체결 토크의 1.1배에서도 나사산 손상이 없는지 실물로 확인했는가?",
@@ -1376,7 +1344,7 @@
     "related_standards": "-"
   },
   {
-    "id": "173",
+    "id": "169",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "조립불량방지대책",
     "criteria": "릴레이 및 저항 조립 시 고정용 후크(Hook)가 쉽게 파손되지 않는 재질/두께인가?",
@@ -1384,7 +1352,7 @@
     "related_standards": "IATF 16949, Clause 8.5.1 (Production/Service Control)"
   },
   {
-    "id": "174",
+    "id": "170",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "버스바간 접촉면적 적합성",
     "criteria": "PRA버스바-모듈버스바 간 접촉면적은 최소 300mm^2 이상 확보 되었는가? (체결 홀 포함 면적)",
@@ -1392,7 +1360,7 @@
     "related_standards": "-"
   },
   {
-    "id": "175",
+    "id": "171",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "고전압 단자부 파단성능시험",
     "criteria": "프리차지 저항 소손 시 외부에서 점검 및 분석이 용이한 구조인가?",
@@ -1400,7 +1368,7 @@
     "related_standards": "IATF 16949, Clause 8.5.1 (Production/Service Control)"
   },
   {
-    "id": "176",
+    "id": "172",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "오조립 방지",
     "criteria": "온도센서 링터미널, 프리차지회로 링터미널, ISO 센서 링터미널 사양은 오조립 방지 대책을 적용하였는가? 오조립 방지 대책이 적용 되어 있는지 확인할 것. (예) 터미널 형상 이원화, 컬러테이핑, 와이어 길이차이 등",
@@ -1408,7 +1376,7 @@
     "related_standards": "-"
   },
   {
-    "id": "177",
+    "id": "173",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "퓨즈 기계적 내구 (조립간)",
     "criteria": "조립 및 정비 시 볼트/너트 파단 토크가 권장 체결 토크보다 충분히 큰가?",
@@ -1416,7 +1384,7 @@
     "related_standards": "-"
   },
   {
-    "id": "178",
+    "id": "174",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "상부케이스 파손",
     "criteria": "진동/충격에 의한 상부 커버열림 또는 파손 방지 구조가 되어 있는가?",
@@ -1424,7 +1392,7 @@
     "related_standards": "IATF 16949, Clause 8.5.1 (Production/Service Control)"
   },
   {
-    "id": "179",
+    "id": "175",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "와이어 경로 신뢰성",
     "criteria": "상부 케이스 조립 시 내부 커넥터 및 하네스가 협착되지 않는 경로인가? (조립경로 상 하네스 존재 시 체결 부 회피할 것.)",
@@ -1432,7 +1400,7 @@
     "related_standards": "IATF 16949, Clause 8.5.1 (Production/Service Control)"
   },
   {
-    "id": "180",
+    "id": "176",
     "category": "조립성(조립기술/의장요구사항)",
     "item": "케이스 단자부 공차",
     "criteria": "메인 릴레이 전단에서 ISO 센서가 분기되어 OFF 시 절연 측정이 가능한가?",
