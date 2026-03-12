@@ -97,15 +97,43 @@ export default function PRADashboard() {
   };
 
     const generateExcel = () => {
-    const excelData = data.map((item: any) => ({
-      "번호": item.id,
-      "카테고리": item.category,
-      "검토 항목": item.item,
-      "상세 내용/기준": item.criteria,
-      "엔지니어링 근거 (Engineering Basis)": item.engineering_basis || "기준 검토 중"
-    }));
+    const excelData = data.map((item: any) => {
+      // 1. ** 제거 및 줄바꿈/구조화 정리
+      let basis = item.engineering_basis || "기준 검토 중";
+      basis = basis.replace(/\*\*/g, ""); // ** 제거
+      
+      // 기호 체계 통일 (예: 1. -> 1) ) 및 줄바꿈 강화
+      basis = basis.replace(/(\d)\.\s/g, "\n$1) "); 
+      basis = basis.replace(/-\s/g, "\n• ");
+      basis = basis.trim();
+
+      return {
+        "번호": item.id,
+        "카테고리": item.category,
+        "검토 항목": item.item,
+        "상세 내용/기준": item.criteria,
+        "엔지니어링 근거 (Engineering Basis)": basis
+      };
+    });
 
     const worksheet = XLSX.utils.json_to_sheet(excelData);
+    
+    // 셀 속성 설정 (자동 줄바꿈 및 상단 정렬)
+    const range = XLSX.utils.decode_range(worksheet['!ref'] || "A1:E1");
+    for (let R = range.s.r; R <= range.e.r; ++R) {
+      for (let C = range.s.c; C <= range.e.c; ++C) {
+        const address = XLSX.utils.encode_col(C) + (R + 1);
+        if (!worksheet[address]) continue;
+        if (!worksheet[address].s) worksheet[address].s = {};
+        
+        // 자동 줄바꿈 활성화 (Note: xlsx-style 또는 Pro 버전 없이 기본 xlsx는 s(style) 속성 제한적일 수 있음)
+        // 하지만 일부 환경/버전에서는 지원하므로 명시
+        worksheet[address].s = {
+          alignment: { wrapText: true, vertical: "top" }
+        };
+      }
+    }
+
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, "PRA_Checklist");
 
@@ -325,7 +353,7 @@ function TableRow({ item }: any) {
       <td className="px-8 py-6 text-sm font-mono text-slate-500">{item.id}</td>
       <td className="px-8 py-6 font-medium text-slate-200">{item.item}</td>
       <td className="px-8 py-6 text-sm text-slate-400">{item.criteria}</td>
-      <td className="px-8 py-6 text-sm text-blue-400/80 leading-relaxed font-light italic">
+      <td className="px-8 py-6 text-sm text-blue-400/80 leading-relaxed font-light italic whitespace-pre-line">
         {item.engineering_basis || "Review pending based on technical standards."}
       </td>
     </tr>
